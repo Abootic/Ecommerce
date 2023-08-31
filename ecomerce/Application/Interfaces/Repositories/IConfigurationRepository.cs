@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Application.Common;
+using EcommereceWeb.Domain.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Target.Application.Interfaces.Common;
 
 namespace Application.Interfaces.Repositories
 {
-    internal interface IConfigurationRepository
+    public interface IConfigurationRepository : IGenericRepository<Configuration>
     {
+        Task<IEnumerable<DataListItem>> GetDDL();
     }
 }

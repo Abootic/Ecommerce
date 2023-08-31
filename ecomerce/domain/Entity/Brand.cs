@@ -6,7 +6,8 @@ namespace EcommereceWeb.Domain.Entity
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string ArName { get; set; }
+        public string EnName { get; set; }
         public string? CompanyInfo { get; set; }
 
         public string? ImageUrl { get; set; }

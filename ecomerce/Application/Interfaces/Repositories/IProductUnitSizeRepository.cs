@@ -1,12 +1,14 @@
-﻿using System;
+﻿using EcommereceWeb.Domain.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Target.Application.Interfaces.Common;
 
 namespace Application.Interfaces.Repositories
 {
-    internal interface IProductUnitSizeRepository
+    public interface IProductUnitSizeRepository : IGenericRepository<ProductUnitSize>
     {
     }
 }

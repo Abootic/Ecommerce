@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Common;
+using EcommereceWeb.Domain.Entity;
+
+using Target.Application.Interfaces.Common;
 
 namespace Application.Interfaces.Repositories
 {
-    internal interface IAddProductToFavoriteRepository
+    public interface IAddProductToFavoriteRepository : IGenericRepository<AddProductToFavorite>
     {
+        Task<IEnumerable<DataListItem>> GetDDL();
     }
 }

@@ -1,0 +1,5 @@
+D:\wejo\dotnetcore\ecomerce\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+D:\wejo\dotnetcore\ecomerce\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\wejo\dotnetcore\ecomerce\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+D:\wejo\dotnetcore\ecomerce\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+D:\wejo\dotnetcore\ecomerce\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache

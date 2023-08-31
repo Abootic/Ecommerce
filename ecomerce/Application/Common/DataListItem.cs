@@ -1,5 +1,5 @@
 ﻿
-namespace Target.Application.Common
+namespace Application.Common
 {
     public class DataListItem
     {
