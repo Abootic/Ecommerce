@@ -1,4 +1,4 @@
-﻿using Domain.BaseEntity;
+﻿using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -7,9 +7,14 @@ namespace EcommereceWeb.Domain.Entity
         public int Id { get; set; }
 
         public int? CouponId { get; set; }
-        public string? ItemId { get; set; }  //   productId 
+        public string? ProductId { get; set; }  //   productId 
 
         public string Type { get; set; } // type for itemId  if is product 
+
+        public virtual Product? Products { get; set; }
+        public virtual Coupon? Coupons { get; set; }
+
+
     }
 
 }

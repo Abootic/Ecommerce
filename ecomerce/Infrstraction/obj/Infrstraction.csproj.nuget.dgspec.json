@@ -4,12 +4,12 @@
     "D:\\wejo\\dotnetcore\\ecomerce\\Infrstraction\\Infrstraction.csproj": {}
   },
   "projects": {
-    "D:\\wejo\\dotnetcore\\ecomerce\\Application\\Application.csproj": {
+    "D:\\wejo\\dotnetcore\\ecomerce\\Application\\EcommereceWeb.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\Application.csproj",
-        "projectName": "Application",
-        "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\EcommereceWeb.Application.csproj",
+        "projectName": "EcommereceWeb.Application",
+        "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\EcommereceWeb.Application.csproj",
         "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
         "outputPath": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\wejo\\dotnetcore\\ecomerce\\domain\\Domain.csproj": {
-                "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\domain\\Domain.csproj"
+              "D:\\wejo\\dotnetcore\\ecomerce\\domain\\EcommereceWeb.Domain.csproj": {
+                "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\domain\\EcommereceWeb.Domain.csproj"
               }
             }
           }
@@ -73,12 +73,12 @@
         }
       }
     },
-    "D:\\wejo\\dotnetcore\\ecomerce\\domain\\Domain.csproj": {
+    "D:\\wejo\\dotnetcore\\ecomerce\\domain\\EcommereceWeb.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wejo\\dotnetcore\\ecomerce\\domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\domain\\Domain.csproj",
+        "projectUniqueName": "D:\\wejo\\dotnetcore\\ecomerce\\domain\\EcommereceWeb.Domain.csproj",
+        "projectName": "EcommereceWeb.Domain",
+        "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\domain\\EcommereceWeb.Domain.csproj",
         "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
         "outputPath": "D:\\wejo\\dotnetcore\\ecomerce\\domain\\obj\\",
         "projectStyle": "PackageReference",
@@ -108,12 +108,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.Extensions.Identity.Core": {
-              "target": "Package",
-              "version": "[6.0.10, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -158,8 +152,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\wejo\\dotnetcore\\ecomerce\\Application\\Application.csproj": {
-                "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\Application.csproj"
+              "D:\\wejo\\dotnetcore\\ecomerce\\Application\\EcommereceWeb.Application.csproj": {
+                "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\EcommereceWeb.Application.csproj"
               }
             }
           }

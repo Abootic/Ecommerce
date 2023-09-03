@@ -1,4 +1,4 @@
-﻿using Domain.BaseEntity;
+﻿using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -9,6 +9,8 @@ namespace EcommereceWeb.Domain.Entity
         public int? ProductId { get; set; } // from Product Model
         public string? UserId { get; set; } // from user Model
 
+        public virtual Product? Products { get; set; }
+        public virtual User? Users { get; set; }
 
     }
 }

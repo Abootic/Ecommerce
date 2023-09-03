@@ -836,32 +836,32 @@
           }
         }
       },
-      "Application/1.0.0": {
+      "EcommereceWeb.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
-          "Domain": "1.0.0",
+          "EcommereceWeb.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.10"
         },
         "compile": {
-          "bin/placeholder/Application.dll": {}
+          "bin/placeholder/EcommereceWeb.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Application.dll": {}
+          "bin/placeholder/EcommereceWeb.Application.dll": {}
         }
       },
-      "Domain/1.0.0": {
+      "EcommereceWeb.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.Extensions.Identity.Core": "6.0.10"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10"
         },
         "compile": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/EcommereceWeb.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/EcommereceWeb.Domain.dll": {}
         }
       }
     }
@@ -2136,20 +2136,20 @@
         "version.txt"
       ]
     },
-    "Application/1.0.0": {
+    "EcommereceWeb.Application/1.0.0": {
       "type": "project",
-      "path": "../Application/Application.csproj",
-      "msbuildProject": "../Application/Application.csproj"
+      "path": "../Application/EcommereceWeb.Application.csproj",
+      "msbuildProject": "../Application/EcommereceWeb.Application.csproj"
     },
-    "Domain/1.0.0": {
+    "EcommereceWeb.Domain/1.0.0": {
       "type": "project",
-      "path": "../domain/Domain.csproj",
-      "msbuildProject": "../domain/Domain.csproj"
+      "path": "../domain/EcommereceWeb.Domain.csproj",
+      "msbuildProject": "../domain/EcommereceWeb.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Application >= 1.0.0",
+      "EcommereceWeb.Application >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Relational >= 6.0.10",
@@ -2162,9 +2162,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\wejo\\dotnetcore\\ecomerce\\Infrstraction\\Infrstraction.csproj",
-      "projectName": "Infrstraction",
-      "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\Infrstraction\\Infrstraction.csproj",
+      "projectUniqueName": "D:\\wejo\\dotnetcore\\ecomerce\\Infrstraction\\EcommereceWeb.Infrstraction.csproj",
+      "projectName": "EcommereceWeb.Infrstraction",
+      "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\Infrstraction\\EcommereceWeb.Infrstraction.csproj",
       "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
       "outputPath": "D:\\wejo\\dotnetcore\\ecomerce\\Infrstraction\\obj\\",
       "projectStyle": "PackageReference",
@@ -2183,8 +2183,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\wejo\\dotnetcore\\ecomerce\\Application\\Application.csproj": {
-              "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\Application.csproj"
+            "D:\\wejo\\dotnetcore\\ecomerce\\Application\\EcommereceWeb.Application.csproj": {
+              "projectPath": "D:\\wejo\\dotnetcore\\ecomerce\\Application\\EcommereceWeb.Application.csproj"
             }
           }
         }

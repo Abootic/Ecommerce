@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
-namespace Infrstraction.EntityConfigration
+namespace EcommereceWeb.Infrstraction.EntityConfigration
 {
     public class BrandConfigration : IEntityTypeConfiguration<Brand>
     {

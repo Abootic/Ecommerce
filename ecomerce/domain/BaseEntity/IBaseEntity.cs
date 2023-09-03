@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.BaseEntity
+namespace EcommereceWeb.Domain.BaseEntity
 {
     public interface IBaseEntity<T>
     {

@@ -1,4 +1,4 @@
-﻿using Domain.BaseEntity;
+﻿using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -9,7 +9,8 @@ namespace EcommereceWeb.Domain.Entity
         public int? Quantity { get; set; }
         public decimal? Price { get; set; }
         public string? ImgUrl { get; set; }
-        public int ColorId { get; set; } // from MasterData model
+        public string ColorName { get; set; } // from MasterData model
+        public virtual Product? Product { get; set; }
 
 
 

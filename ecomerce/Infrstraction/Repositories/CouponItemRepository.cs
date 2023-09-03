@@ -1,4 +1,5 @@
-﻿using Application.Interfaces.Repositories;
+﻿using Application.Common;
+using Application.Interfaces.Repositories;
 using EcommereceWeb.Domain.Entity;
 using infrstraction.Repositories;
 using System;
@@ -14,6 +15,10 @@ namespace Infrstraction.Repositories
     {
         public CouponItemRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
+        }
+        public Task<IEnumerable<DataListItem>> GetDDL()
+        {
+            throw new NotImplementedException();
         }
     }
 }

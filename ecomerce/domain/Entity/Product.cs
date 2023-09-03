@@ -1,4 +1,4 @@
-﻿using Domain.BaseEntity;
+﻿using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -6,8 +6,8 @@ namespace EcommereceWeb.Domain.Entity
     {
         public int Id { get; set; }
 
-        public string ProductName { get; set; }
-        public string Name { get; set; }
+        public string ArName { get; set; }
+        public string EnName { get; set; }
         // كود  المنتج  عند  مشاركة المنتج يتم ارساله هذا الكود  ليتمكن من البحث عبره
         public string Code { get; set; }
         public decimal Price { get; set; }
@@ -15,12 +15,15 @@ namespace EcommereceWeb.Domain.Entity
         public int? Quantity { get; set; }
 
         public string Logo { get; set; }// الصورة الرئيسة للمنتج
-        public string? Details { get; set; }
+        public string? EnDetails { get; set; }
+        public string? ArDetails { get; set; }
         public decimal? MinOrderQuantity { get; set; } // اقل كمية يتم  طلبة
+        public decimal? Discount { get; set; } // اقل كمية يتم  طلبة
+
         public string? VideoProvider { get; set; }// نوع مزود الخدمة  هل يوتيوب او غيرة 
         public string? VideoUrl { get; set; }
-        public string? TaxType { get; set; }// نوع الضريبة  هل قيمة او نسبة مئوية
-        public string? TaxValue { get; set; }// قيمة الضريبة
+        public int? TaxType { get; set; }// نوع الضريبة  هل قيمة او نسبة مئوية
+       
 
         public string? KeyWords { get; set; }
        
@@ -30,12 +33,25 @@ namespace EcommereceWeb.Domain.Entity
         //from MainClassfication model
         public int? BasicClassificationId { get; set; }
         // from BasicClassification model
-        public int? SubclassificationId { get; set; }
+        public int? SubClassificationBaseId { get; set; }
         // from Subclassification model
-        public int? SubSubClassificationId { get; set; }
+        public int? SubSubclassificationId { get; set; }
         // from SubSubClassification model
 
+        public virtual MainClassification? MainClassification { get; set; }
+        public virtual BasicClassification? BasicClassification { get; set; }
+        public virtual SubClassificationBase? SubClassificationBase { get; set; }
+        public virtual SubSubclassification? SubSubClassification { get; set; }
+        public virtual Brand? Brand { get; set; }
 
+        public virtual ICollection<AddProductToFavorite> AddProductToFavorites { get; set; }
+        public virtual ICollection<CouponItem> CouponItems { get; set; }
+        public virtual ICollection<ProductAdditionalDetails> ProductAdditionalDetails { get; set; }
+        public virtual ICollection<ProductColors> ProductColors { get; set; }
+        public virtual ICollection<ProductEvaluaton> ProductEvaluatons { get; set; }
+        public virtual ICollection<ProductUnitSize> ProductUnitSizes { get; set; }
+        public virtual ICollection<ProductImage> ProductImages { get; set; }
+        public virtual ICollection<ProductSize> ProductSize { get; set; }
 
 
     }

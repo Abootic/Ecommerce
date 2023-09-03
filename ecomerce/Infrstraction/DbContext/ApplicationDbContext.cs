@@ -1,18 +1,18 @@
 ﻿
 using Application.Interfaces.Common;
+using EcommereceWeb.Application.Interfaces.Common;
+using EcommereceWeb.Domain.BaseEntity;
 using EcommereceWeb.Domain.Entity;
+using EcommereceWeb.infrstraction.Extensions;
+using EcommereceWeb.Infrstraction.EntityConfigration;
+using Infrstraction.EntityConfigration;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-using Target.Application.Interfaces.Common;
 
-using Target.Infrastraction.EntityConfigration;
-using Target.Infrastraction.Identity;
-using Target.infrstraction.Extensions;
-
-namespace Target.Infrastraction.Data
+namespace EcommereceWeb.Infrastraction.Data
 {
-    public partial class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
+    public partial class ApplicationDbContext : IdentityDbContext<User>, IApplicationDbContext
     {
         private readonly ICurrentUserServices _currentUserServices;
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, ICurrentUserServices currentUserServices):base(options)
@@ -62,6 +62,7 @@ namespace Target.Infrastraction.Data
         public DbSet<SubSubclassification> SubSubclassification { get; private set; } = null!;
 
         public DbSet<TaxConfiguration> TaxConfiguration { get; private set; } = null!;
+        public DbSet<User> Users { get; private set; } = null!;
 
         //public virtual Task<int> SaveChange(CancellationToken cancellationToken)
         //{
@@ -96,48 +97,43 @@ namespace Target.Infrastraction.Data
             return await base.SaveChangesAsync(cancellationToken);
         }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-        //    modelBuilder.ApplayGlobalFilter<ISoftDelete>(e => e.IsDeleted == false);
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplayGlobalFilter<ISoftDelete>(e => e.IsDeleted == false);
 
-        //    modelBuilder.ApplyConfiguration(new AboutSectionConfiguration());
-        //    modelBuilder.ApplyConfiguration(new AboutSectionItemConfiguration());
-        //    modelBuilder.ApplyConfiguration(new AdsConfigration());
-        //    modelBuilder.ApplyConfiguration(new AvailableAreaConfiguration());
-        //    modelBuilder.ApplyConfiguration(new ContactConfigration());
-        
-        //    modelBuilder.ApplyConfiguration(new ExhConfigConfigration());
-        //    modelBuilder.ApplyConfiguration(new ExhibitionConfigration());
-        //    modelBuilder.ApplyConfiguration(new ExhSectionConfiguration());
-        //    modelBuilder.ApplyConfiguration(new ExhSectionItemConfigration());
-        //    modelBuilder.ApplyConfiguration(new EXhSocialMediaConfigration());
-        //    modelBuilder.ApplyConfiguration(new NewsConfigration());
-        //    modelBuilder.ApplyConfiguration(new ReservedAreaConfigration());
-        //    modelBuilder.ApplyConfiguration(new SlideConfigration());
-        //    modelBuilder.ApplyConfiguration(new SocialMediaConfigration());
-        //    modelBuilder.ApplyConfiguration(new SponsorConfigration());
-        //    modelBuilder.ApplyConfiguration(new SponsorProductsConfigration());
-        //   // modelBuilder.ApplyConfiguration(new UserConfigration());
-        //    modelBuilder.ApplyConfiguration(new VisitConfigration());
-        //    modelBuilder.ApplyConfiguration(new SponsorTypeConfigration());
-        //    modelBuilder.ApplyConfiguration(new ExhUserConfigration());
-        //    modelBuilder.ApplyConfiguration(new ExhSlideConfigration());
+            modelBuilder.ApplyConfiguration(new AddProductToFavoriteConfigration());
+            modelBuilder.ApplyConfiguration(new BasicClassificationConfigration());
+            modelBuilder.ApplyConfiguration(new BrandConfigration());
+            modelBuilder.ApplyConfiguration(new ConfigurationConfigration());
+            modelBuilder.ApplyConfiguration(new CouponConfigration());
 
-        //    //============= for sitex conferenc =================
-        //    modelBuilder.ApplyConfiguration(new AxlesConfigration());
-        //    modelBuilder.ApplyConfiguration(new ConferenceConfigration());
-        //    modelBuilder.ApplyConfiguration(new ExhDataConfigration());
-        //    modelBuilder.ApplyConfiguration(new RequestConfigration());
-        //    modelBuilder.ApplyConfiguration(new WorksheetConfigration());
-        //   // modelBuilder.ApplyConfiguration(new SponsorTypeFeaturesConfigration());
-        //    OnModelCreatingPartial(modelBuilder);
-           
+            modelBuilder.ApplyConfiguration(new CouponItemConfigration());
+            modelBuilder.ApplyConfiguration(new CurrencyConfigration());
+            modelBuilder.ApplyConfiguration(new DetailsDataConfigration());
+            modelBuilder.ApplyConfiguration(new MainClassificationConfigration());
+            modelBuilder.ApplyConfiguration(new MasterDataConfigration());
+            modelBuilder.ApplyConfiguration(new ProductAdditionalDetailsConfigration());
+            modelBuilder.ApplyConfiguration(new ProductColorsConfigration());
+            modelBuilder.ApplyConfiguration(new ProductConfigration());
+            modelBuilder.ApplyConfiguration(new ProductImageConfigration());
+            modelBuilder.ApplyConfiguration(new ProductSizeConfigration());
+            modelBuilder.ApplyConfiguration(new ProductUnitSizeConfigration());
+            // modelBuilder.ApplyConfiguration(new UserConfigration());
+            modelBuilder.ApplyConfiguration(new SliderConfigration());
+            modelBuilder.ApplyConfiguration(new SubClassificationBaseConfigration());
+            modelBuilder.ApplyConfiguration(new SubSubclassificationConfigration());
+            modelBuilder.ApplyConfiguration(new TaxConfigurationConfigration());
+            modelBuilder.ApplyConfiguration(new ProductEvaluatonConfigration());
+
+          
+            OnModelCreatingPartial(modelBuilder);
 
 
-        //}
 
-        //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
       
     }

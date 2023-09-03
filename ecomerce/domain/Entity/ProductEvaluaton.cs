@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain.BaseEntity;
+using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -13,8 +13,10 @@ namespace EcommereceWeb.Domain.Entity
         public int Rating { get; set; }
         public string Comment { get; set; }
         public int? ProductId { get; set; }
-        public string UserId { get; set; }
-      
-       
+        public string? UserId { get; set; }
+        public virtual Product? Product { get; set; }
+        public virtual User? Users { get; set; }
+
+
     }
 }

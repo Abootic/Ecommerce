@@ -1,4 +1,4 @@
-﻿using Domain.BaseEntity;
+﻿using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -7,11 +7,13 @@ namespace EcommereceWeb.Domain.Entity
 
         public int Id { get; set; }
         public string SubSubClassificationName { get; set; } 
-        public int? SubclassificationId { get; set; } // from  Subclassification model
+        public int? SubClassificationBaseId { get; set; } // from  Subclassification model
         public string ImageUrl { get; set; }
+        public virtual SubClassificationBase? SubClassificationBases { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
 
 
-       
-        }
+
+    }
 }

@@ -1,4 +1,4 @@
-﻿using Domain.BaseEntity;
+﻿using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -8,7 +8,8 @@ namespace EcommereceWeb.Domain.Entity
         public int CodeValue { get; set; }
         public string Name { get; set; }
         public string? Description { get; set; }
-     
+
+        public virtual ICollection<DetailsData> DetailsDatas { get; set; }
 
 
 

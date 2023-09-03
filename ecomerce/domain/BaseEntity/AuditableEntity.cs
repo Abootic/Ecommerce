@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.BaseEntity
+namespace EcommereceWeb.Domain.BaseEntity
 {
     public class AuditableEntity : ISoftDelete
     {
@@ -20,6 +20,8 @@ namespace Domain.BaseEntity
         public bool IsActive { get; set; } = false;
         public bool IsDeleted { get ; set; }
         public string? DeletedBy { get ; set ; }
+        public string? LastModfiedBy { get ; set ; }
+        public DateTime? LastModfiedAt { get ; set; }
         public DateTime? DeletedAt { get ; set; }
     }
 

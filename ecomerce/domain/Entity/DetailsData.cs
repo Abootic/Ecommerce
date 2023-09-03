@@ -1,4 +1,4 @@
-﻿using Domain.BaseEntity;
+﻿using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -10,7 +10,7 @@ namespace EcommereceWeb.Domain.Entity
         public string? Description { get; set; }
         public int? MasterDataId { get; set; } // from MasterData model
 
-
+        public virtual MasterData? MasterData { get; set; }
 
 
 

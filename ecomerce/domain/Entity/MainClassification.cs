@@ -13,8 +13,10 @@ namespace EcommereceWeb.Domain.Entity
         public string MainClassificationName { get; set; }
        
         public string? ImageUrl { get; set; }
+        public virtual ICollection<BasicClassification> BasicClassifications { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
-      
+
 
     }
 }

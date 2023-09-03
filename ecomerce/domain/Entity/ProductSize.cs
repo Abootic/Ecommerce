@@ -1,4 +1,4 @@
-﻿using Domain.BaseEntity;
+﻿using EcommereceWeb.Domain.BaseEntity;
 
 namespace EcommereceWeb.Domain.Entity
 {
@@ -8,8 +8,9 @@ namespace EcommereceWeb.Domain.Entity
         public int? ProductId { get; set; }
         public int? Quantity { get; set; }
         public decimal? Price { get; set; }
-        public int? SizeId { get; set; }
+        public int? SizeName { get; set; } // from masterData
 
+        public virtual Product? Product { get; set; }
 
 
 

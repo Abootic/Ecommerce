@@ -2,7 +2,7 @@
 using EcommereceWeb.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Interfaces.Common
+namespace EcommereceWeb.Application.Interfaces.Common
 {
     public interface IApplicationDbContext
     {

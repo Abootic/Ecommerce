@@ -1,4 +1,5 @@
-﻿using EcommereceWeb.Domain.Entity;
+﻿using Application.Common;
+using EcommereceWeb.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Application.Interfaces.Repositories
 {
     public interface IMainClassificationRepository : IGenericRepository<MainClassification>
     {
+        Task<IEnumerable<DataListItem>> GetDDL();
     }
 }
