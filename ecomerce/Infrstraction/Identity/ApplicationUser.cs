@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Target.Infrastraction.Identity
+namespace EcommereceWeb.Infrastraction.Identity
 {
     public class ApplicationUser: IdentityUser
     {

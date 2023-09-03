@@ -1,11 +1,10 @@
 ﻿
-using Application.Interfaces.Common;
 using EcommereceWeb.Application.Interfaces.Common;
 using EcommereceWeb.Domain.BaseEntity;
 using EcommereceWeb.Domain.Entity;
-using EcommereceWeb.infrstraction.Extensions;
+using EcommereceWeb.Infrstraction.Extensions;
 using EcommereceWeb.Infrstraction.EntityConfigration;
-using Infrstraction.EntityConfigration;
+using EcommereceWeb.Infrstraction.EntityConfigration;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -62,7 +61,7 @@ namespace EcommereceWeb.Infrastraction.Data
         public DbSet<SubSubclassification> SubSubclassification { get; private set; } = null!;
 
         public DbSet<TaxConfiguration> TaxConfiguration { get; private set; } = null!;
-        public DbSet<User> Users { get; private set; } = null!;
+        public DbSet<User> User { get; private set; } = null!;
 
         //public virtual Task<int> SaveChange(CancellationToken cancellationToken)
         //{

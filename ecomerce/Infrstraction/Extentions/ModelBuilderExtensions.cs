@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 
-namespace EcommereceWeb.infrstraction.Extensions
+namespace EcommereceWeb.Infrstraction.Extensions
 {
     public static class ModelBuilderExtensions
     {

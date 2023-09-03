@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Target.Application.DTOs;
+using EcommereceWeb.Application.DTOs;
 
-namespace Target.Application.Interfaces.Common
+namespace EcommereceWeb.Application.Interfaces.Common
 {
     public interface ISigninManager
     {

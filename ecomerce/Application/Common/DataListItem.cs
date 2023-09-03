@@ -1,5 +1,5 @@
 ﻿
-namespace Application.Common
+namespace EcommereceWeb.Application.Common
 {
     public class DataListItem
     {

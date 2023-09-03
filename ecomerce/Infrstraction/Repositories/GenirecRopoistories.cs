@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using Target.Application.Interfaces.Common;
-using Target.Infrastraction.Data;
+using EcommereceWeb.Application.Interfaces.Common;
+using EcommereceWeb.Infrastraction.Data;
 
-namespace infrstraction.Repositories
+namespace EcommereceWeb.Infrstraction.Repositories
 {
     public abstract class GenirecRopoistories<T>: IGenericRepository<T> where T : class
     {

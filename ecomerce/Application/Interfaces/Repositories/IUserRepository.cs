@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EcommereceWeb.Application.Constant
+namespace EcommereceWeb.Application.Interfaces.Repositories
 {
-    public class ProjectConstant
+    public interface IUserRepository
     {
-        public const string ProjectUpload = "Upload";
+        Task<User>
     }
 }

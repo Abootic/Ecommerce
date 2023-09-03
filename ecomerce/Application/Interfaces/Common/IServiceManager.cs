@@ -1,8 +1,8 @@
 ﻿
 using Sitex.Application.Interfaces.Services;
-using Target.Application.Interfaces.Services;
+using EcommereceWeb.Application.Interfaces.Services;
 
-namespace Target.Application.Interfaces.Common
+namespace EcommereceWeb.Application.Interfaces.Common
 {
     public interface IServiceManager
     {

@@ -1,6 +1,6 @@
 ﻿
 
-namespace Target.Application.Interfaces.Common
+namespace EcommereceWeb.Application.Interfaces.Common
 {
     public class Message
     {

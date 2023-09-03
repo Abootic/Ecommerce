@@ -1,13 +1,13 @@
-﻿using Application.Common;
+﻿using EcommereceWeb.Application.Common;
 using EcommereceWeb.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Target.Application.Interfaces.Common;
+using EcommereceWeb.Application.Interfaces.Common;
 
-namespace Application.Interfaces.Repositories
+namespace EcommereceWeb.Application.Interfaces.Repositories
 {
     public interface ICurrencyRepository : IGenericRepository<Currency>
     {

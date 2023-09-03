@@ -1,15 +1,16 @@
-﻿using Application.Common;
-using Application.Interfaces.Repositories;
+﻿using EcommereceWeb.Application.Common;
+using EcommereceWeb.Application.Interfaces.Repositories;
 using EcommereceWeb.Domain.Entity;
-using infrstraction.Repositories;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Target.Infrastraction.Data;
+using EcommereceWeb.Infrastraction.Data;
+using EcommereceWeb.Infrstraction.Repositories;
 
-namespace Infrstraction.Repositories
+namespace EcommereceWeb.Infrstraction.Repositories
 {
     public class MainClassificationRepository : GenirecRopoistories<MainClassification>, IMainClassificationRepository
     {

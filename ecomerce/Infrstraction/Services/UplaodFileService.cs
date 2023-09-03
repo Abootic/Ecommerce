@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Target.Application.Constant;
-using Target.Application.Interfaces.Common;
+using EcommereceWeb.Application.Constant;
+using EcommereceWeb.Application.Interfaces.Common;
 
-namespace Target.Infrastraction.Services
+namespace EcommereceWeb.Infrastraction.Services
 {
     public class UplaodFileService : IUplaodFileService
     {

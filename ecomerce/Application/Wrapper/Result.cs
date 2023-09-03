@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Target.Application.Interfaces.Common;
+using EcommereceWeb.Application.Interfaces.Common;
 
-namespace Target.Application.Wrapper
+namespace EcommereceWeb.Application.Wrapper
 {
     public class Result : IResult
     {

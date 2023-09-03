@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Target.Application.Common
+namespace EcommereceWeb.Application.Common
 {
     public class DtResult
     {

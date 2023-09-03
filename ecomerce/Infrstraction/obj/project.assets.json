@@ -855,7 +855,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.10"
         },
         "compile": {
           "bin/placeholder/EcommereceWeb.Domain.dll": {}

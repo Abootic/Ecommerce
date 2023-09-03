@@ -1,11 +1,11 @@
 ﻿
 using System.Linq.Expressions;
-using Target.Application.Common;
-using Target.Application.DTOs;
-using Target.Application.Interfaces.Common;
-using Target.Application.Wrapper;
+using EcommereceWeb.Application.Common;
+using EcommereceWeb.Application.DTOs;
+using EcommereceWeb.Application.Interfaces.Common;
+using EcommereceWeb.Application.Wrapper;
 
-namespace Target.Application.Interfaces.Common
+namespace EcommereceWeb.Application.Interfaces.Common
 {
     public interface IUserManager
     {

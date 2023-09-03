@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrstraction.EntityConfigration
+namespace EcommereceWeb.Infrstraction.EntityConfigration
 {
     public class MasterDataConfigration : IEntityTypeConfiguration<MasterData>
     {

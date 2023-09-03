@@ -1,5 +1,5 @@
 ﻿
-namespace Target.Application.Wrapper
+namespace EcommereceWeb.Application.Wrapper
 {
     public class DtResult<T>
     {

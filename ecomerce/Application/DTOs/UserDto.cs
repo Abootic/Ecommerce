@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EcommereceWeb.Application.Constant
+namespace EcommereceWeb.Application.DTOs
 {
-    public class ProjectConstant
+    public class UserDto
     {
-        public const string ProjectUpload = "Upload";
     }
 }
