@@ -1,5 +1,0 @@
-D:\wejo\dotnetcore\ecomerce\Infrstraction\obj\Debug\net6.0\Infrstraction.csproj.AssemblyReference.cache
-D:\wejo\dotnetcore\ecomerce\Infrstraction\obj\Debug\net6.0\Infrstraction.GeneratedMSBuildEditorConfig.editorconfig
-D:\wejo\dotnetcore\ecomerce\Infrstraction\obj\Debug\net6.0\Infrstraction.AssemblyInfoInputs.cache
-D:\wejo\dotnetcore\ecomerce\Infrstraction\obj\Debug\net6.0\Infrstraction.AssemblyInfo.cs
-D:\wejo\dotnetcore\ecomerce\Infrstraction\obj\Debug\net6.0\Infrstraction.csproj.CoreCompileInputs.cache

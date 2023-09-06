@@ -1,0 +1,15 @@
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\EcommereceWeb.Application.csproj.AssemblyReference.cache
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\EcommereceWeb.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\EcommereceWeb.Application.AssemblyInfoInputs.cache
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\EcommereceWeb.Application.AssemblyInfo.cs
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\EcommereceWeb.Application.csproj.CoreCompileInputs.cache
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\bin\Debug\net6.0\EcommereceWeb.Application.deps.json
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\bin\Debug\net6.0\EcommereceWeb.Application.dll
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\bin\Debug\net6.0\EcommereceWeb.Application.pdb
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\bin\Debug\net6.0\EcommereceWeb.Domain.dll
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\bin\Debug\net6.0\EcommereceWeb.Domain.pdb
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\EcommereceWeb.Application.csproj.CopyComplete
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\EcommereceWeb.Application.dll
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\refint\EcommereceWeb.Application.dll
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\EcommereceWeb.Application.pdb
+D:\wejo\dotnetcore\EcommereceWeb\EcommereceWeb.Application\obj\Debug\net6.0\ref\EcommereceWeb.Application.dll
