@@ -10,7 +10,7 @@ namespace EcommereceWeb.Domain.Entity
         public string? EnSubSubClassificationName { get; set; }  //AddedNew
         public int? SubClassificationBaseId { get; set; } // from  Subclassification model
         public string? ImageUrl { get; set; }
-        public virtual SubClassificationBase? SubClassificationBases { get; set; }
+        public virtual SubClassificationBase? SubClassificationBase { get; set; }
         public virtual ICollection<Product> Products { get; set; }
 
 

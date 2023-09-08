@@ -24,6 +24,7 @@ namespace EcommereceWeb.Application.Interfaces.Common
         ISubClassificationBaseRepository SubClassificationBaseRepository { get; }
         ISubSubclassificationRepository SubSubclassificationRepository { get; }
         ITaxConfigurationRepository TaxConfigurationRepository { get; }
+        IUserRepository UserRepository { get; }
 
     }
 }

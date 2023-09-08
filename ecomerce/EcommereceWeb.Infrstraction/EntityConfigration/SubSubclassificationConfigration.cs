@@ -18,9 +18,9 @@ namespace EcommereceWeb.Infrstraction.EntityConfigration
             builder.Property(x => x.Id).HasColumnName(@"Id").HasColumnType("int").IsRequired().ValueGeneratedOnAdd().UseIdentityColumn();
             builder.Property(x => x.ArSubSubClassificationName).HasColumnName(@"ArSubSubClassificationName").HasColumnType("nvarchar(255)").IsRequired().HasMaxLength(255);
             builder.Property(x => x.EnSubSubClassificationName).HasColumnName(@"EnSubSubClassificationName").HasColumnType("nvarchar(255)").IsRequired(false).HasMaxLength(255);
-            builder.Property(x => x.ImageUrl).HasColumnName(@"ImageUrl").HasColumnType("nvarchar(255)").IsRequired().HasMaxLength(255);
-            builder.Property(x => x.SubClassificationBaseId).HasColumnName(@"SubClassificationBaseId").HasColumnType("int)").IsRequired(false);
-            builder.HasOne(a => a.SubClassificationBases).WithMany(b => b.SubSubclassifications).HasForeignKey(b => b.SubClassificationBaseId).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_SubClassificationBases_SubSubclassifications");
+            builder.Property(x => x.ImageUrl).HasColumnName(@"ImageUrl").HasColumnType("nvarchar(255)").IsRequired(false).HasMaxLength(255);
+            builder.Property(x => x.SubClassificationBaseId).HasColumnName(@"SubClassificationBaseId").HasColumnType("int").IsRequired(false);
+            builder.HasOne(a => a.SubClassificationBase).WithMany(b => b.SubSubclassifications).HasForeignKey(b => b.SubClassificationBaseId).OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_SubClassificationBaseId_SubSubclassifications");
 
 
         }

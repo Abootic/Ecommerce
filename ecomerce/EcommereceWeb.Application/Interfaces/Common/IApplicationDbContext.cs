@@ -27,7 +27,7 @@ namespace EcommereceWeb.Application.Interfaces.Common
         DbSet<ProductUnitSize> ProductUnitSize { get; }
         DbSet<Slider> Slider { get; }
         DbSet<SubClassificationBase> SubClassificationBase { get; }
-        DbSet<SubSubclassification> SubSubclassification { get; }
+      //  DbSet<SubSubclassification> SubSubclassification { get; }
         DbSet<TaxConfiguration> TaxConfiguration { get; }
 
         Task<int> SaveChangeAsync(CancellationToken cancellationToken);

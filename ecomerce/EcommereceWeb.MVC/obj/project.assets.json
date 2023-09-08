@@ -1344,6 +1344,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Autofac": "7.1.0",
           "Autofac.Extensions.DependencyInjection": "8.0.0",
           "EcommereceWeb.Application": "1.0.0",
@@ -3096,11 +3098,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\wejo\\dotnetcore\\EcommereceWeb\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
+      "projectUniqueName": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
       "projectName": "EcommereceWeb.MVC",
-      "projectPath": "D:\\wejo\\dotnetcore\\EcommereceWeb\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
+      "projectPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
       "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-      "outputPath": "D:\\wejo\\dotnetcore\\EcommereceWeb\\EcommereceWeb.MVC\\obj\\",
+      "outputPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3118,8 +3120,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\wejo\\dotnetcore\\EcommereceWeb\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {
-              "projectPath": "D:\\wejo\\dotnetcore\\EcommereceWeb\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj"
+            "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {
+              "projectPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj"
             }
           }
         }

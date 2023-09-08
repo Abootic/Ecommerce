@@ -28,10 +28,16 @@ namespace EcommereceWeb.Application.DTOs
         public int? TaxType { get; set; }// نوع الضريبة  هل قيمة او نسبة مئوية
 
 
-        public string? KeyWords { get; set; }   
+        public string? KeyWords { get; set; }
+        public int? BrandId { get; set; }
+                                 
+        public int? MainClassificationId { get; set; }
+        public int? BasicClassificationId { get; set; }
+        public int? SubClassificationBaseId { get; set; }
+        public int? SubSubclassificationId { get; set; }
 
     }
-      public class ProductDto
+    public class ProductDto
     {
         [Required]
         [Display(Name = "الرقم")]
@@ -74,7 +80,13 @@ namespace EcommereceWeb.Application.DTOs
         [Display(Name = "الكلمات المفتاحية")]
         public string? ArKeyWords { get; set; }
         [Display(Name = "الكلمات المفتاحية انجليزي")]
-        public string? EnKeyWords { get; set; }     
+        public string? EnKeyWords { get; set; }
+        public int? BrandId { get; set; }//العلامة  التجارية
+                                         // from brand model
+        public int? MainClassificationId { get; set; }
+        public int? BasicClassificationId { get; set; }
+        public int? SubClassificationBaseId { get; set; }
+        public int? SubSubclassificationId { get; set; }
 
     }
 

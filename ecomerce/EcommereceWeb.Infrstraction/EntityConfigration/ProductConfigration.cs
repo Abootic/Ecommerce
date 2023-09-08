@@ -19,19 +19,19 @@ namespace EcommereceWeb.Infrstraction.EntityConfigration
             builder.Property(x => x.ArName).HasColumnName(@"ArName").HasColumnType("nvarchar(255)").IsRequired().HasMaxLength(255);
             builder.Property(x => x.EnName).HasColumnName(@"EnName").HasColumnType("nvarchar(255)").IsRequired(false).HasMaxLength(255);
             builder.Property(x => x.Code).HasColumnName(@"Code").HasColumnType("nvarchar(255)").IsRequired().HasMaxLength(255);
-            builder.Property(x => x.EnDetails).HasColumnName(@"EnDetails").HasColumnType("MAX").IsRequired();
-            builder.Property(x => x.ArDetails).HasColumnName(@"ArDetails").HasColumnType("MAX").IsRequired();
+            builder.Property(x => x.EnDetails).HasColumnName(@"EnDetails").HasColumnType("nvarchar(MAX)").IsRequired(false);
+            builder.Property(x => x.ArDetails).HasColumnName(@"ArDetails").HasColumnType("nvarchar(MAX)").IsRequired(false);
             builder.Property(x => x.Logo).HasColumnName(@"Logo").HasColumnType("nvarchar(255)").IsRequired().HasMaxLength(255);
             builder.Property(x => x.VideoProvider).HasColumnName(@"VideoProvider").HasColumnType("nvarchar(255)").IsRequired(false).HasMaxLength(255);
             builder.Property(x => x.VideoUrl).HasColumnName(@"VideoUrl").HasColumnType("nvarchar(255)").IsRequired(false).HasMaxLength(255);
 
-            builder.Property(x => x.Price).HasColumnName(@"Price").HasColumnType("decimal").IsRequired().HasPrecision(0,20);
-            builder.Property(x => x.Cost).HasColumnName(@"Cost").HasColumnType("decimal").IsRequired(false).HasPrecision(0,20);
-            builder.Property(x => x.Discount).HasColumnName(@"Discount").HasColumnType("decimal").IsRequired(false).HasPrecision(0,20);
-            builder.Property(x => x.MinOrderQuantity).HasColumnName(@"MinOrderQuantity").HasColumnType("decimal").IsRequired(false).HasPrecision(0,20);
-            builder.Property(x => x.MaxOrderQuantity).HasColumnName(@"MaxOrderQuantity").HasColumnType("decimal").IsRequired(false).HasPrecision(0,20);
+            builder.Property(x => x.Price).HasColumnName(@"Price").HasColumnType("decimal(10, 2)").IsRequired();
+            builder.Property(x => x.Cost).HasColumnName(@"Cost").HasColumnType("decimal(10, 2)").IsRequired(false);
+            builder.Property(x => x.Discount).HasColumnName(@"Discount").HasColumnType("decimal(10, 2)").IsRequired(false);
+            builder.Property(x => x.MinOrderQuantity).HasColumnName(@"MinOrderQuantity").HasColumnType("decimal(10, 2)").IsRequired(false);
+            builder.Property(x => x.MaxOrderQuantity).HasColumnName(@"MaxOrderQuantity").HasColumnType("decimal(10, 2)").IsRequired(false);
             builder.Property(x => x.Quantity).HasColumnName(@"Quantity").HasColumnType("int").IsRequired(false);
-            builder.Property(x => x.Price).HasColumnName(@"Price").HasColumnType("decimal").IsRequired(false);
+            builder.Property(x => x.Price).HasColumnName(@"Price").HasColumnType("decimal(10, 2)").IsRequired(false);
             builder.Property(x => x.TaxType).HasColumnName(@"TaxType").HasColumnType("int").IsRequired();
             builder.Property(x => x.ArKeyWords).HasColumnName(@"ArKeyWords").HasColumnType("nvarchar(255)").IsRequired(false);
             builder.Property(x => x.EnKeyWords).HasColumnName(@"ArKeyWords").HasColumnType("nvarchar(255)").IsRequired(false);

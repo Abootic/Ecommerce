@@ -12,7 +12,7 @@ namespace EcommereceWeb.Application.DTOs
         public string SubSubClassificationName { get; set; } = null!;
       
         public int? SubClassificationBaseId { get; set; } 
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
     }
      public class SubSubclassificationDto

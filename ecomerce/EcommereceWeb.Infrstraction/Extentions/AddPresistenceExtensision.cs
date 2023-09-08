@@ -18,10 +18,11 @@ namespace EcommereceWeb.Infrstraction.Extensions
 
         public static IServiceCollection AddPresistence(this IServiceCollection service,IConfiguration configuration)
         {
-            service.AddDbContext<ApplicationDbContext>(op =>
-
-                op.UseSqlServer(configuration.GetConnectionString("SqlServerDB")));
-           service.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            string conString = "Server=DESKTOP-VC0T8OV\\AQLAN;Database=WebEcommerce;Trusted_Connection = yes;";
+            service.AddDbContext<ApplicationDbContext>(op => op.UseSqlServer(conString));
+            //service.AddDbContext<ApplicationDbContext>(op =>op.UseSqlServer(configuration.GetConnectionString("SqlServerDB")));
+           
+            service.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
           
             service.AddIdentity<User, IdentityRole>(bulder =>
             {

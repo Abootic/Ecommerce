@@ -68,7 +68,7 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(460)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("UserId");
 
                     b.HasKey("Id")
@@ -790,8 +790,7 @@ namespace EcommereceWeb.Infrstraction.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("ArDetails")
-                        .IsRequired()
-                        .HasColumnType("MAX")
+                        .HasColumnType("nvarchar(MAX)")
                         .HasColumnName("ArDetails");
 
                     b.Property<string>("ArKeyWords")
@@ -820,8 +819,7 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnName("Code");
 
                     b.Property<decimal?>("Cost")
-                        .HasPrecision(0, 20)
-                        .HasColumnType("decimal(0,20)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("Cost");
 
                     b.Property<DateTime>("CreatedAt")
@@ -837,13 +835,11 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("Discount")
-                        .HasPrecision(0, 20)
-                        .HasColumnType("decimal(0,20)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("Discount");
 
                     b.Property<string>("EnDetails")
-                        .IsRequired()
-                        .HasColumnType("MAX")
+                        .HasColumnType("nvarchar(MAX)")
                         .HasColumnName("EnDetails");
 
                     b.Property<string>("EnKeyWords")
@@ -879,13 +875,11 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnName("MainClassificationId");
 
                     b.Property<decimal?>("MaxOrderQuantity")
-                        .HasPrecision(0, 20)
-                        .HasColumnType("decimal(0,20)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("MaxOrderQuantity");
 
                     b.Property<decimal?>("MinOrderQuantity")
-                        .HasPrecision(0, 20)
-                        .HasColumnType("decimal(0,20)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("MinOrderQuantity");
 
                     b.Property<DateTime?>("ModifiedAt")
@@ -895,8 +889,7 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("Price")
-                        .HasPrecision(0, 20)
-                        .HasColumnType("decimal(0,20)")
+                        .HasColumnType("decimal(10,2)")
                         .HasColumnName("Price");
 
                     b.Property<int?>("Quantity")
@@ -1146,7 +1139,7 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnName("Rating");
 
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(460)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("UserId");
 
                     b.HasKey("Id")
@@ -1547,7 +1540,6 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnName("EnSubSubClassificationName");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("ImageUrl");
@@ -1571,7 +1563,7 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("SubClassificationBaseId")
-                        .HasColumnType("int)")
+                        .HasColumnType("int")
                         .HasColumnName("SubClassificationBaseId");
 
                     b.HasKey("Id")
@@ -1660,12 +1652,40 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModfiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModfiedBy")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -1681,6 +1701,9 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("Others")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
@@ -1693,12 +1716,18 @@ namespace EcommereceWeb.Infrstraction.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("State")
+                        .HasColumnType("int");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("UserType")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -2019,12 +2048,12 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.SubSubclassification", b =>
                 {
-                    b.HasOne("EcommereceWeb.Domain.Entity.SubClassificationBase", "SubClassificationBases")
+                    b.HasOne("EcommereceWeb.Domain.Entity.SubClassificationBase", "SubClassificationBase")
                         .WithMany("SubSubclassifications")
                         .HasForeignKey("SubClassificationBaseId")
-                        .HasConstraintName("FK_SubClassificationBases_SubSubclassifications");
+                        .HasConstraintName("FK_SubClassificationBaseId_SubSubclassifications");
 
-                    b.Navigation("SubClassificationBases");
+                    b.Navigation("SubClassificationBase");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
