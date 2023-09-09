@@ -13,8 +13,10 @@ builder.Services.AddControllersWithViews();
 var configration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 builder.Services.ApplicationServices();
 builder.Services.AddPresistence(configration);
-builder.Services.AddScoped<ICurrentUserServices, CurrentUserServices>();
+
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Services.AddScoped<ICurrentUserServices, CurrentUserServices>();
+builder.Services.AddScoped<IUplaodFileService, UplaodFileService>();
 builder.Host.ConfigureContainer<ContainerBuilder>(builder =>
 {
     builder.RegisterModule(new EcommereceWeb.Infrstraction.DI.MainModule());
