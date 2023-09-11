@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using EcommereceWeb.Infrstraction.Identity;
 
 
 namespace EcommereceWeb.Infrstraction.Extensions
@@ -32,7 +33,8 @@ namespace EcommereceWeb.Infrstraction.Extensions
 
 
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<ApplicationDbContext>();
-            service.AddScoped<IUnitOfWork, UnitOfWork>();
+            //service.AddScoped<IUnitOfWork, UnitOfWork>();
+            service.AddScoped<ISigninManager, SigninManger>();
             return service;
            
             

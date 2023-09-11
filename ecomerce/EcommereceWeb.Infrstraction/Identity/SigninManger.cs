@@ -29,7 +29,7 @@ namespace EcommereceWeb.Infrstraction.Identity
             if (user == null)
             {
 
-                return await Result<UserTokenRequst>.FailAsync($"the user that has this username {username} not Exsit ");
+                return await Result<UserTokenRequst>.FailAsync($" اسم المستخد الذي ادخلتة {username}  غير موجود    ");
 
             }
             var res = await _signinManger.PasswordSignInAsync(username, password, isPerisistent, LockOutoNFauilar);

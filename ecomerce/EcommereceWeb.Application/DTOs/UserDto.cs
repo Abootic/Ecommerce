@@ -25,7 +25,7 @@ namespace EcommereceWeb.Application.DTOs
         [Display(Name = " تأكيد كلمة السر ")]
         public string? ConfirmPassword { get; set; }
         [Display(Name = "نوع المستخدم")]
-        public string UserType { get; set; }
+        public string? UserType { get; set; }
         public int State { get; set; } = 1;
         public string? CreatedBy { get; set; }
         public string? LastModfiedBy { get; set; }

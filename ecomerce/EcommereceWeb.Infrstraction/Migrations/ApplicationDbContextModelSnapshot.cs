@@ -1676,7 +1676,9 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("Image");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -1739,7 +1741,30 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("AspNetUsers", (string)null);
+                    b.ToTable("AspNetUsers", "dbo");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "4a2e1650-21bd-4e67-832e-2e99c267a2e4",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "805001dc-aa56-40b1-a451-d449bae04fa8",
+                            CreatedAt = new DateTime(2023, 9, 10, 21, 39, 36, 447, DateTimeKind.Local).AddTicks(8201),
+                            Email = "Admin@Gmail.com",
+                            EmailConfirmed = false,
+                            FullName = "Admin",
+                            Image = "unkown",
+                            IsDeleted = false,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ADMIN@GMAIL.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMrtQmCgm5z+Z7/UVpqfllHWn2fo/804KFN94854N2wojNSsfx3bsPkXxOsfjFQ+YA==",
+                            PhoneNumber = "123456789",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "e7159947-eebb-4f49-8d9f-310e6a2f2cac",
+                            TwoFactorEnabled = false,
+                            UserName = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -1766,7 +1791,37 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles", (string)null);
+                    b.ToTable("AspNetRoles", "dbo");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "ca34737e-e863-40aa-a82f-adbd3207988a",
+                            ConcurrencyStamp = "b9fce677-ff9b-4d55-93b0-dcb97d12b11c",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "8c1f7d67-0b9e-44ef-83d4-6e4ef72d3b6f",
+                            ConcurrencyStamp = "ca3b3647-fb97-40a0-ad64-8a3d645cdc03",
+                            Name = "Manager",
+                            NormalizedName = "OWNER"
+                        },
+                        new
+                        {
+                            Id = "eedae456-fa3a-47a0-9764-c634214bbe42",
+                            ConcurrencyStamp = "a8333576-d0ec-4caa-925c-cf7113f8df7d",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        },
+                        new
+                        {
+                            Id = "cb512048-1ad1-437b-8930-1b70a31e4d5c",
+                            ConcurrencyStamp = "de8c59e2-0bf9-451e-8c0f-672e0335fbf2",
+                            Name = "ServiceProvider",
+                            NormalizedName = "SERVICEPROVIDER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -1853,7 +1908,14 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles", (string)null);
+                    b.ToTable("AspNetUserRoles", "dbo");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "4a2e1650-21bd-4e67-832e-2e99c267a2e4",
+                            RoleId = "ca34737e-e863-40aa-a82f-adbd3207988a"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>

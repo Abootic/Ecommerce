@@ -17,13 +17,15 @@ namespace EcommereceWeb.Infrstraction.Repositories
     public class UserRepository:IUserRepository
     {
         private readonly UserManager<User> _userManager;
+
         private readonly IMapper _mapper;
-        public UserRepository(UserManager<User> userManager, IMapper mapper)
+
+        public UserRepository(UserManager<User> userManager,  IMapper mapper)
         {
             _userManager = userManager;
+           
             _mapper = mapper;
         }
-
 
         public async Task<IResult<UserDto>> AddAsync(UserDto entity, CancellationToken cancellationToken = default)
         {
@@ -41,7 +43,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
                     Email = entity.Email,
                     PhoneNumber = entity.PhoneNamber,
                     //Image = entity.Image,
-                    UserType = entity.UserType,
+                    UserType = "user",
                     State = entity.State,
                     CreatedBy = entity.CreatedBy,
 
@@ -94,29 +96,6 @@ namespace EcommereceWeb.Infrstraction.Repositories
         }
 
 
-        //public async Task<Boolean> FindByEmailAsync(string email, CancellationToken cancellationToken = default)
-        //{
-
-
-
-        //    var user = await _userManager.FindByEmailAsync(email);
-
-        //    if (user != null)
-        //    {
-        //        return true;
-        //        Console.WriteLine($"the user FindByEmailAsync has data {user.UserName} and {user.Email}");
-        //    }
-        //    else
-        //    {
-
-        //        return false;
-        //    }
-
-
-
-
-
-        //}
 
         public async Task<IResult<User>> FindByIdAsync(string id, CancellationToken cancellationToken = default)
         {
@@ -191,12 +170,20 @@ namespace EcommereceWeb.Infrstraction.Repositories
             try
             {
                 var res = await _userManager.Users.ToListAsync();
-                if (res != null)
+            var users = new List<UserDto>();
+            if (res != null)
                 {
-                    var users = new List<UserDto>();
-
+                   
+                    
                     foreach (var item in res)
                     {
+                        var roles = await _userManager.GetRolesAsync(item);
+                        if (roles != null)
+                        {
+
+
+                            Console.WriteLine("dddddddddddd " + roles.First());
+                        }
                         var itemMap = new UserDto
                         {
                             Id = item.Id,
@@ -204,13 +191,14 @@ namespace EcommereceWeb.Infrstraction.Repositories
                             FullName = item.FullName,
                             //    Image = item.Image,
 
-                            //   PhoneNamber = item.PhoneNamber,
+                           // PhoneNamber = item.PhoneNumber,
                             State = item.State.Value,
                             UserName = item.UserName,
-                            UserType = item.UserType,
+                            UserType ="jj"//  roles.First(),
 
                         };
                         users.Add(itemMap);
+                        
                     }
                     return await Result<IEnumerable<UserDto>>.SucessAsync(users, "user record");
                 }
@@ -218,6 +206,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
             }
             catch (Exception ex)
             {
+
                 return await Result<IEnumerable<UserDto>>.FailAsync($"catch error {ex.Message}");
             }
 

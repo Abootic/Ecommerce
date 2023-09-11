@@ -9,7 +9,7 @@ namespace EcommereceWeb.Application.Interfaces.Common
         IBasicClassificationService BasicClassificationService { get; }
         IBrandService BrandService { get; }
         IConfigurationService ConfigurationService { get; }
-        IContactServices ContactServices { get; }
+        IContactService ContactServices { get; }
         ICouponItemService CouponItemService { get; }
         ICouponService CouponService { get; }
         ICurrencyService CurrencyService { get; }
@@ -29,6 +29,7 @@ namespace EcommereceWeb.Application.Interfaces.Common
         ITaxConfigurationService TaxConfigurationService { get; }
         IUserService UserService { get; }
         IUplaodFileService UplaodFileService { get; }
+        IRoleService RoleService { get; }
 
 
     }

@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" href="~/app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="~/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
-
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/vendors-rtl.min.css">
     <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/charts/apexcharts.css">
@@ -249,10 +249,26 @@
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
                 <li class=" nav-item">
                     <a href="../../../html/rtl/vertical-menu-template/index.html"><i class="menu-livicon" data-icon="desktop"></i><span class="menu-title text-truncate" data-i18n="Dashboard">Dashboard</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-50 ml-auto">2</span></a>
-                    <ul class="menu-content">
-                        <li class="active">
-                            <a class="d-flex align-items-center" asp-controller="Account" asp-action="Index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="eCommerce">User</span></a>
+                    <ul class="navigation navigation-main">
+                        <li class=" nav-item">
+                            <a href="../../../html/rtl/vertical-menu-template/index.html"><i class="menu-livicon" data-icon="user"></i><span class="menu-title text-truncate" data-i18n="Dashboard">User setting</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-50 ml-auto">2</span></a>
+
+                             <ul class="menu-content">
+                                <li class="active">
+                                <a class="d-flex align-items-center" asp-controller="Account" asp-action="Index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="eCommerce">User</span></a>
+                            </li> 
+                            <li class="active">
+                                <a class="d-flex align-items-center" asp-controller="Account" asp-action="Index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Rozle</span></a>
+                            </li> 
+                            <li class="active">
+                                    <a class="d-flex align-items-center" asp-controller="UserAccess" asp-action="Login"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Rozle</span></a>
+                            </li>
+
+                            </ul>
+
+                          
                         </li>
+                         
                         <li>
                             <a class="d-flex align-items-center" href="dashboard-analytics.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Analytics">Analytics</span></a>
                         </li>
@@ -697,6 +713,9 @@
     </footer>
     <!-- END: Footer-->
     <!-- BEGIN: Vendor JS-->
+    <script defer src="~/lib/jquery/dist/jquery.min.js"></script>
+   
+    <script defer src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/app-assets/vendors/js/vendors.min.js"></script>
     <script src="~/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
     <script src="~/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>

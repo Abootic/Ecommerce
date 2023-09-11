@@ -126,6 +126,9 @@ namespace EcommereceWeb.Infrastraction.Data
             modelBuilder.ApplyConfiguration(new SubSubclassificationConfigration());
             modelBuilder.ApplyConfiguration(new TaxConfigurationConfigration());
             modelBuilder.ApplyConfiguration(new ProductEvaluatonConfigration());
+            modelBuilder.ApplyConfiguration(new UserRoleConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
 
           
             OnModelCreatingPartial(modelBuilder);

@@ -4,6 +4,7 @@ using EcommereceWeb.Infrstraction.Extensions;
 using EcommereceWeb.Application.Extensions;
 using EcommereceWeb.Application.Interfaces.Common;
 using EcommereceWeb.MVC.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,14 +15,25 @@ var configration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Bu
 builder.Services.ApplicationServices();
 builder.Services.AddPresistence(configration);
 
-builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+
 builder.Services.AddScoped<ICurrentUserServices, CurrentUserServices>();
 builder.Services.AddScoped<IUplaodFileService, UplaodFileService>();
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(builder =>
 {
-    builder.RegisterModule(new EcommereceWeb.Infrstraction.DI.MainModule());
     builder.RegisterModule(new EcommereceWeb.Application.DI.MainModule());
+    builder.RegisterModule(new EcommereceWeb.Infrstraction.DI.MainModule());
+    
 });
+builder.Services.ConfigureApplicationCookie(builder =>
+{
+    builder.LoginPath = "/UserAccess/Login";
+    builder.LoginPath = "/UserAccess/Logout";
+    builder.AccessDeniedPath = "/Account/AccessDenaid";
+    builder.SlidingExpiration = true;
+
+});
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 var app = builder.Build();
 
@@ -36,8 +48,9 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseAuthentication();
 app.UseRouting();
-
+app.UseCookiePolicy();
 app.UseAuthorization();
 
 app.MapControllerRoute(

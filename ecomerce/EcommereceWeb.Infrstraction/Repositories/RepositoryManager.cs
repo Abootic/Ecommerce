@@ -18,7 +18,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
 
         private readonly IProductRepository productRepository ;
 
-        private readonly ICouponRepository couponRepository ;
+      //  private readonly ICouponRepository couponRepository ;
 
         private readonly ICouponItemRepository couponItemRepository ;
 
@@ -36,7 +36,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
 
         private readonly IProductSizeRepository productSizeRepository ;
 
-        private readonly IProductUnitSizeRepository productUnitSizeRepository ;
+       // private readonly IProductUnitSizeRepository productUnitSizeRepository ;
 
         private readonly ISliderRepository sliderRepository ;
 
@@ -46,14 +46,35 @@ namespace EcommereceWeb.Infrstraction.Repositories
 
         private readonly ITaxConfigurationRepository taxConfigurationRepository ;
         private readonly IUserRepository userRepository  ;
+        private readonly IUnitOfWork unitOfWork;
 
-        public RepositoryManager(IAddProductToFavoriteRepository addProductToFavoriteRepository, IBrandRepository brandRepository, IConfigurationRepository configurationRepository, IProductRepository productRepository, ICouponRepository couponRepository, ICouponItemRepository couponItemRepository, ICurrencyRepository currencyRepository, IMainClassificationRepository mainClassificationRepository, IMasterDataRepository masterDataRepository, IProductColorsRepository productColorsRepository, IProductEvaluatonRepository productEvaluatonRepository, IProductImageRepository productImageRepository, IProductSizeRepository productSizeRepository, IProductUnitSizeRepository productUnitSizeRepository, ISliderRepository sliderRepository, ISubClassificationBaseRepository subClassificationBaseRepository, ISubSubclassificationRepository subSubclassificationRepository, ITaxConfigurationRepository taxConfigurationRepository, IUserRepository userRepository)
+        public RepositoryManager(IAddProductToFavoriteRepository addProductToFavoriteRepository,
+            IBrandRepository brandRepository,
+            IConfigurationRepository configurationRepository,
+            IProductRepository productRepository,
+          //  ICouponRepository couponRepository,
+            ICouponItemRepository couponItemRepository,
+            ICurrencyRepository currencyRepository,
+            IMainClassificationRepository mainClassificationRepository,
+            IMasterDataRepository masterDataRepository,
+            IProductColorsRepository productColorsRepository,
+            IProductEvaluatonRepository productEvaluatonRepository,
+            IProductImageRepository productImageRepository,
+            IProductSizeRepository productSizeRepository,
+          //  IProductUnitSizeRepository productUnitSizeRepository,
+            ISliderRepository sliderRepository,
+            ISubClassificationBaseRepository subClassificationBaseRepository,
+            ISubSubclassificationRepository subSubclassificationRepository,
+            ITaxConfigurationRepository taxConfigurationRepository, 
+            IUserRepository userRepository,
+            IUnitOfWork unitOfWork
+            )
         {
             this.addProductToFavoriteRepository = addProductToFavoriteRepository;
             this.brandRepository = brandRepository;
             this.configurationRepository = configurationRepository;
             this.productRepository = productRepository;
-            this.couponRepository = couponRepository;
+            //this.couponRepository = couponRepository;
             this.couponItemRepository = couponItemRepository;
             this.currencyRepository = currencyRepository;
             this.mainClassificationRepository = mainClassificationRepository;
@@ -62,24 +83,20 @@ namespace EcommereceWeb.Infrstraction.Repositories
             this.productEvaluatonRepository = productEvaluatonRepository;
             this.productImageRepository = productImageRepository;
             this.productSizeRepository = productSizeRepository;
-            this.productUnitSizeRepository = productUnitSizeRepository;
+           // this.productUnitSizeRepository = productUnitSizeRepository;
             this.sliderRepository = sliderRepository;
             this.subClassificationBaseRepository = subClassificationBaseRepository;
             this.subSubclassificationRepository = subSubclassificationRepository;
             this.taxConfigurationRepository = taxConfigurationRepository;
             this.userRepository = userRepository;
+            this.unitOfWork = unitOfWork;
         }
 
         public IAddProductToFavoriteRepository AddProductToFavoriteRepository => addProductToFavoriteRepository;
         public IBrandRepository BrandRepository => brandRepository;
         public IConfigurationRepository ConfigurationRepository => configurationRepository;
         public IProductRepository ProductRepository => productRepository;
-
-
-
-        
-
-        public ICouponRepository CouponRepository =>couponRepository;
+       // public ICouponRepository CouponRepository =>couponRepository;
 
         public ICouponItemRepository CouponItemRepository => couponItemRepository;
         public ICurrencyRepository CurrencyRepository => currencyRepository;
@@ -88,14 +105,14 @@ namespace EcommereceWeb.Infrstraction.Repositories
 
         public IMasterDataRepository MasterDataRepository => masterDataRepository;
 
-        public IProductColorsRepository ProductColorsRepository => ProductColorsRepository;
+        public IProductColorsRepository ProductColorsRepository => productColorsRepository;
 
         public IProductEvaluatonRepository ProductEvaluatonRepository => productEvaluatonRepository;
         public IProductImageRepository ProductImageRepository => productImageRepository;
 
         public IProductSizeRepository ProductSizeRepository => productSizeRepository;
 
-        public IProductUnitSizeRepository ProductUnitSizeRepository => productUnitSizeRepository;
+       // public IProductUnitSizeRepository ProductUnitSizeRepository => productUnitSizeRepository;
 
         public ISliderRepository SliderRepository => sliderRepository;
 
@@ -106,6 +123,8 @@ namespace EcommereceWeb.Infrstraction.Repositories
         public ITaxConfigurationRepository TaxConfigurationRepository => taxConfigurationRepository;
 
         public IUserRepository UserRepository => userRepository;
+
+        public IUnitOfWork UnitOfWork => unitOfWork;
     }
 
 }

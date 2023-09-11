@@ -1,14 +1,30 @@
 ﻿using EcommereceWeb.Application.DTOs;
+using EcommereceWeb.Infrstraction.Repositories;
 using EcommereceWeb.MVC.Controllers.Base;
+using EcommereceWeb.MVC.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommereceWeb.MVC.Controllers
 {
     public class AccountController : BaseMVCController
     {
-        public IActionResult Index()
+      
+    public async Task<IActionResult>  Index()
         {
-            return View();
+        UserAndRoleVm userAndRoleVm = new UserAndRoleVm();
+        userAndRoleVm.obj = new UserDto();
+        var res=await ServiceManager.UserService.GetAll();
+                if (res.Status.Succeeded)
+                {
+                TempData["suc"] = res.Status.message;
+            userAndRoleVm.data = res.Data;
+                Console.WriteLine($"cccccccccccccccc     {res.Data.First().FullName}");
+            return View(userAndRoleVm);
+
+                }
+            TempData["err"] =res.Status.message;
+            return View(res.Data);
+           
         }
         public IActionResult Create()
         {
@@ -27,9 +43,9 @@ namespace EcommereceWeb.MVC.Controllers
                 if (res.Status.Succeeded)
                 {
                     TempData["suc"] = "done";
-                    return View(res);
+                    return View(res.Data);
                 }
-                TempData["err"] = "error";
+                TempData["err"] = $"error: {res.Status.message}";
                 return   View(userDto);
             }
             catch(Exception ex)

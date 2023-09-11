@@ -14,7 +14,7 @@ namespace EcommereceWeb.Application.Services
         private readonly IBasicClassificationService basicClassificationService;
         private readonly IBrandService brandService  ;
         private readonly IConfigurationService configurationService   ;
-        private readonly IContactServices contactServices;
+        private readonly IContactService contactServices;
         private readonly ICouponItemService couponItemService ;
         private readonly ICouponService couponService   ;
         private readonly ICurrencyService currencyService;
@@ -34,8 +34,9 @@ namespace EcommereceWeb.Application.Services
         private readonly ITaxConfigurationService taxConfigurationService;
         private readonly IUserService userService;
         private readonly IUplaodFileService uplaodFileService;
+        private readonly IRoleService roleService;
 
-        public ServiceManager(IAddProductToFavoriteService addProductToFavoriteService, IBasicClassificationService basicClassificationService, IBrandService brandService, IConfigurationService configurationService, IContactServices contactServices, ICouponItemService couponItemService, ICouponService couponService, ICurrencyService currencyService, IDetailsDataService detailsDataService, IMainClassificationService mainClassificationService, IMasterDataService masterDataService, IProductService productService, IProductAdditionalDetailsService productAdditionalDetailsService, IProductColorsService productColorsService, IProductEvaluatonService productEvaluatonService, IProductImageService productImageService, IProductSizeService productSizeService, IProductUnitSizeService productUnitSizeService, ISliderService sliderService, ISubClassificationBaseService subClassificationBaseService, ISubSubclassificationService subSubclassificationService, ITaxConfigurationService taxConfigurationService, IUserService userService, IUplaodFileService uplaodFileService)
+        public ServiceManager(IAddProductToFavoriteService addProductToFavoriteService, IBasicClassificationService basicClassificationService, IBrandService brandService, IConfigurationService configurationService, IContactService contactServices, ICouponItemService couponItemService, ICouponService couponService, ICurrencyService currencyService, IDetailsDataService detailsDataService, IMainClassificationService mainClassificationService, IMasterDataService masterDataService, IProductService productService, IProductAdditionalDetailsService productAdditionalDetailsService, IProductColorsService productColorsService, IProductEvaluatonService productEvaluatonService, IProductImageService productImageService, IProductSizeService productSizeService, IProductUnitSizeService productUnitSizeService, ISliderService sliderService, ISubClassificationBaseService subClassificationBaseService, ISubSubclassificationService subSubclassificationService, ITaxConfigurationService taxConfigurationService, IUserService userService, IUplaodFileService uplaodFileService, IRoleService roleService)
         {
             this.addProductToFavoriteService = addProductToFavoriteService;
             this.basicClassificationService = basicClassificationService;
@@ -61,6 +62,7 @@ namespace EcommereceWeb.Application.Services
             this.taxConfigurationService = taxConfigurationService;
             this.userService = userService;
             this.uplaodFileService = uplaodFileService;
+            this.roleService = roleService;
         }
 
         public IAddProductToFavoriteService AddProductToFavoriteService => addProductToFavoriteService;
@@ -71,7 +73,7 @@ namespace EcommereceWeb.Application.Services
 
         public IConfigurationService ConfigurationService => configurationService;
 
-        public IContactServices ContactServices => contactServices;
+        public IContactService ContactServices => contactServices;
 
         public ICouponItemService CouponItemService =>couponItemService;
 
@@ -109,6 +111,7 @@ namespace EcommereceWeb.Application.Services
 
         public IUserService UserService =>userService;
         public IUplaodFileService UplaodFileService => uplaodFileService;
+        public IRoleService RoleService => roleService;
 
     }
 }

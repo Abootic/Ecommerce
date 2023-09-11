@@ -10,7 +10,7 @@ namespace EcommereceWeb.Application.Interfaces.Common
         IBrandRepository BrandRepository { get; }
         IConfigurationRepository ConfigurationRepository { get; }
         IProductRepository ProductRepository { get; }
-        ICouponRepository CouponRepository { get; }
+        //ICouponRepository CouponRepository { get; }
          ICouponItemRepository CouponItemRepository { get; }
         ICurrencyRepository CurrencyRepository { get; }
         IMainClassificationRepository MainClassificationRepository { get; }
@@ -19,12 +19,13 @@ namespace EcommereceWeb.Application.Interfaces.Common
         IProductEvaluatonRepository ProductEvaluatonRepository { get; }
         IProductImageRepository ProductImageRepository { get; }
         IProductSizeRepository ProductSizeRepository { get; }
-        IProductUnitSizeRepository ProductUnitSizeRepository { get; }
+        //IProductUnitSizeRepository ProductUnitSizeRepository { get; }
         ISliderRepository SliderRepository { get; }
         ISubClassificationBaseRepository SubClassificationBaseRepository { get; }
         ISubSubclassificationRepository SubSubclassificationRepository { get; }
         ITaxConfigurationRepository TaxConfigurationRepository { get; }
         IUserRepository UserRepository { get; }
+        IUnitOfWork UnitOfWork { get; }
 
     }
 }
