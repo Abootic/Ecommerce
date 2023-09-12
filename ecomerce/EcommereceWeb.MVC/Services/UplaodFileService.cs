@@ -6,6 +6,12 @@ namespace EcommereceWeb.MVC.Services
     public class UplaodFileService : IUplaodFileService
     {
         private readonly IWebHostEnvironment _env;
+
+        public UplaodFileService(IWebHostEnvironment env)
+        {
+            _env = env;
+        }
+
         public bool DeleteImageLogoSponserFile(string fileNameWithPath, string folderName)
         {
             var ufolder = Path.Combine(_env.WebRootPath, ProjectConstant.ProjectUpload);
@@ -144,6 +150,7 @@ namespace EcommereceWeb.MVC.Services
         }
         public string UploadFileAsBase64(IFormFile Image, string SubFolder)
         {
+            
             List<string> imageName = new List<string>();
             if (Image == null)
             {
@@ -152,6 +159,7 @@ namespace EcommereceWeb.MVC.Services
 
             try
             {
+                Console.Write("55555555555555555555555555555");
                 string ext = Image.FileName.Split(".").Last();
 
 
@@ -222,15 +230,18 @@ namespace EcommereceWeb.MVC.Services
                     return "NotImage";
                 }
 
-            }
+        }
             catch (Exception ex)
             {
+              
+            
                 string uploadsFolder = Path.Combine(_env.WebRootPath, ProjectConstant.ProjectUpload);
+        
                 return "Erro Occured" + uploadsFolder;
             }
 
 
-        }
+}
 
         public string UploadPdfFile(IFormFile Image, string SubFolder)
         {

@@ -5,7 +5,7 @@ namespace EcommereceWeb.Application.Interfaces.Common
     public interface IGenericRepository<T> where T : class
     {
         IQueryable<T> Entities { get; }
-        Task<IEnumerable<T>> GetAll1();
+        Task<IEnumerable<T>> GetAll();
         Task<IEnumerable<T>> GetAll(int skip,int take);
         Task<IEnumerable<R>> GetAll<R>(Expression<Func<T,R>> selector);
         Task<IEnumerable<R>> GetAll<R>(Expression<Func<T,R>> selector,int skip,int take);
@@ -16,8 +16,8 @@ namespace EcommereceWeb.Application.Interfaces.Common
         Task<IEnumerable<R>> Find<R>(Expression<Func<T, R>> Selector, Expression<Func<T, bool>> expression,int skip,int take);
         Task Add(T entity);
         Task<T> AddAndReturn(T entity);
-         T Remove(T entity);
-        T Update(T entity);
+         Task<T> Remove(T entity);
+        Task<T> Update(T entity);
         Task<int> SaveChange();
 
 

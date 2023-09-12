@@ -51,7 +51,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
             return await _dbContext.Set<T>().Where(expression).Select(Selector).Skip(skip).Take(take).ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAll1()
+        public async Task<IEnumerable<T>> GetAll()
         {
             return await  _dbContext.Set<T>().AsNoTracking().ToListAsync();
         }
@@ -71,7 +71,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
             return await _dbContext.Set<T>().AsNoTracking().Select(selector).Skip(skip).Take(take).ToListAsync();
         }
 
-        public T Remove(T entity)
+        public async Task<T> Remove(T entity)
         {
             var res= _dbContext.Set<T>().Remove(entity);
          return   res.Entity;
@@ -84,7 +84,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
             return res;
         }
 
-        public virtual T Update(T entity)
+        public async Task<T> Update(T entity)
         {
             var res=  _dbContext.Set<T>().Update(entity);
             return res.Entity;

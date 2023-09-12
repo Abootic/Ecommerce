@@ -6697,8 +6697,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\js\\UploadEditFile.js",
+      "PackagePath": "staticwebassets\\js\\UploadEditFile.js"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\js\\uploadFiles.js",
+      "PackagePath": "staticwebassets\\js\\uploadFiles.js"
     },
     {
       "Id": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",

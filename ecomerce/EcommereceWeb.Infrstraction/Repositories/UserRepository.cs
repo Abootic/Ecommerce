@@ -177,13 +177,13 @@ namespace EcommereceWeb.Infrstraction.Repositories
                     
                     foreach (var item in res)
                     {
-                        var roles = await _userManager.GetRolesAsync(item);
-                        if (roles != null)
-                        {
+                        //var roles = await _userManager.GetRolesAsync(item);
+                        //if (roles != null)
+                        //{
 
 
-                            Console.WriteLine("dddddddddddd " + roles.First());
-                        }
+                        //    Console.WriteLine("dddddddddddd " + roles.First());
+                        //}
                         var itemMap = new UserDto
                         {
                             Id = item.Id,

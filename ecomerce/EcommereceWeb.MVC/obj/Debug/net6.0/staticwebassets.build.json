@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6GedhukKAw0nNWXBmuvMlxHP+DQ5VgT4TfXZBuXjdsk=",
+  "Hash": "IswZZM+TFjjlTIdyoXR5nWYT1i48ynONcTH91zwGAfs=",
   "Source": "EcommereceWeb.MVC",
   "BasePath": "_content/EcommereceWeb.MVC",
   "Mode": "Default",
@@ -28507,6 +28507,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\js\\UploadEditFile.js",
+      "SourceId": "EcommereceWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/EcommereceWeb.MVC",
+      "RelativePath": "js/UploadEditFile.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\UploadEditFile.js"
+    },
+    {
+      "Identity": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\js\\uploadFiles.js",
+      "SourceId": "EcommereceWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/EcommereceWeb.MVC",
+      "RelativePath": "js/uploadFiles.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\uploadFiles.js"
     },
     {
       "Identity": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

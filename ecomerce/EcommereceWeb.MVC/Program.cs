@@ -17,7 +17,7 @@ builder.Services.AddPresistence(configration);
 
 
 builder.Services.AddScoped<ICurrentUserServices, CurrentUserServices>();
-builder.Services.AddScoped<IUplaodFileService, UplaodFileService>();
+
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(builder =>
 {
@@ -34,7 +34,8 @@ builder.Services.ConfigureApplicationCookie(builder =>
 
 });
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
-
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IUplaodFileService, UplaodFileService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -46,6 +47,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.UseAuthentication();

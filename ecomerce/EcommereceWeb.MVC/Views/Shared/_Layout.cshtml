@@ -268,6 +268,38 @@
 
                           
                         </li>
+                        <li class=" nav-item">
+                            <a href="../../../html/rtl/vertical-menu-template/index.html"><i class="menu-livicon" data-icon="settings"></i><span class="menu-title text-truncate" data-i18n="Dashboard">website setting</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-50 ml-auto">2</span></a>
+
+                            <ul class="menu-content">
+                                <li class="active">
+                                    <a class="d-flex align-items-center" asp-controller="Configuration" asp-action="Index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="eCommerce">اعدادات الموقع </span></a>
+                                </li>
+                                
+                                <li class="active">
+                                    <a class="d-flex align-items-center" asp-controller="TaxConfiguration" asp-action="Index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="eCommerce"> الضريبة </span></a>
+                                </li>
+                              
+
+                            </ul>
+
+
+                        </li>
+                        <li class=" nav-item">
+                            <a href="../../../html/rtl/vertical-menu-template/index.html"><i class="menu-livicon" data-icon="settings"></i><span class="menu-title text-truncate" data-i18n="Dashboard">البيانات الاساسية</span><span class="badge badge-light-danger badge-pill badge-round float-right mr-50 ml-auto">2</span></a>
+
+                            <ul class="menu-content">
+                                <li class="active">
+                                    <a class="d-flex align-items-center" asp-controller="Brand" asp-action="Index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="eCommerce"> الوكالات </span></a>
+                                </li>
+
+                              
+
+
+                            </ul>
+
+
+                        </li>
                          
                         <li>
                             <a class="d-flex align-items-center" href="dashboard-analytics.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item text-truncate" data-i18n="Analytics">Analytics</span></a>
@@ -697,14 +729,14 @@
             </ul>
         </div>
     </div>
-    <!-- END: Main Menu-->
-  @*  <div class="container">
-        <main role="main" class="pb-3">*@
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
             @RenderBody()
-       @* </main>
-    </div>*@
-    <!-- BEGIN: Footer-->
-    <!-- BEGIN: Footer-->
+        </div>
+    </div>
     <footer class="footer footer-static footer-light">
         <p class="clearfix mb-0">
             <span class="float-left d-inline-block">2021 &copy; PIXINVENT</span><span class="float-right d-sm-inline-block d-none">Crafted with<i class="bx bxs-heart pink mx-50 font-small-3"></i>by<a class="text-uppercase" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a></span>

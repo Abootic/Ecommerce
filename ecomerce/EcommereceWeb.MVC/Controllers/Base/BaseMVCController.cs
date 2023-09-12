@@ -11,9 +11,10 @@ namespace EcommereceWeb.MVC.Controllers.Base
 
         public ActionResult UploadJobImage(IFormFile Image, string folderName)//notic how to make it dynamic function to all controller
         {
+            Console.WriteLine($"11111111111111111111111111111111111111111111111111  {Image.FileName} ");
 
             var img = ServiceManager.UplaodFileService.UploadFileAsBase64(Image, folderName);
-
+            Console.WriteLine($"222222222222222222222   {img}");
             if (img == "NotImage")
             {
                 return BadRequest("  png or jpg يجب ان تكون صيغة الصور من نوع  ");
