@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\EcommereceWeb.MVC.bundle.scp.css"
     },
     {
+      "Id": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\MainClassification\\6c1d0291-2f37-4685-9021-f4eeeb0f0fd1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\MainClassification\\6c1d0291-2f37-4685-9021-f4eeeb0f0fd1.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Slider\\357d6a8a-f08e-4da7-96c3-c60db7499215.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Slider\\357d6a8a-f08e-4da7-96c3-c60db7499215.jpg"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\app-assets\\css-rtl\\bootstrap-extended.css",
       "PackagePath": "staticwebassets\\app-assets\\css-rtl\\bootstrap-extended.css"
     },

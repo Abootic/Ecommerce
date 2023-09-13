@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SliderDto>
+﻿@model IEnumerable<MainClassificationDto>
 <!-- BEGIN: Content-->
 @if (TempData["err"] != null)
 {
@@ -17,7 +17,7 @@
 
 
                 <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-center">
-                    <button type="reset" class="btn btn-primary btn-block glow users-list-clear mb-0">   <a asp-controller="Slider" asp-action="Create" style="color:#fff">     إضافة </a></button>
+                    <button type="reset" class="btn btn-primary btn-block glow users-list-clear mb-0">   <a asp-controller="MainClassification" asp-action="Create" style="color:#fff">     إضافة </a></button>
                 </div>
             </div>
         </form>
@@ -38,10 +38,7 @@
                                         <th>  الصورة</th>
                                         <th> الاسم العربي</th>
                                         <th>الاسم الانجليزي</th>
-                                        <th> التفاصيل بالعربي </th>
-                                        <th> التفاصيل بالانجليزي </th>
-                                        <th>  وقت البداية </th>
-                                        <th> وقت الانتهاء </th>
+                                       
                                         <th>الحالة </th>
 
                                         <th>الاجرءات</th>
@@ -53,16 +50,13 @@
                                     {
                                         <tr>
                                             <td>
-                                                <img src="../../Upload/Slider/@item.ImgUrl" id="Image_Image" class="users-avatar-shadow rounded-circle" height="70" width="70">
+                                                <img src="../../Upload/MainClassification/@item.ImageUrl" id="Image_Image" class="users-avatar-shadow rounded-circle" height="70" width="70">
 
                                             </td>
 
-                                            <td>@item.ArName</td>
-                                            <td>@item.EnName</td>
-                                            <td>@item.ArDetails</td>
-                                            <td>@item.EnDetails</td>
-                                            <td>@item.StartDate</td>
-                                            <td>@item.EndDate</td>
+                                            <td>@item.ArMainClassificationName</td>
+                                            <td>@item.EnMainClassificationName</td>
+                                           
 
                                             <td>1</td>
                                             @* @if (item.State == 1)
@@ -78,8 +72,8 @@
                                                 <div class="btn-group dropend">
                                                     <span class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  <i class="ai-dots-vertical"></i></span>
                                                     <div class="dropdown-menu mx-1">
-                                                        <a class="dropdown-item" asp-controller="Slider" asp-action="Edit" asp-route-Id="@item.Id"> تعديل  </a>
-                                                        <a class="dropdown-item" asp-controller="Slider" asp-action="Delete" asp-route-Id="@item.Id"> حذف  </a>
+                                                        <a class="dropdown-item" asp-controller="MainClassification" asp-action="Edit" asp-route-Id="@item.Id"> تعديل  </a>
+                                                        <a class="dropdown-item" asp-controller="MainClassification" asp-action="Delete" asp-route-Id="@item.Id"> حذف  </a>
                                                     </div>
 
 

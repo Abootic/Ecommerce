@@ -1,14 +1,15 @@
 ﻿using EcommereceWeb.Application.DTOs;
+using EcommereceWeb.Application.Services;
 using EcommereceWeb.MVC.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EcommereceWeb.MVC.Controllers
 {
-    public class SliderController : BaseMVCController
+    public class MainClassificationController : BaseMVCController
     {
         public async Task<IActionResult> Index()
         {
-            var res = await ServiceManager.SliderService.GetAll();
+            var res = await ServiceManager.MainClassificationService.GetAll();
             if (res.Status.Succeeded)
             {
                 return View(res.Data);
@@ -22,11 +23,11 @@ namespace EcommereceWeb.MVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(SliderDto entity)
+        public async Task<IActionResult> Create(MainClassificationDto entity)
         {
 
             if (entity == null) { TempData["err"] = "null value"; return View(entity); }
-            var res = await ServiceManager.SliderService.Add(entity);
+            var res = await ServiceManager.MainClassificationService.Add(entity);
             if (res.Status.Succeeded)
             {
                 TempData["suc"] = res.Status.message;
@@ -38,7 +39,7 @@ namespace EcommereceWeb.MVC.Controllers
 
         public async Task<IActionResult> Edit(int Id)
         {
-            var res = await ServiceManager.SliderService.GetById(Id);
+            var res = await ServiceManager.MainClassificationService.GetById(Id);
             if (res.Status.Succeeded)
             {
                 return View(res.Data);
@@ -49,13 +50,14 @@ namespace EcommereceWeb.MVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(SliderDto entity)
+        public async Task<IActionResult> Edit(MainClassificationDto entity)
         {
 
             if (entity == null) { TempData["err"] = "null value"; return View(entity); }
-            var res = await ServiceManager.SliderService.Update(entity);
+            var res = await ServiceManager.MainClassificationService.Update(entity);
             if (res.Status.Succeeded)
             {
+
                 TempData["suc"] = res.Status.message;
                 return RedirectToAction("Index");
             }
@@ -64,11 +66,11 @@ namespace EcommereceWeb.MVC.Controllers
         }
         public async Task<IActionResult> Delete(int Id)
         {
-            var res = await ServiceManager.SliderService.Remove(Id);
+            var res = await ServiceManager.MainClassificationService.Remove(Id);
             if (res.Status.Succeeded)
             {
-                const string folderName = "Slider";
-                var deleteRes = ServiceManager.UplaodFileService.DeleteImageFile(res.Data.ImgUrl, folderName);
+                const string folderName = "MainClassification";
+                var deleteRes = ServiceManager.UplaodFileService.DeleteImageFile(res.Data.ImageUrl, folderName);
 
 
                 if (deleteRes == true)
@@ -87,7 +89,6 @@ namespace EcommereceWeb.MVC.Controllers
             TempData["err"] = res.Status.message;
             return RedirectToAction("Index");
         }
-
 
     }
 }

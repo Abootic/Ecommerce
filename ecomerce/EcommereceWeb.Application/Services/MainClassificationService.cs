@@ -1,6 +1,9 @@
-﻿using EcommereceWeb.Application.DTOs;
+﻿using AutoMapper;
+using EcommereceWeb.Application.DTOs;
 using EcommereceWeb.Application.Interfaces.Common;
 using EcommereceWeb.Application.Interfaces.Services;
+using EcommereceWeb.Application.Wrapper;
+using EcommereceWeb.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +15,35 @@ namespace EcommereceWeb.Application.Services
 {
     public class MainClassificationService : IMainClassificationService
     {
-        public Task<IResult<MainClassificationDto>> Add(MainClassificationDto entity, CancellationToken cancellationToken = default)
+        private readonly IRepositoryManager _repositoryManager;
+        private readonly IMapper _mapper;
+
+        public MainClassificationService(IRepositoryManager repositoryManager, IMapper mapper)
         {
-            throw new NotImplementedException();
+            _repositoryManager = repositoryManager;
+            _mapper = mapper;
+        }
+
+        public async Task<IResult<MainClassificationDto>> Add(MainClassificationDto entity, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+
+                var entityMap = _mapper.Map<MainClassification>(entity);
+                var res = await _repositoryManager.MainClassificationRepository.AddAndReturn(entityMap);
+                if (res != null)
+                {
+                    await _repositoryManager.UnitOfWork.CompleteAsync();
+                    var map = _mapper.Map<MainClassificationDto>(res);
+                    return await Result<MainClassificationDto>.SucessAsync(map, "تم الاضافة بنجاح");
+                }
+                return await Result<MainClassificationDto>.FailAsync($"لم يتم الاضافة ");
+
+            }
+            catch (Exception ex)
+            {
+                return await Result<MainClassificationDto>.FailAsync($"something error {ex.Message} ");
+            }
         }
 
         public Task<IResult<IEnumerable<MainClassificationDto>>> Find(Expression<Func<MainClassificationDto, bool>> expression, CancellationToken cancellationToken = default)
@@ -22,24 +51,86 @@ namespace EcommereceWeb.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<IResult<IEnumerable<MainClassificationDto>>> GetAll(CancellationToken cancellationToken = default)
+        public async Task<IResult<IEnumerable<MainClassificationDto>>> GetAll(CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var res = await _repositoryManager.MainClassificationRepository.GetAll();
+                if (res != null)
+                {
+                    return await Result<IEnumerable<MainClassificationDto>>.SucessAsync(_mapper.Map<IEnumerable<MainClassificationDto>>(res));
+                }
+                return await Result<IEnumerable<MainClassificationDto>>.FailAsync($"لايوجد بيانات ");
+
+            }
+            catch (Exception ex)
+            {
+                return await Result<IEnumerable<MainClassificationDto>>.FailAsync($"something error {ex.Message} ");
+            }
         }
 
-        public Task<IResult<MainClassificationDto>> GetById(int Id, CancellationToken cancellationToken = default)
+        public async Task<IResult<MainClassificationDto>> GetById(int Id, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var res = await _repositoryManager.MainClassificationRepository.GetById(Id);
+                if (res != null)
+                {
+                    return await Result<MainClassificationDto>.SucessAsync(_mapper.Map<MainClassificationDto>(res));
+                }
+                return await Result<MainClassificationDto>.FailAsync(" لايوجد بيانات لهذا الرقم");
+
+            }
+            catch (Exception ex)
+            {
+                return await Result<MainClassificationDto>.FailAsync($"something error {ex.Message} ");
+            }
         }
 
-        public Task<IResult<MainClassificationDto>> Remove(int Id, CancellationToken cancellationToken = default)
+        public async Task<IResult<MainClassificationDto>> Remove(int Id, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var entity = await _repositoryManager.MainClassificationRepository.GetById(Id);
+                if (entity != null)
+                {
+                    var res = await _repositoryManager.MainClassificationRepository.Remove(entity);
+                    await _repositoryManager.UnitOfWork.CompleteAsync();
+                    if (res != null)
+                    {
+                        return await Result<MainClassificationDto>.SucessAsync(_mapper.Map<MainClassificationDto>(res));
+                    }
+                    return await Result<MainClassificationDto>.FailAsync(" لم يتم حذف البيانات");
+                }
+                return await Result<MainClassificationDto>.FailAsync(" لايوجد بيانات لهذا الرقم");
+
+            }
+            catch (Exception ex)
+            {
+                return await Result<MainClassificationDto>.FailAsync($"something error {ex.Message} ");
+            }
         }
 
-        public Task<IResult<MainClassificationDto>> Update(MainClassificationDto entity, CancellationToken cancellationToken = default)
+        public async Task<IResult<MainClassificationDto>> Update(MainClassificationDto entity, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var entityMap = _mapper.Map<MainClassification>(entity);
+                var res = await _repositoryManager.MainClassificationRepository.Update(entityMap);
+                if (res != null)
+                {
+                    await _repositoryManager.UnitOfWork.CompleteAsync();
+                    var map = _mapper.Map<MainClassificationDto>(res);
+                    return await Result<MainClassificationDto>.SucessAsync(map, "تم التعديل بنجاح");
+                }
+                return await Result<MainClassificationDto>.FailAsync($"لم يتم التعديل ");
+
+            }
+            catch (Exception ex)
+            {
+                return await Result<MainClassificationDto>.FailAsync($"something error {ex.Message} ");
+            }
         }
+
     }
 }

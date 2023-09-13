@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EcommereceWeb.MVC.Controllers
 {
-    public class SliderController : BaseMVCController
+    public class CurrencyController : BaseMVCController
     {
         public async Task<IActionResult> Index()
         {
-            var res = await ServiceManager.SliderService.GetAll();
+            var res = await ServiceManager.CurrencyService.GetAll();
             if (res.Status.Succeeded)
             {
                 return View(res.Data);
@@ -22,11 +22,11 @@ namespace EcommereceWeb.MVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(SliderDto entity)
+        public async Task<IActionResult> Create(CurrencyDto entity)
         {
 
             if (entity == null) { TempData["err"] = "null value"; return View(entity); }
-            var res = await ServiceManager.SliderService.Add(entity);
+            var res = await ServiceManager.CurrencyService.Add(entity);
             if (res.Status.Succeeded)
             {
                 TempData["suc"] = res.Status.message;
@@ -38,7 +38,7 @@ namespace EcommereceWeb.MVC.Controllers
 
         public async Task<IActionResult> Edit(int Id)
         {
-            var res = await ServiceManager.SliderService.GetById(Id);
+            var res = await ServiceManager.CurrencyService.GetById(Id);
             if (res.Status.Succeeded)
             {
                 return View(res.Data);
@@ -49,11 +49,11 @@ namespace EcommereceWeb.MVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(SliderDto entity)
+        public async Task<IActionResult> Edit(CurrencyDto entity)
         {
 
             if (entity == null) { TempData["err"] = "null value"; return View(entity); }
-            var res = await ServiceManager.SliderService.Update(entity);
+            var res = await ServiceManager.CurrencyService.Update(entity);
             if (res.Status.Succeeded)
             {
                 TempData["suc"] = res.Status.message;
@@ -64,30 +64,15 @@ namespace EcommereceWeb.MVC.Controllers
         }
         public async Task<IActionResult> Delete(int Id)
         {
-            var res = await ServiceManager.SliderService.Remove(Id);
+            var res = await ServiceManager.CurrencyService.Remove(Id);
             if (res.Status.Succeeded)
             {
-                const string folderName = "Slider";
-                var deleteRes = ServiceManager.UplaodFileService.DeleteImageFile(res.Data.ImgUrl, folderName);
-
-
-                if (deleteRes == true)
-                {
-                    TempData["success"] = res.Status.message;
-                    return RedirectToAction(nameof(Index));
-                }
-                else
-                {
-                    TempData["err"] = "file not deleted because there is no file name ";
-
-                    return RedirectToAction(nameof(Index));
-                }
-
+                TempData["suc"] = res.Status.message;
+                return RedirectToAction("Index");
             }
             TempData["err"] = res.Status.message;
             return RedirectToAction("Index");
         }
-
 
     }
 }
