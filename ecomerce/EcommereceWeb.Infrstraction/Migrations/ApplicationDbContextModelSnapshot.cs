@@ -83,6 +83,152 @@ namespace EcommereceWeb.Infrstraction.Migrations
                     b.ToTable("AddProductToFavorite", "dbo");
                 });
 
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.Attribute", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ArName")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("ArName");
+
+                    b.Property<string>("Code")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("Code");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EnName")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("EnName");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModfiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModfiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Type")
+                        .HasColumnType("int")
+                        .HasColumnName("Type");
+
+                    b.HasKey("Id")
+                        .HasName("Pk_Attributes");
+
+                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
+
+                    b.ToTable("Attribute", "dbo");
+                });
+
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.AttributeItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ArName")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("ArName");
+
+                    b.Property<int?>("AttributeId")
+                        .HasColumnType("int")
+                        .HasColumnName("AttributeId");
+
+                    b.Property<string>("Code")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("Code");
+
+                    b.Property<string>("ColorCode")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("ColorCode");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Details")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(MAX)")
+                        .HasColumnName("Details");
+
+                    b.Property<string>("EnName")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("EnName");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModfiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModfiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id")
+                        .HasName("Pk_AttributeItem");
+
+                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
+
+                    b.HasIndex("AttributeId");
+
+                    b.ToTable("AttributeItem", "dbo");
+                });
+
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.BasicClassification", b =>
                 {
                     b.Property<int>("Id")
@@ -1012,6 +1158,71 @@ namespace EcommereceWeb.Infrstraction.Migrations
                     b.ToTable("ProductAdditionalDetails", "dbo");
                 });
 
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductAttribute", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("AttributeId")
+                        .HasColumnType("int")
+                        .HasColumnName("AttributeId");
+
+                    b.Property<int?>("AttributeItemId")
+                        .HasColumnType("int")
+                        .HasColumnName("AttributeItemId");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModfiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModfiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int")
+                        .HasColumnName("ProductId");
+
+                    b.HasKey("Id")
+                        .HasName("Pk_ProductAttribute");
+
+                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
+
+                    b.HasIndex("AttributeId");
+
+                    b.HasIndex("AttributeItemId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductAttribute", "dbo");
+                });
+
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductColors", b =>
                 {
                     b.Property<int>("Id")
@@ -1354,6 +1565,91 @@ namespace EcommereceWeb.Infrstraction.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductUnitSize", "dbo");
+                });
+
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductVariation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("ColorId")
+                        .HasColumnType("int")
+                        .HasColumnName("ColorId");
+
+                    b.Property<string>("ColorName")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("ColorName");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModfiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastModfiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("Price")
+                        .HasColumnType("decimal(10,2)")
+                        .HasColumnName("Price");
+
+                    b.Property<int?>("ProductAttributeId")
+                        .HasColumnType("int")
+                        .HasColumnName("ProductAttributeId");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int")
+                        .HasColumnName("ProductId");
+
+                    b.Property<int?>("Quntatiy")
+                        .HasColumnType("int")
+                        .HasColumnName("Quntatiy");
+
+                    b.Property<int?>("SizeId")
+                        .HasColumnType("int")
+                        .HasColumnName("SizeId");
+
+                    b.Property<string>("SizeName")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("SizeName");
+
+                    b.HasKey("Id")
+                        .HasName("Pk_ProductVariation");
+
+                    SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
+
+                    b.HasIndex("ProductAttributeId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductVariation", "dbo");
                 });
 
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.Slider", b =>
@@ -1748,8 +2044,8 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         {
                             Id = "4a2e1650-21bd-4e67-832e-2e99c267a2e4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "805001dc-aa56-40b1-a451-d449bae04fa8",
-                            CreatedAt = new DateTime(2023, 9, 10, 21, 39, 36, 447, DateTimeKind.Local).AddTicks(8201),
+                            ConcurrencyStamp = "d030d369-f555-486e-8406-fc8b1b295c58",
+                            CreatedAt = new DateTime(2023, 9, 13, 18, 1, 36, 698, DateTimeKind.Local).AddTicks(5529),
                             Email = "Admin@Gmail.com",
                             EmailConfirmed = false,
                             FullName = "Admin",
@@ -1758,10 +2054,10 @@ namespace EcommereceWeb.Infrstraction.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMrtQmCgm5z+Z7/UVpqfllHWn2fo/804KFN94854N2wojNSsfx3bsPkXxOsfjFQ+YA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEA1ylvEyHpFflEcDpFEyFQMmNIHQBoZ8ak2P0CN3lpdkCHq/BRtvZMSEYSwo+nhd0g==",
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e7159947-eebb-4f49-8d9f-310e6a2f2cac",
+                            SecurityStamp = "d87cacd0-b0ba-40cc-afa7-1ae22f36416a",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -1956,6 +2252,16 @@ namespace EcommereceWeb.Infrstraction.Migrations
                     b.Navigation("Users");
                 });
 
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.AttributeItem", b =>
+                {
+                    b.HasOne("EcommereceWeb.Domain.Entity.Attribute", "Attribute")
+                        .WithMany("AttributeItems")
+                        .HasForeignKey("AttributeId")
+                        .HasConstraintName("FK_AttributeId_AttributeItem");
+
+                    b.Navigation("Attribute");
+                });
+
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.BasicClassification", b =>
                 {
                     b.HasOne("EcommereceWeb.Domain.Entity.MainClassification", "MainClassification")
@@ -2041,6 +2347,30 @@ namespace EcommereceWeb.Infrstraction.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductAttribute", b =>
+                {
+                    b.HasOne("EcommereceWeb.Domain.Entity.Attribute", "Attribute")
+                        .WithMany("ProductAttributes")
+                        .HasForeignKey("AttributeId")
+                        .HasConstraintName("FK_AttributeId_ProductAttribute");
+
+                    b.HasOne("EcommereceWeb.Domain.Entity.AttributeItem", "AttributeItem")
+                        .WithMany("ProductAttributes")
+                        .HasForeignKey("AttributeItemId")
+                        .HasConstraintName("FK_AttributeItemId_ProductAttribute");
+
+                    b.HasOne("EcommereceWeb.Domain.Entity.Product", "Product")
+                        .WithMany("ProductAttributes")
+                        .HasForeignKey("ProductId")
+                        .HasConstraintName("FK_ProductId_ProductAttribute");
+
+                    b.Navigation("Attribute");
+
+                    b.Navigation("AttributeItem");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductColors", b =>
                 {
                     b.HasOne("EcommereceWeb.Domain.Entity.Product", "Product")
@@ -2096,6 +2426,23 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasConstraintName("FK_ProductUnitSizes_Products");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductVariation", b =>
+                {
+                    b.HasOne("EcommereceWeb.Domain.Entity.ProductAttribute", "ProductAttribute")
+                        .WithMany("ProductVariations")
+                        .HasForeignKey("ProductAttributeId")
+                        .HasConstraintName("FK_ProductAttributeId_ProductVariation");
+
+                    b.HasOne("EcommereceWeb.Domain.Entity.Product", "Product")
+                        .WithMany("ProductVariations")
+                        .HasForeignKey("ProductId")
+                        .HasConstraintName("FK_ProductId_ProductVariation");
+
+                    b.Navigation("Product");
+
+                    b.Navigation("ProductAttribute");
                 });
 
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.SubClassificationBase", b =>
@@ -2169,6 +2516,18 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.Attribute", b =>
+                {
+                    b.Navigation("AttributeItems");
+
+                    b.Navigation("ProductAttributes");
+                });
+
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.AttributeItem", b =>
+                {
+                    b.Navigation("ProductAttributes");
+                });
+
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.BasicClassification", b =>
                 {
                     b.Navigation("Products");
@@ -2206,6 +2565,8 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
                     b.Navigation("ProductAdditionalDetails");
 
+                    b.Navigation("ProductAttributes");
+
                     b.Navigation("ProductColors");
 
                     b.Navigation("ProductEvaluatons");
@@ -2215,6 +2576,13 @@ namespace EcommereceWeb.Infrstraction.Migrations
                     b.Navigation("ProductSize");
 
                     b.Navigation("ProductUnitSizes");
+
+                    b.Navigation("ProductVariations");
+                });
+
+            modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductAttribute", b =>
+                {
+                    b.Navigation("ProductVariations");
                 });
 
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.SubClassificationBase", b =>

@@ -55,6 +55,8 @@ namespace EcommereceWeb.Domain.Entity
         public virtual ICollection<ProductUnitSize> ProductUnitSizes { get; set; }
         public virtual ICollection<ProductImage> ProductImages { get; set; }
         public virtual ICollection<ProductSize> ProductSize { get; set; }
+        public virtual ICollection<ProductAttribute> ProductAttributes { get; set; }
+        public virtual ICollection<ProductVariation> ProductVariations { get; set; }
 
 
     }

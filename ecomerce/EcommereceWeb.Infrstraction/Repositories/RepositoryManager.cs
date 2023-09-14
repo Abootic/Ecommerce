@@ -45,6 +45,10 @@ namespace EcommereceWeb.Infrstraction.Repositories
         private readonly ISubSubclassificationRepository subSubclassificationRepository ;
 
         private readonly ITaxConfigurationRepository taxConfigurationRepository ;
+        private readonly IAttributeItemRepository attributeItemRepository;
+        private readonly IAttributeRepository attributeRepository;
+        private readonly IProductAttributeRepository productAttributeRepository;
+        private readonly IProductVariationRepository productVariationRepository;
         private readonly IUserRepository userRepository  ;
         private readonly IUnitOfWork unitOfWork;
 
@@ -65,7 +69,11 @@ namespace EcommereceWeb.Infrstraction.Repositories
             ISliderRepository sliderRepository,
             ISubClassificationBaseRepository subClassificationBaseRepository,
             ISubSubclassificationRepository subSubclassificationRepository,
-            ITaxConfigurationRepository taxConfigurationRepository, 
+            ITaxConfigurationRepository taxConfigurationRepository,
+            IAttributeRepository attributeRepository,
+            IAttributeItemRepository attributeItemRepository,
+            IProductAttributeRepository productAttributeRepository,
+            IProductVariationRepository productVariationRepository,
             IUserRepository userRepository,
             IUnitOfWork unitOfWork
             )
@@ -88,6 +96,10 @@ namespace EcommereceWeb.Infrstraction.Repositories
             this.subClassificationBaseRepository = subClassificationBaseRepository;
             this.subSubclassificationRepository = subSubclassificationRepository;
             this.taxConfigurationRepository = taxConfigurationRepository;
+            this.attributeRepository = attributeRepository;
+            this.attributeItemRepository = attributeItemRepository;
+            this.productAttributeRepository = productAttributeRepository;
+            this.productVariationRepository = productVariationRepository;
             this.userRepository = userRepository;
             this.unitOfWork = unitOfWork;
         }
@@ -125,6 +137,14 @@ namespace EcommereceWeb.Infrstraction.Repositories
         public IUserRepository UserRepository => userRepository;
 
         public IUnitOfWork UnitOfWork => unitOfWork;
+
+        public IAttributeRepository AttributeRepository => attributeRepository;
+
+        public IAttributeItemRepository AttributeItemRepository => attributeItemRepository;
+
+        public IProductAttributeRepository ProductAttributeRepository => productAttributeRepository;
+
+        public IProductVariationRepository ProductVariationRepository => productVariationRepository;
     }
 
 }

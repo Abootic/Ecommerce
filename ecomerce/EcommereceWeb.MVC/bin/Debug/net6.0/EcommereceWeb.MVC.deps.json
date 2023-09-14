@@ -747,6 +747,7 @@
           "Autofac": "7.1.0",
           "Autofac.Extensions.DependencyInjection": "8.0.0",
           "EcommereceWeb.Application": "1.0.0",
+          "EcommereceWeb.Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.10",

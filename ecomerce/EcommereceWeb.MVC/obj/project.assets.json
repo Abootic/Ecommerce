@@ -1470,6 +1470,7 @@
           "Autofac": "7.1.0",
           "Autofac.Extensions.DependencyInjection": "8.0.0",
           "EcommereceWeb.Application": "1.0.0",
+          "EcommereceWeb.Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.10",
@@ -3318,11 +3319,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
+      "projectUniqueName": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
       "projectName": "EcommereceWeb.MVC",
-      "projectPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
+      "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
       "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-      "outputPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\obj\\",
+      "outputPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3340,8 +3341,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {
-              "projectPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj"
+            "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {
+              "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj"
             }
           }
         }

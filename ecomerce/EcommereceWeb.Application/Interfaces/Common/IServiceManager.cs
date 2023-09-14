@@ -27,6 +27,10 @@ namespace EcommereceWeb.Application.Interfaces.Common
         ISubClassificationBaseService SubClassificationBaseService { get; }
         ISubSubclassificationService SubSubclassificationService { get; }
         ITaxConfigurationService TaxConfigurationService { get; }
+        IAttributeService AttributeService { get; }
+        IAttributeItemService AttributeItemService { get; }
+        IProductAttributeService ProductAttributeService { get; }
+        IProductVariationService ProductVariationService { get; }
         IUserService UserService { get; }
         IUplaodFileService UplaodFileService { get; }
         IRoleService RoleService { get; }

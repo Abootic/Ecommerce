@@ -26,4 +26,5 @@ namespace EcommereceWeb.Infrstraction.EntityConfigration
 
         }
     }
+
 }

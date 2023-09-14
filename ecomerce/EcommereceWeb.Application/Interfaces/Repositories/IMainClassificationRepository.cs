@@ -13,4 +13,5 @@ namespace EcommereceWeb.Application.Interfaces.Repositories
     {
         Task<IEnumerable<DataListItem>> GetDDL();
     }
+
 }

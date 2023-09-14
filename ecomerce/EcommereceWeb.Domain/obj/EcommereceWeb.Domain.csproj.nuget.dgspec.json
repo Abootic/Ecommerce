@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {}
+    "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {}
   },
   "projects": {
-    "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
+    "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
+        "projectUniqueName": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
         "projectName": "EcommereceWeb.Domain",
-        "projectPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
+        "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
         "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-        "outputPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\obj\\",
+        "outputPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",

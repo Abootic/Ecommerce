@@ -19,4 +19,5 @@ namespace EcommereceWeb.Infrstraction.EntityConfigration
             builder.Property(x => x.ImageUrl).HasColumnName(@"ImageUrl").HasColumnType("nvarchar(255)").IsRequired(false).HasMaxLength(255);
         }
     }
+
 }

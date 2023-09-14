@@ -7,7 +7,7 @@ using EcommereceWeb.Infrstraction.EntityConfigration;
 using EcommereceWeb.Infrstraction.EntityConfigration;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using Attribute = EcommereceWeb.Domain.Entity.Attribute;
 
 namespace EcommereceWeb.Infrastraction.Data
 {
@@ -61,6 +61,10 @@ namespace EcommereceWeb.Infrastraction.Data
 
         public DbSet<SubSubclassification> SubSubclassification { get; private set; } = null!;
 
+        public DbSet<Attribute> Attribute { get; private set; } = null!;
+        public DbSet<AttributeItem> AttributeItem { get; private set; } = null!;
+        public DbSet<ProductAttribute> ProductAttribute { get; private set; } = null!;
+        public DbSet<ProductVariation> ProductVariation { get; private set; } = null!;
         public DbSet<TaxConfiguration> TaxConfiguration { get; private set; } = null!;
         public DbSet<User> User { get; private set; } = null!;
 
@@ -126,6 +130,10 @@ namespace EcommereceWeb.Infrastraction.Data
             modelBuilder.ApplyConfiguration(new SubSubclassificationConfigration());
             modelBuilder.ApplyConfiguration(new TaxConfigurationConfigration());
             modelBuilder.ApplyConfiguration(new ProductEvaluatonConfigration());
+            modelBuilder.ApplyConfiguration(new AttributeConfigration());
+            modelBuilder.ApplyConfiguration(new AttributeItemConfigration());
+            modelBuilder.ApplyConfiguration(new ProductAttributeConfigration());
+            modelBuilder.ApplyConfiguration(new ProductVariationConfigration());
             modelBuilder.ApplyConfiguration(new UserRoleConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new RoleConfiguration());

@@ -24,6 +24,10 @@ namespace EcommereceWeb.Application.Interfaces.Common
         ISubClassificationBaseRepository SubClassificationBaseRepository { get; }
         ISubSubclassificationRepository SubSubclassificationRepository { get; }
         ITaxConfigurationRepository TaxConfigurationRepository { get; }
+        IAttributeRepository AttributeRepository { get; }
+        IAttributeItemRepository AttributeItemRepository { get; }
+        IProductAttributeRepository ProductAttributeRepository { get; }
+        IProductVariationRepository ProductVariationRepository { get; }
         IUserRepository UserRepository { get; }
         IUnitOfWork UnitOfWork { get; }
 

@@ -22,4 +22,5 @@ namespace EcommereceWeb.Infrstraction.Repositories
             throw new NotImplementedException();
         }
     }
+
 }

@@ -3322,6 +3322,7 @@
       "Autofac >= 7.1.0",
       "Autofac.Extensions.DependencyInjection >= 8.0.0",
       "EcommereceWeb.Application >= 1.0.0",
+      "EcommereceWeb.Domain >= 1.0.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Relational >= 6.0.10",
@@ -3335,11 +3336,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj",
+      "projectUniqueName": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj",
       "projectName": "EcommereceWeb.Infrstraction",
-      "projectPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj",
+      "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj",
       "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-      "outputPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\obj\\",
+      "outputPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3356,8 +3357,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj": {
-              "projectPath": "D:\\wejo\\verison\\v2\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj"
+            "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj": {
+              "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj"
+            },
+            "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
+              "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
             }
           }
         }
