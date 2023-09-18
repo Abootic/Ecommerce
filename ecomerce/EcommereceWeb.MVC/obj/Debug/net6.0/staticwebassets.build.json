@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mOtaWwrP0bV45GXkjSaQEiDHrt8w73P76ifIH+HHrNo=",
+  "Hash": "z6uJWyYRKxhS5amRNfRj9aJ/R8WXl3WjZi4C+GxsAqY=",
   "Source": "EcommereceWeb.MVC",
   "BasePath": "_content/EcommereceWeb.MVC",
   "Mode": "Default",
@@ -29665,12 +29665,12 @@
       "OriginalItemSpec": "wwwroot\\Upload\\MainClassification\\7df70954-e826-4466-829c-deb97eb5de51.png"
     },
     {
-      "Identity": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\bd3d9251-7d77-4e5c-a24e-9e9f9e596a21.png",
+      "Identity": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassification\\bd5f9573-b37e-4c56-bbe1-66fd2a219705.png",
       "SourceId": "EcommereceWeb.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
       "BasePath": "_content/EcommereceWeb.MVC",
-      "RelativePath": "Upload/SubClassificationBase/bd3d9251-7d77-4e5c-a24e-9e9f9e596a21.png",
+      "RelativePath": "Upload/SubClassification/bd5f9573-b37e-4c56-bbe1-66fd2a219705.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -29679,7 +29679,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\SubClassificationBase\\bd3d9251-7d77-4e5c-a24e-9e9f9e596a21.png"
+      "OriginalItemSpec": "wwwroot\\Upload\\SubClassification\\bd5f9573-b37e-4c56-bbe1-66fd2a219705.png"
+    },
+    {
+      "Identity": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassification\\be3e5008-6810-4143-8b2a-d902868a9b99.png",
+      "SourceId": "EcommereceWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/EcommereceWeb.MVC",
+      "RelativePath": "Upload/SubClassification/be3e5008-6810-4143-8b2a-d902868a9b99.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\SubClassification\\be3e5008-6810-4143-8b2a-d902868a9b99.png"
+    },
+    {
+      "Identity": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassification\\feea1400-a6b3-4c27-97b3-45f467e3d2c9.png",
+      "SourceId": "EcommereceWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/EcommereceWeb.MVC",
+      "RelativePath": "Upload/SubClassification/feea1400-a6b3-4c27-97b3-45f467e3d2c9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\SubClassification\\feea1400-a6b3-4c27-97b3-45f467e3d2c9.png"
     },
     {
       "Identity": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\c38ca67e-171c-4f8c-b6fe-1b99df558880.png",
@@ -29697,6 +29731,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\SubClassificationBase\\c38ca67e-171c-4f8c-b6fe-1b99df558880.png"
+    },
+    {
+      "Identity": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\e69ed42a-cca3-49ef-9a27-c003994c136f.png",
+      "SourceId": "EcommereceWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/EcommereceWeb.MVC",
+      "RelativePath": "Upload/SubClassificationBase/e69ed42a-cca3-49ef-9a27-c003994c136f.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\SubClassificationBase\\e69ed42a-cca3-49ef-9a27-c003994c136f.png"
     }
   ]
 }

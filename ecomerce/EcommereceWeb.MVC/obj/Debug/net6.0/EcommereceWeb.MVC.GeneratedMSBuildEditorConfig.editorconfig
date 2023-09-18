@@ -76,6 +76,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmVuY3lcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/DetailsData/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsc0RhdGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/DetailsData/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsc0RhdGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/DetailsData/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsc0RhdGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -94,6 +106,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/MainClassification/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbkNsYXNzaWZpY2F0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/MasterData/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyRGF0YVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/MasterData/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyRGF0YVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/MasterData/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyRGF0YVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/RolesManager/AddRoleToUser.cshtml]
@@ -134,6 +158,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/SubClassificationBase/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViQ2xhc3NpZmljYXRpb25CYXNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/SubSubclassification/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViU3ViY2xhc3NpZmljYXRpb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/SubSubclassification/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViU3ViY2xhc3NpZmljYXRpb25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/SubSubclassification/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViU3ViY2xhc3NpZmljYXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/wejo/verison/v4/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/TaxConfiguration/Create.cshtml]

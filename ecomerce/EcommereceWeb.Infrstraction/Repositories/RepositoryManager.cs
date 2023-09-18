@@ -51,9 +51,10 @@ namespace EcommereceWeb.Infrstraction.Repositories
         private readonly IProductVariationRepository productVariationRepository;
         private readonly IUserRepository userRepository  ;
         private readonly IBasicClassificationRepository basicClassificationRepository;
+        private readonly IDetailsDataRepository detailsDataRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public RepositoryManager(IAddProductToFavoriteRepository addProductToFavoriteRepository, IBrandRepository brandRepository, IConfigurationRepository configurationRepository, IProductRepository productRepository, ICouponItemRepository couponItemRepository, ICurrencyRepository currencyRepository, IMainClassificationRepository mainClassificationRepository, IMasterDataRepository masterDataRepository, IProductColorsRepository productColorsRepository, IProductEvaluatonRepository productEvaluatonRepository, IProductImageRepository productImageRepository, IProductSizeRepository productSizeRepository, ISliderRepository sliderRepository, ISubClassificationBaseRepository subClassificationBaseRepository, ISubSubclassificationRepository subSubclassificationRepository, ITaxConfigurationRepository taxConfigurationRepository, IAttributeItemRepository attributeItemRepository, IAttributeRepository attributeRepository, IProductAttributeRepository productAttributeRepository, IProductVariationRepository productVariationRepository, IUserRepository userRepository, IBasicClassificationRepository basicClassificationRepository, IUnitOfWork unitOfWork)
+        public RepositoryManager(IAddProductToFavoriteRepository addProductToFavoriteRepository, IBrandRepository brandRepository, IConfigurationRepository configurationRepository, IProductRepository productRepository, ICouponItemRepository couponItemRepository, ICurrencyRepository currencyRepository, IMainClassificationRepository mainClassificationRepository, IMasterDataRepository masterDataRepository, IProductColorsRepository productColorsRepository, IProductEvaluatonRepository productEvaluatonRepository, IProductImageRepository productImageRepository, IProductSizeRepository productSizeRepository, ISliderRepository sliderRepository, ISubClassificationBaseRepository subClassificationBaseRepository, ISubSubclassificationRepository subSubclassificationRepository, ITaxConfigurationRepository taxConfigurationRepository, IAttributeItemRepository attributeItemRepository, IAttributeRepository attributeRepository, IProductAttributeRepository productAttributeRepository, IProductVariationRepository productVariationRepository, IUserRepository userRepository, IBasicClassificationRepository basicClassificationRepository, IDetailsDataRepository detailsDataRepository, IUnitOfWork unitOfWork)
         {
             this.addProductToFavoriteRepository = addProductToFavoriteRepository;
             this.brandRepository = brandRepository;
@@ -77,6 +78,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
             this.productVariationRepository = productVariationRepository;
             this.userRepository = userRepository;
             this.basicClassificationRepository = basicClassificationRepository;
+            this.detailsDataRepository = detailsDataRepository;
             this.unitOfWork = unitOfWork;
         }
 
@@ -123,6 +125,8 @@ namespace EcommereceWeb.Infrstraction.Repositories
         public IProductVariationRepository ProductVariationRepository => productVariationRepository;
 
         public IBasicClassificationRepository BasicClassificationRepository => basicClassificationRepository;
+
+        public IDetailsDataRepository DetailsDataRepository => detailsDataRepository;
     }
 
 }

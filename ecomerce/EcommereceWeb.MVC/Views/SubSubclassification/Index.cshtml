@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MainClassificationDto>
+﻿@model IEnumerable<SubSubclassificationDto>
 <!-- BEGIN: Content-->
 @if (TempData["err"] != null)
 {
@@ -15,10 +15,24 @@
         <form>
             <div class="row border rounded py-2 mb-2">
 
+                @{
 
-                <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-center">
-                    <button type="reset" class="btn btn-primary btn-block glow users-list-clear mb-0">   <a asp-controller="MainClassification" asp-action="Create" style="color:#fff">     إضافة </a></button>
-                </div>
+                    if (TempData.GetTemp<string>("name") != null)
+                    {
+                        var name = TempData.GetTemp<string>("name");
+
+                        <h4 class="text-center mb-2"> يا مرحبا في @name  </h4>
+                    }
+
+                }
+                @if (TempData.GetTemp<int>("SubSubclassificationBaseId") != 0)
+                {
+                    int mainId = TempData.GetTemp<int>("SubSubclassificationBaseId");
+                    <div class="col-12 col-sm-6 col-lg-3 d-flex align-items-center">
+                        <button type="reset" class="btn btn-primary btn-block glow users-list-clear mb-0">   <a asp-controller="SubSubclassification" asp-action="Create" asp-route-SubSubclassificationBaseId="@mainId" style="color:#fff">     إضافة </a></button>
+                    </div>
+                }
+
             </div>
         </form>
     </div>
@@ -38,7 +52,8 @@
                                         <th>  الصورة</th>
                                         <th> الاسم العربي</th>
                                         <th>الاسم الانجليزي</th>
-                                       
+
+
                                         <th>الحالة </th>
 
                                         <th>الاجرءات</th>
@@ -50,13 +65,13 @@
                                     {
                                         <tr>
                                             <td>
-                                                <img src="../../Upload/MainClassification/@item.ImageUrl" id="Image_Image" class="users-avatar-shadow rounded-circle" height="70" width="70">
+                                                <img src="../../Upload/SubClassification/@item.ImageUrl" id="Image_Image" class="users-avatar-shadow rounded-circle" height="70" width="70">
 
                                             </td>
 
-                                            <td>@item.ArMainClassificationName</td>
-                                            <td>@item.EnMainClassificationName</td>
-                                           
+                                            <td>@item.ArSubSubClassificationName</td>
+                                            <td>@item.EnSubSubClassificationName</td>
+
 
                                             <td>1</td>
                                             @* @if (item.State == 1)
@@ -72,9 +87,8 @@
                                                 <div class="btn-group dropend">
                                                     <span class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  <i class="ai-dots-vertical"></i></span>
                                                     <div class="dropdown-menu mx-1">
-                                                        <a class="dropdown-item" asp-controller="MainClassification" asp-action="Edit" asp-route-Id="@item.Id"> تعديل  </a>
-                                                        <a class="dropdown-item" asp-controller="MainClassification" asp-action="Delete" asp-route-Id="@item.Id"> حذف  </a>
-                                                        <a class="dropdown-item" asp-controller="BasicClassification" asp-action="Index" asp-route-MainClassificationId="@item.Id"> اضافة التصنيف الاول  </a>
+                                                        <a class="dropdown-item" asp-controller="SubSubclassification" asp-action="Edit" asp-route-Id="@item.Id"> تعديل  </a>
+                                                        <a class="dropdown-item" asp-controller="SubSubclassification" asp-action="Delete" asp-route-Id="@item.Id"> حذف  </a>
                                                     </div>
 
 
