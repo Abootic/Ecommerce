@@ -3314,19 +3314,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\My Computer\\.nuget\\packages\\": {}
+    "C:\\Users\\Eng.Aqlan Al-Wagdy\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
+      "projectUniqueName": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
       "projectName": "EcommereceWeb.MVC",
-      "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
-      "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-      "outputPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\obj\\",
+      "projectPath": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
+      "packagesPath": "C:\\Users\\Eng.Aqlan Al-Wagdy\\.nuget\\packages\\",
+      "outputPath": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eng.Aqlan Al-Wagdy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3334,15 +3341,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {
-              "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj"
+            "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {
+              "projectPath": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj"
             }
           }
         }
@@ -3391,7 +3397,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

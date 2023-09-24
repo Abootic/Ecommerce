@@ -8,7 +8,6 @@ namespace EcommereceWeb.Application.Interfaces.Common
     {
         IAddProductToFavoriteRepository AddProductToFavoriteRepository { get; }
         IBrandRepository BrandRepository { get; }
-        IBasicClassificationRepository BasicClassificationRepository { get; }
         IConfigurationRepository ConfigurationRepository { get; }
         IProductRepository ProductRepository { get; }
         //ICouponRepository CouponRepository { get; }
@@ -30,9 +29,7 @@ namespace EcommereceWeb.Application.Interfaces.Common
         IProductAttributeRepository ProductAttributeRepository { get; }
         IProductVariationRepository ProductVariationRepository { get; }
         IUserRepository UserRepository { get; }
-        IDetailsDataRepository DetailsDataRepository { get; }
-
-         IUnitOfWork UnitOfWork { get; }
+        IUnitOfWork UnitOfWork { get; }
 
     }
 }

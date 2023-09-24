@@ -1674,19 +1674,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\My Computer\\.nuget\\packages\\": {}
+    "C:\\Users\\Eng.Aqlan Al-Wagdy\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
+      "projectUniqueName": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
       "projectName": "EcommereceWeb.Application",
-      "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
-      "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-      "outputPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\obj\\",
+      "projectPath": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
+      "packagesPath": "C:\\Users\\Eng.Aqlan Al-Wagdy\\.nuget\\packages\\",
+      "outputPath": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eng.Aqlan Al-Wagdy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1700,8 +1707,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
-              "projectPath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
+            "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
+              "projectPath": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
             }
           }
         }
@@ -1757,7 +1764,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
