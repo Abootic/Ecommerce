@@ -1,0 +1,68 @@
+﻿@using EcommereceWeb.Application.Interfaces.Common;
+
+@inject IServiceManager serviceManager
+@{
+    var res =await  serviceManager.AttributeService.GetAll();
+
+}
+<form asp-controller="Attribute" asp-action="Create" method="post">
+
+    <div class="form-group mb-50">
+        <label class="text-bold-600" for="exampleInputEmail1">صفات المنتج </label>
+
+        <select class="form-select"  id="Att" >
+            @if (res.Status.Succeeded)
+            {
+                foreach(var item in res.Data)
+                {
+                    <option value="@item.Id">@item.ArName</option>
+
+                }
+            }
+        </select>
+    </div>
+
+     <div class="form-group mb-50">
+        <label class="text-bold-600" for="exampleInputEmail1"> عناصر الصفات </label>
+
+        <select class="form-select"   id="AttItem"  >
+           
+        </select>
+    </div>
+
+    <select></select>
+
+    <div class="modal-footer d-inline-flex">
+        <a class="btn btn-secondary" asp-action="Index">Cancel</a>
+        <input type="submit" class="btn alert-info" value="Add Attribute">
+    </div>
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+        <script>
+    $("#Att").on("change", function () {
+
+        let id=$(this).val();
+        let url = "../ProductAttribute/getAttrItems";
+        let item = "";
+        jQuery.ajax({
+            method: "get",
+            url: url,
+            data: { "id": id },
+            contentType: false,
+            success: function (res) {
+                res.map(a => {
+                    item += `<option value="${a.id}"> ${a.name}</option>`;
+                });
+                $("#AttItem").html(item);
+
+
+            },
+            error:function(ex){
+                alert("errrrrrrrrrr  " + ex.resopnseText);
+            }
+        });
+    })
+        </script>
