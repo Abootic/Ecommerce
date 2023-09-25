@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9xZUUw7eZhkJhZsFHryYOlt9w3SQ4JG0RxJMsQKCWioghG4zDc+U6kwG9cTKcBHOqc3hl9xTp0fXCIU3c0t1gA==",
+  "dgSpecHash": "iq5/KzVwPG+Of5XuG347u5G6IEuDIvDv8+ZqibWoCYSd57qg4BwJyu5N42yRKcvQaWlhNp686aWZS4PUOW0Z7w==",
   "success": true,
-  "projectFilePath": "D:\\wejo\\verison\\v4\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
+  "projectFilePath": "D:\\wejo\\verison\\v6\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\My Computer\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

@@ -10,10 +10,12 @@ namespace EcommereceWeb.Application.DTOs
         public int Id { get; set; }
        
         public string Name { get; set; }
-        public string Code { get; set; }
+        public string? Code { get; set; }
    
         public int? Type { get; set; }
-        
+        public bool IsActive { get; set; } = false;
+        public DateTime CreatedAt { get; set; } 
+
     }
   public class AttributeDto 
     {
@@ -26,10 +28,12 @@ namespace EcommereceWeb.Application.DTOs
         public string ArName { get; set; }
         [Display(Name = "الاسم انجليزي")]
         public string? EnName { get; set; }
-        public string Code { get; set; }
+        public string? Code { get; set; }
         [Display(Name = "النوع")]
         public int? Type { get; set; }
-        
+        public bool IsActive { get; set; } = false;
+        public DateTime CreatedAt { get; set; }
+
     }
 
 }

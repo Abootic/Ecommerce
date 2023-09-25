@@ -15,6 +15,8 @@ namespace EcommereceWeb.Application.DTOs
         public string? Details { get; set; }
         public string? ColorCode { get; set; }
         public int? AttributeId { get; set; }
+        public bool IsActive { get; set; } = false;
+        public DateTime CreatedAt { get; set; }
 
     }
 
@@ -36,6 +38,8 @@ namespace EcommereceWeb.Application.DTOs
         public string? ColorCode { get; set; }
         [Display(Name = "رقم العنصر")]
         public int? AttributeId { get; set; }
+        public bool IsActive { get; set; } = false;
+        public DateTime CreatedAt { get; set; }
 
     }
 

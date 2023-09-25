@@ -18,6 +18,7 @@ namespace EcommereceWeb.Infrstraction.EntityConfigration
             builder.Property(x => x.EnName).HasColumnName(@"EnName").HasColumnType("nvarchar(255)").IsRequired(false).HasMaxLength(255);
             builder.Property(x => x.Code).HasColumnName(@"Code").HasColumnType("nvarchar(255)").IsRequired(false).HasMaxLength(255);
             builder.Property(x => x.Type).HasColumnName(@"Type").HasColumnType("int").IsRequired(false);
+            
         }
     }
 
