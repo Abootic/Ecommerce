@@ -108,6 +108,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbkNsYXNzaWZpY2F0aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/pro/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAttribute/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEF0dHJpYnV0ZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/pro/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/RolesManager/AddRoleToUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNNYW5hZ2VyXEFkZFJvbGVUb1VzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
