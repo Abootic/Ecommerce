@@ -11549,6 +11549,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\css\\virtual-select.min.css",
+      "PackagePath": "staticwebassets\\css\\virtual-select.min.css"
+    },
+    {
       "Id": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -11563,6 +11567,10 @@
     {
       "Id": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\js\\uploadFiles.js",
       "PackagePath": "staticwebassets\\js\\uploadFiles.js"
+    },
+    {
+      "Id": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\js\\virtual-select.min.js",
+      "PackagePath": "staticwebassets\\js\\virtual-select.min.js"
     },
     {
       "Id": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
