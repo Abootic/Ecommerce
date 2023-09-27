@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fTRBbOktpzClJ13ddRbD7o4MnwWR3/PtbROPYc2b92A=",
+  "Hash": "Au07OZNdpaTmBQ/GV6UYSGZ+/1XPmzp0eNiS7xLs1t0=",
   "Source": "EcommereceWeb.MVC",
   "BasePath": "_content/EcommereceWeb.MVC",
   "Mode": "Default",
@@ -49045,6 +49045,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\css\\virtual-select.min.css",
+      "SourceId": "EcommereceWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/EcommereceWeb.MVC",
+      "RelativePath": "css/virtual-select.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\virtual-select.min.css"
+    },
+    {
       "Identity": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\favicon.ico",
       "SourceId": "EcommereceWeb.MVC",
       "SourceType": "Discovered",
@@ -49111,6 +49128,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\uploadFiles.js"
+    },
+    {
+      "Identity": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\js\\virtual-select.min.js",
+      "SourceId": "EcommereceWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/EcommereceWeb.MVC",
+      "RelativePath": "js/virtual-select.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\virtual-select.min.js"
     },
     {
       "Identity": "E:\\pro\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
