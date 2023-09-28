@@ -1,4 +1,7 @@
-﻿using EcommereceWeb.MVC.Controllers.Base;
+﻿using EcommereceWeb.Application.DTOs;
+using EcommereceWeb.Application.Interfaces.Common;
+using EcommereceWeb.MVC.Controllers.Base;
+using EcommereceWeb.MVC.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,6 +9,13 @@ namespace EcommereceWeb.MVC.Controllers
 {
     public class ProductAttributeController : BaseMVCController
     {
+        private readonly ICustomConventer _customConventer;
+
+        public ProductAttributeController(ICustomConventer customConventer)
+        {
+            _customConventer = customConventer;
+        }
+
         // GET: ProductAttributeController
         public ActionResult Index()
         {
@@ -14,20 +24,24 @@ namespace EcommereceWeb.MVC.Controllers
         public async Task<IActionResult> getAttrItems(int id)
         {
             var res = await ServiceManager.AttributeItemService.Find(a => a.AttributeId == id);
-            Console.WriteLine("ABOODI"+id);
-            Console.WriteLine("ID"+res.Data.FirstOrDefault().Id.ToString());
-
-            var json = new List<dynamic>();
+            
             if (res.Status.Succeeded)
             {
-                foreach(var item in res.Data)
+                ProductAdditionalVM vm =new ProductAdditionalVM();
+              vm.checkBoxListVms  = new List<CheckBoxListVm>();
+                foreach (var item in res.Data)
                 {
-                    var dict = new Dictionary<string, dynamic>();
-                    dict.Add("name", item.ArName);
-                    dict.Add("id", item.Id);
-                    json.Add(dict);
+                   
+                    vm.CheckBoxListVm = new CheckBoxListVm
+                    {
+                        id = item.Id,
+                        name = item.ArName
+                    };
+
+                    vm.checkBoxListVms.Add(vm.CheckBoxListVm);
                 }
-                return Ok(json);
+               
+                return PartialView("Views/Attribute/_checkBoxList.cshtml", vm);
             }
             return BadRequest("noo data");
      
@@ -44,6 +58,41 @@ namespace EcommereceWeb.MVC.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(ProductAdditionalVM entity)
+        {
+            Console.WriteLine($"000000000000000000000000  {entity.ProductId}");
+            Console.WriteLine($"11111111111111111111  {entity.AttributeId}");
+            if (entity.AttributeItemId != null)
+            {
+                var d = entity.AttributeItemId.Split(","); 
+                foreach(var item in d) {
+                    Console.WriteLine($"ccccccccccccc   {item}");
+                    var ob = new ProductAttributeDto
+                    {
+                        AtrrributeId = entity.AttributeId,
+                        AttributeItemId = int.Parse(item),
+                        ProductId = entity.ProductId
+                    };
+                    var res = await ServiceManager.ProductAttributeService.Add(ob);
+                    if (res.Status.Succeeded)
+                    {
+                        Console.WriteLine(res.Status.message);
+                      //  return View();
+                    }
+                    Console.WriteLine(res.Status.message);
+                  //  return View();
+                }
+
+            }
+            return View();
+
+
+            //  Console.WriteLine($"2222222222222222222222  {d.AttributeItemId}");
+
+        }
+       
          public async  Task<ActionResult> GetAttribute()
         {
             var res = await ServiceManager.AttributeService.GetAll();
@@ -55,20 +104,7 @@ namespace EcommereceWeb.MVC.Controllers
             return View();
         }
 
-        // POST: ProductAttributeController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+     
 
         // GET: ProductAttributeController/Edit/5
         public ActionResult Edit(int id)

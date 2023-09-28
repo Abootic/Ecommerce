@@ -2044,8 +2044,8 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         {
                             Id = "4a2e1650-21bd-4e67-832e-2e99c267a2e4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a5d53e2b-d18e-4773-9570-b0f72c45c407",
-                            CreatedAt = new DateTime(2023, 9, 25, 15, 50, 35, 78, DateTimeKind.Local).AddTicks(6696),
+                            ConcurrencyStamp = "49298d3d-7eba-4800-826b-586c4b0c0fd0",
+                            CreatedAt = new DateTime(2023, 9, 27, 20, 20, 5, 379, DateTimeKind.Local).AddTicks(5922),
                             Email = "Admin@Gmail.com",
                             EmailConfirmed = false,
                             FullName = "Admin",
@@ -2054,10 +2054,10 @@ namespace EcommereceWeb.Infrstraction.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEITZZYjxerXGZRDBTL+Y8IyFzgHUEDDDklx7z6jkI83blk8NKkYEMYRtTvg5pZdzsA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEOwINDvszCK7jb2E9hscAKY978vKSDAjgw9s/cm69UV0ub/7vvPLSdecyXBbH0WO0Q==",
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2c89597d-6c4b-46d3-83eb-feba872bd398",
+                            SecurityStamp = "1457130f-0d28-461b-9c23-5a5d1d7aeab4",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });

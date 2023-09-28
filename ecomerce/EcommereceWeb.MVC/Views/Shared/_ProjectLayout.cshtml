@@ -91,6 +91,7 @@
     <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../../assets/css/demo.css" />
+    <link rel="stylesheet" href="~/css/virtual-select.min.css"/>
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
@@ -100,7 +101,7 @@
     <link rel="stylesheet" href="../../assets/vendor/libs/flatpickr/flatpickr.css" />
 
     <!-- Page CSS -->
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
     <!-- Helpers -->
     <script src="../../assets/vendor/js/helpers.js"></script>
 
@@ -693,6 +694,7 @@
     @await RenderSectionAsync("Scripts", required: false)
  *@
    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
             <script src="../../assets/vendor/libs/popper/popper.js"></script>
             <script src="../../assets/vendor/js/bootstrap.js"></script>
             <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
@@ -701,6 +703,8 @@
             <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
 
             <script src="../../assets/vendor/js/menu.js"></script>
+            
+            <script src="~/js/virtual-select.min.js"></script>
             <!-- endbuild -->
             <!-- Vendors JS -->
             <script src="../../assets/vendor/libs/datatables/jquery.dataTables.js"></script>

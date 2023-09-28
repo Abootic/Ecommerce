@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DcOvS0oYBSf4eRTUJiHMP/gAPBrUq+0cQzE11fsjfcdcz2lNRNpU3v0KMXKdHn3Q5WCdilus9PLrQ2MgsaZlYg==",
+  "dgSpecHash": "9J4h1vZQMoVvdi5wB4Xnwb+flBN62ZfqO/AJ1nCmLqiGnvUMeowXf03adaZeTZNy8AP7TnbgpgDRqhNm47vFdw==",
   "success": true,
-  "projectFilePath": "D:\\wejo\\verison\\v6\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
+  "projectFilePath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\My Computer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.10\\microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.10\\microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512",
