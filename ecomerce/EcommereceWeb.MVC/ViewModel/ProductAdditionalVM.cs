@@ -10,5 +10,7 @@ namespace EcommereceWeb.MVC.ViewModel
         public int ProductId { get; set; }
         public int? AttributeId { get; set; }
         public string AttributeItemId { get; set; }
+        public string Name { get; set; }
+
     }
 }

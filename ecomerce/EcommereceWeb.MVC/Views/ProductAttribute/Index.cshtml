@@ -1,0 +1,33 @@
+﻿@inject IServiceManager serviceManager
+@{
+
+    var resProduct = await serviceManager.ProductAttributeService.Find(a => a.ProductId == 2 && a.AttributeId==1);
+    var resproItem = await serviceManager.ProductAttributeService.Find(a => a.ProductId == 2 && a.AttributeId==2);
+    var data = new List<Dictionary<string, dynamic>>();
+    for (int i = 0, k = 0; i < resProduct.Data.Count() && k < resproItem.Data.Count(); i++,k++)
+    {
+        var res = await serviceManager.AttributeItemService.Find(a => a.AttributeId == 1);
+        var dict = new Dictionary<string, dynamic>();
+        dict.Add(resProduct.Data.ToList()[i].Name, resproItem.Data.ToList()[k]);
+        data.Add(dict);
+    }
+    // var res = await serviceManager.AttributeService.GetAll();
+ 
+  
+
+  
+}
+@foreach(var item in data)
+{
+    foreach(var i in item)
+    {
+        <table>
+            <tr>
+                <td>@i.Key</td>
+                <td>@i.Value</td>
+            </tr>
+         
+        </table>
+    }
+   
+}

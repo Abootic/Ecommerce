@@ -19,7 +19,9 @@ namespace EcommereceWeb.MVC.Controllers
         // GET: ProductAttributeController
         public ActionResult Index()
         {
+
             return View();
+
         }
         public async Task<IActionResult> getAttrItems(int id)
         {
@@ -65,30 +67,37 @@ namespace EcommereceWeb.MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(ProductAdditionalVM entity)
         {
-            Console.WriteLine($"000000000000000000000000  {entity.ProductId}");
-            Console.WriteLine($"11111111111111111111  {entity.AttributeId}");
+           
             if (entity.AttributeItemId != null)
             {
-                var d = entity.AttributeItemId.Split(","); 
-                foreach(var item in d) {
-                    Console.WriteLine($"ccccccccccccc   {item}");
+                var AttributeItemIdList = entity.AttributeItemId.Split(","); 
+                var nameattrList = entity.Name.Split(",");
+            
+                for(int i= 0,k=0; i < nameattrList.Length &&k< AttributeItemIdList.Length; i++,k++)
+                {
+                  
                     var ob = new ProductAttributeDto
                     {
                         AttributeId = entity.AttributeId,
-                        AttributeItemId = int.Parse(item),
-                        ProductId = entity.ProductId
+                        AttributeItemId = int.Parse(AttributeItemIdList[k]),
+                        ProductId = entity.ProductId,
+                        Name = nameattrList[i]
+
                     };
                     var res = await ServiceManager.ProductAttributeService.Add(ob);
                     if (res.Status.Succeeded)
                     {
                         Console.WriteLine(res.Status.message);
-                      //  return View();
+                        //  return View();
                     }
-                    Console.WriteLine(res.Status.message);
-                  //  return View();
+                    else
+                    {
+                        Console.WriteLine(res.Status.message);
+                    }
                 }
 
-            }
+            } 
+            
             return RedirectToAction("Create");
 
 

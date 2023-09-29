@@ -1,4 +1,4 @@
-﻿@using EcommereceWeb.Application.Interfaces.Common;
+﻿
 @model ProductAdditionalVM
 @inject IServiceManager serviceManager
 @{
@@ -197,6 +197,7 @@
     <input type="hidden" asp-for="ProductId" value="2">
     <input type="hidden" asp-for="AttributeId" id="AttributeId">
     <input type="hidden" asp-for="AttributeItemId" id="AttributeItemId">
+    <input type="hidden" asp-for="Name" id="name">
 
     <div class="modal-footer d-inline-flex">
         <a class="btn btn-secondary" asp-action="Index">Cancel</a>
@@ -218,6 +219,8 @@
         });
         $("#Att").on("change", function () {
             let list = [];
+            let namelist = [];
+
             let id = $(this).val();
             $("#AttributeId").val($(this).val());
             let url = "../ProductAttribute/getAttrItems";
@@ -251,28 +254,40 @@
                                 e.preventDefault();
                                 e.stopImmediatePropagation();
                                 let AttributeItemId = $(this).attr("value");
+                                let namevalue = $(this).attr("name-att");
+                                console.log("name-att  "+namevalue);
 
-                                if (list.length > 0) {
+                                if (list.length > 0 && namelist.length>0) {
                                     let index = list.some(obj => obj === AttributeItemId);
-                                    if (index) {
+                                    let name = namelist.some(obj => obj === namevalue);
+                                    /////////////////////////////
+                                    if (index && name) {
                                         list = list.filter(a => {
                                             return a !== AttributeItemId;
+                                        });
+                                        //////////////////////////
+                                        namelist = namelist.filter(a => {
+                                            return a !== namevalue;
                                         });
                                         console.log("hi");
 
                                     } else {
                                         console.log("noo");
-                                        list.push(AttributeItemId);
+                                        list.push( AttributeItemId);
+                                        namelist.push(namevalue);
 
                                     }
                                 } else {
                                     console.log("sssssssssssssssss");
                                     list.push(AttributeItemId);
+                                    namelist.push(namevalue);
                                 }
                                 //  console.log("ttttttttttttt  " + v);
-                                console.log(JSON.stringify(list));
+                                console.log("listttttttttttt  "+JSON.stringify(list));
+                                console.log("nameListttttt    "+JSON.stringify(namelist));
 
                                 $("#AttributeItemId").val(list.toString());
+                                $("#name").val(namelist.toString());
                             })
                         });
                     });

@@ -4,4 +4,9 @@
     {
         public string AttributeItemId { get; set; }
     }
+    public class AtrributeItemHelperVM
+    {
+        public string AttributeItemId { get; set;}
+        public string AttributeItemName { get; set;}
+    }
 }
