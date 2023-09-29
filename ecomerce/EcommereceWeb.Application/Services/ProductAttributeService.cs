@@ -22,9 +22,12 @@ namespace EcommereceWeb.Application.Services
         {
             try
             {
+
                 if (entity == null) return await Result<ProductAttributeDto>.FailAsync("--- entity is null ---");
 
+                Console.WriteLine($"vvvvvvvvvvvvvvvvvv  {entity.AttributeId}");
                 var entityMap = _mapper.Map<ProductAttribute>(entity);
+                Console.WriteLine($"dddddddddddddddddddddddddddd  {entityMap.AttributeId}");
                 var res = await _repositoryManager.ProductAttributeRepository.AddAndReturn(entityMap);
                 if (res != null)
                 {
