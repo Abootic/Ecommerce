@@ -176,9 +176,15 @@
                                     </div>
 
                                 </div>
+                             
                                 <div class="modal-footer d-inline-flex">
-                                    <a class="btn btn-secondary" asp-action="Index">Cancel</a>
-                                    <input type="submit" class="btn alert-info" value="Add Attribute" id="attr-btn">
+                                    <div class="row">
+                                        <div class="col-sm-6">   <a class="btn btn-secondary" onclick="Clear()" style="color:#fff">Cancel</a></div>
+                                        <div class="col-sm-6">
+                                            <input type="submit" class="btn alert-info" value="Add Attribute" id="attr-btn"></div>
+                                    </div>
+                                 
+                                   
                                 </div>
                             </form>
                         </div>
@@ -217,9 +223,22 @@
             e.preventDefault();
             $("#hidden-btn").trigger("click");
         });
+        let list = [];
+        let namelist = [];
+        function Clear(){
+
+            var selectElement = document.getElementById("Att");
+            selectElement.disabled = false;
+            list = [];
+             namelist = [];
+            window.location.reload();
+        }
         $("#Att").on("change", function () {
-            let list = [];
-            let namelist = [];
+            //let list = [];
+            //let namelist = [];
+
+            var selectElement = document.getElementById("Att");
+            selectElement.disabled = true;
 
             let id = $(this).val();
             $("#AttributeId").val($(this).val());

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v0CHm43TDe/qlymXIwst/ifyPjKNy8IGelUGEJFpnH4=",
+  "Hash": "OTK97tY/aDHKgm30vBDTCWDoJt6N4n6MPrr25pkc3ec=",
   "Source": "EcommereceWeb.MVC",
   "BasePath": "_content/EcommereceWeb.MVC",
   "Mode": "Default",
@@ -86222,6 +86222,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\Brand\\fea0c758-8437-409e-8637-777171713948.png"
+    },
+    {
+      "Identity": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\MainClassification\\21010fab-417e-4d02-92fb-5cd68accefcc.jpg",
+      "SourceId": "EcommereceWeb.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\",
+      "BasePath": "_content/EcommereceWeb.MVC",
+      "RelativePath": "Upload/MainClassification/21010fab-417e-4d02-92fb-5cd68accefcc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\MainClassification\\21010fab-417e-4d02-92fb-5cd68accefcc.jpg"
     },
     {
       "Identity": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\MainClassification\\7df70954-e826-4466-829c-deb97eb5de51.png",

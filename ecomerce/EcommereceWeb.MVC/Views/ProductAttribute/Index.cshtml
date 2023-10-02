@@ -1,33 +1,55 @@
-﻿@inject IServiceManager serviceManager
+﻿@model List<ProductVariationDto>
 @{
+    ViewData["Title"] = "Home Page";
+}<
 
-    var resProduct = await serviceManager.ProductAttributeService.Find(a => a.ProductId == 2 && a.AttributeId==1);
-    var resproItem = await serviceManager.ProductAttributeService.Find(a => a.ProductId == 2 && a.AttributeId==2);
-    var data = new List<Dictionary<string, dynamic>>();
-    for (int i = 0, k = 0; i < resProduct.Data.Count() && k < resproItem.Data.Count(); i++,k++)
-    {
-        var res = await serviceManager.AttributeItemService.Find(a => a.AttributeId == 1);
-        var dict = new Dictionary<string, dynamic>();
-        dict.Add(resProduct.Data.ToList()[i].Name, resproItem.Data.ToList()[k]);
-        data.Add(dict);
-    }
-    // var res = await serviceManager.AttributeService.GetAll();
- 
-  
 
-  
-}
-@foreach(var item in data)
-{
-    foreach(var i in item)
-    {
-        <table>
-            <tr>
-                <td>@i.Key</td>
-                <td>@i.Value</td>
-            </tr>
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">  إداراة الصفات المتغيرة  /</span> الصفات المتغيرة  </h4>
+
+
+        <!-- Ajax Sourced Server-side -->
+        <div class="card">
+
+            <div class="row ">
+                <div class="col-md-6 text-start  mt-3  ps-4">
+                    <h5 class="card-title mb-0 ms-2">  إضافة منتج</h5>
+                </div>
+                <div class="col-md-6 text-end">
+
+                    <div class="dt-buttons text-end me-3">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    @if (Model != null)
+                    {
+                     
+                            <div class="col-sm-2">
+                                <div class="form-group mb-50">
+
+                                    <select class="form-select">
+                                    @foreach (var item in Model)
+                                    {
+                                        <option value="@item.ProductId">@item.ColorName</option>
+                                    }
+                                    </select>
+                                </div>
+                            </div>
+
+                        
+
+                    }
+                </div>
+            </div>
+        </div>
+
+      
          
-        </table>
-    }
-   
-}
+        
+

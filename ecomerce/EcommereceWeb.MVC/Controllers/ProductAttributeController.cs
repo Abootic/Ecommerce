@@ -1,5 +1,6 @@
 ﻿using EcommereceWeb.Application.DTOs;
 using EcommereceWeb.Application.Interfaces.Common;
+using EcommereceWeb.Infrastraction.Data;
 using EcommereceWeb.MVC.Controllers.Base;
 using EcommereceWeb.MVC.ViewModel;
 using Microsoft.AspNetCore.Http;
@@ -10,17 +11,29 @@ namespace EcommereceWeb.MVC.Controllers
     public class ProductAttributeController : BaseMVCController
     {
         private readonly ICustomConventer _customConventer;
+        private readonly ApplicationDbContext _applicationDbContext;
 
-        public ProductAttributeController(ICustomConventer customConventer)
+        public ProductAttributeController(ICustomConventer customConventer, ApplicationDbContext applicationDbContext)
         {
             _customConventer = customConventer;
+            _applicationDbContext = applicationDbContext;
         }
 
+
         // GET: ProductAttributeController
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
 
-            return View();
+         var res=   ServiceManager.ProductAttributeService.GetListVaration();
+            if (res.Status.Succeeded)
+            {
+                TempData["suc"] = res.Status.Succeeded;
+                return View(res.Data);
+
+            }
+            TempData["err"] = res.Status.Succeeded;
+            return View(res.Data);
+
 
         }
         public async Task<IActionResult> getAttrItems(int id)
