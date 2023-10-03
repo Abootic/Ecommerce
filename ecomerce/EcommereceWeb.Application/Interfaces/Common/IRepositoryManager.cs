@@ -29,6 +29,7 @@ namespace EcommereceWeb.Application.Interfaces.Common
         IProductAttributeRepository ProductAttributeRepository { get; }
         IProductVariationRepository ProductVariationRepository { get; }
         IUserRepository UserRepository { get; }
+        IProductAdditionalDetailsRepository ProductAdditionalDetailsRepository { get; }
         IUnitOfWork UnitOfWork { get; }
 
     }

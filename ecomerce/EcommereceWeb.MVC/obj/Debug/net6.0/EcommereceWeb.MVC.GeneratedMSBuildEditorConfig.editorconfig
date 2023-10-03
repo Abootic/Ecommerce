@@ -52,10 +52,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0cmlidXRlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/Attribute/_checkBoxList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0cmlidXRlXF9jaGVja0JveExpc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/BasicClassification/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWNDbGFzc2lmaWNhdGlvblxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -146,6 +142,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/MasterData/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyRGF0YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAdditionalDetails/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEFkZGl0aW9uYWxEZXRhaWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAdditionalDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEFkZGl0aW9uYWxEZXRhaWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAdditionalDetails/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEFkZGl0aW9uYWxEZXRhaWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAttribute/Create.cshtml]

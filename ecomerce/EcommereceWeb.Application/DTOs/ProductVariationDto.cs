@@ -36,7 +36,7 @@ namespace EcommereceWeb.Application.DTOs
         public int? SizeId { get; set; }
         [Display(Name = " الكمية")]
         public int? Quntatiy { get; set; }
-        [Display(Name = "=سعر المنتج")]
+        [Display(Name = "سعر المنتج")]
         public decimal? Price { get; set; }
 
 
