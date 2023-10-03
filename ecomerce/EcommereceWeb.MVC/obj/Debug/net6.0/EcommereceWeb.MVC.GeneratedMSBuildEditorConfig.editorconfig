@@ -148,10 +148,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFzdGVyRGF0YVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAttribute/cccccccc.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEF0dHJpYnV0ZVxjY2NjY2NjYy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAttribute/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEF0dHJpYnV0ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -162,6 +158,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAttribute/_checkBoxList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEF0dHJpYnV0ZVxfY2hlY2tCb3hMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/ProductAttribute/_varationForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEF0dHJpYnV0ZVxfdmFyYXRpb25Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/wejo/verison/v7/Ecommerce-main/ecomerce/EcommereceWeb.MVC/Views/RolesManager/AddRoleToUser.cshtml]
