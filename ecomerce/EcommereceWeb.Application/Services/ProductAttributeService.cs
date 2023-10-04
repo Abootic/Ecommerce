@@ -92,42 +92,48 @@ namespace EcommereceWeb.Application.Services
             {
                 return variations;
             }
-
-            var currentIndexes = new int[attributeLists.Count];
-            var maxIndexes = new int[attributeLists.Count];
-
-            for (int i = 0; i < attributeLists.Count; i++)
+            try
             {
-                maxIndexes[i] = attributeLists[i].Count - 1;
-            }
 
-            while (true)
-            {
-                var variation = GetVariation(attributeLists, currentIndexes);
-                variations.Add(variation);
+                var currentIndexes = new int[attributeLists.Count];
+                var maxIndexes = new int[attributeLists.Count];
 
-                int nextIndex = attributeLists.Count - 1;
-
-                while (nextIndex >= 0 && currentIndexes[nextIndex] == maxIndexes[nextIndex])
+                for (int i = 0; i < attributeLists.Count; i++)
                 {
-                    currentIndexes[nextIndex] = 0;
-                    nextIndex--;
+                    maxIndexes[i] = attributeLists[i].Count - 1;
                 }
 
-                if (nextIndex < 0)
+                while (true)
                 {
-                    break;
+                    var variation = GetVariation(attributeLists, currentIndexes);
+                    variations.Add(variation);
+
+                    int nextIndex = attributeLists.Count - 1;
+
+                    while (nextIndex >= 0 && currentIndexes[nextIndex] == maxIndexes[nextIndex])
+                    {
+                        currentIndexes[nextIndex] = 0;
+                        nextIndex--;
+                    }
+
+                    if (nextIndex < 0)
+                    {
+                        break;
+                    }
+
+                    currentIndexes[nextIndex]++;
                 }
 
-                currentIndexes[nextIndex]++;
+                return variations;
+            }catch(Exception ex)
+            {
+                Console.WriteLine($"eeeeeeeeeeeeeeeeeeeee  {ex.Message}");
+                return variations;
             }
-
-            return variations;
         }
 
         private ProductVariation GetVariation(List<List<ProductAttribute>> attributeLists, int[] currentIndexes)
         {
-            Console.WriteLine("ssssssssssssssssssssssssssssssssssssssssss");
             var variation = new ProductVariation();
 
             for (int i = 0; i < attributeLists.Count; i++)
@@ -135,38 +141,36 @@ namespace EcommereceWeb.Application.Services
                 var currentList = attributeLists[i];
                 var currentIndex = currentIndexes[i];
                 var attribute = currentList[currentIndex];
+                Console.WriteLine("545555555555555555555555");
 
                 variation.ProductId = attribute.ProductId;
-                variation.ColorName += (currentList[i].Name.Length> 0 ? "-" : "") + attribute.Name;
+                variation.EnName += (currentList[i].Name.Length> 0 ? "-" : "") + attribute.Name;
             }
 
             return variation;
         }
         public IResult<List<ProductVariationDto>> GetListVaration()
         {
-            Console.WriteLine($"resssssssssss   dddddddddddddddddd");
-            //try
-            //{
+          
+            try
+            {
 
                 var res = _repositoryManager.ProductAttributeRepository.GetListVarationData();
                 var varition = GenerateVariations(res);
-                foreach (var item in varition)
-                {
-
-                    Console.WriteLine($"resssssssssss   {item.Id}");
-                }
+             
                 if (res != null)
                 {
                    
                     var map=_mapper.Map<List<ProductVariationDto>>(varition);
-                    return Result<List<ProductVariationDto>>.Sucess(map);
+                    return Result<List<ProductVariationDto>>.Sucess(map,"eeeeeeeeeeeeeeee",200);
                 }
                 return Result<List<ProductVariationDto>>.Fail("لا يوجد بيانات", 500);
-            //} catch (Exception ex)
-            //{
-            //    Console.WriteLine($"2222222222222222222222   {ex.Message}");
-            //    return Result<List<ProductVariationDto>>.Fail(ex.Message, 500);
-            //}
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"2222222222222222222222   {ex.Message}");
+                return Result<List<ProductVariationDto>>.Fail(ex.Message, 500);
+            }
         }
 
 

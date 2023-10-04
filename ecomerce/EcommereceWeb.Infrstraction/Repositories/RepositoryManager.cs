@@ -35,7 +35,6 @@ namespace EcommereceWeb.Infrstraction.Repositories
         private readonly IProductImageRepository productImageRepository ;
 
         private readonly IProductSizeRepository productSizeRepository ;
-        private readonly IProductAdditionalDetailsRepository productAdditionalDetailsRepository;
 
        // private readonly IProductUnitSizeRepository productUnitSizeRepository ;
 
@@ -55,7 +54,7 @@ namespace EcommereceWeb.Infrstraction.Repositories
         private readonly IDetailsDataRepository detailsDataRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public RepositoryManager(IAddProductToFavoriteRepository addProductToFavoriteRepository, IBrandRepository brandRepository, IConfigurationRepository configurationRepository, IProductRepository productRepository, ICouponItemRepository couponItemRepository, ICurrencyRepository currencyRepository, IMainClassificationRepository mainClassificationRepository, IMasterDataRepository masterDataRepository, IProductColorsRepository productColorsRepository, IProductEvaluatonRepository productEvaluatonRepository, IProductImageRepository productImageRepository, IProductSizeRepository productSizeRepository, IProductAdditionalDetailsRepository productAdditionalDetailsRepository, ISliderRepository sliderRepository, ISubClassificationBaseRepository subClassificationBaseRepository, ISubSubclassificationRepository subSubclassificationRepository, ITaxConfigurationRepository taxConfigurationRepository, IAttributeItemRepository attributeItemRepository, IAttributeRepository attributeRepository, IProductAttributeRepository productAttributeRepository, IProductVariationRepository productVariationRepository, IUserRepository userRepository, IBasicClassificationRepository basicClassificationRepository, IDetailsDataRepository detailsDataRepository, IUnitOfWork unitOfWork)
+        public RepositoryManager(IAddProductToFavoriteRepository addProductToFavoriteRepository, IBrandRepository brandRepository, IConfigurationRepository configurationRepository, IProductRepository productRepository, ICouponItemRepository couponItemRepository, ICurrencyRepository currencyRepository, IMainClassificationRepository mainClassificationRepository, IMasterDataRepository masterDataRepository, IProductColorsRepository productColorsRepository, IProductEvaluatonRepository productEvaluatonRepository, IProductImageRepository productImageRepository, IProductSizeRepository productSizeRepository, ISliderRepository sliderRepository, ISubClassificationBaseRepository subClassificationBaseRepository, ISubSubclassificationRepository subSubclassificationRepository, ITaxConfigurationRepository taxConfigurationRepository, IAttributeItemRepository attributeItemRepository, IAttributeRepository attributeRepository, IProductAttributeRepository productAttributeRepository, IProductVariationRepository productVariationRepository, IUserRepository userRepository, IBasicClassificationRepository basicClassificationRepository, IDetailsDataRepository detailsDataRepository, IUnitOfWork unitOfWork)
         {
             this.addProductToFavoriteRepository = addProductToFavoriteRepository;
             this.brandRepository = brandRepository;
@@ -69,7 +68,6 @@ namespace EcommereceWeb.Infrstraction.Repositories
             this.productEvaluatonRepository = productEvaluatonRepository;
             this.productImageRepository = productImageRepository;
             this.productSizeRepository = productSizeRepository;
-            this.productAdditionalDetailsRepository = productAdditionalDetailsRepository;
             this.sliderRepository = sliderRepository;
             this.subClassificationBaseRepository = subClassificationBaseRepository;
             this.subSubclassificationRepository = subSubclassificationRepository;
@@ -129,8 +127,6 @@ namespace EcommereceWeb.Infrstraction.Repositories
         public IBasicClassificationRepository BasicClassificationRepository => basicClassificationRepository;
 
         public IDetailsDataRepository DetailsDataRepository => detailsDataRepository;
-
-        public IProductAdditionalDetailsRepository ProductAdditionalDetailsRepository => productAdditionalDetailsRepository;
     }
 
 }

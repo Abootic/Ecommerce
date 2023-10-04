@@ -18,21 +18,28 @@ namespace EcommereceWeb.Infrstraction.Repositories
       
         public List<List<ProductAttribute>> GetListVarationData()
         {  
-            var res = _dbContext.ProductAttribute.Where(a => a.ProductId == 2).AsEnumerable().GroupBy(a => a.AttributeId);
+            var res = _dbContext.ProductAttribute.Where(a => a.ProductId == 1).AsEnumerable().GroupBy(a => a.AttributeId);
             var attributeLists = new List<List<ProductAttribute>>();
-
-            foreach (var i in res)
+            if (res.Any())
             {
-                attributeLists.Add(i.ToList());
+                foreach (var i in res)
+                {
+                    foreach (var item in i)
+                    {
+                        Console.WriteLine($"fffffffffffffffffffffffffff  {item.Name}");
+                    }
+
+                    attributeLists.Add(i.ToList());
 
 
 
+                }
             }
-            //var variations = GenerateVariations(attributeLists);
-            //for (int i = 0; i < variations.Count; i++)
-            //{
-            //    variations[i].Id = i + 1;
-            //}
+            else
+            {
+                Console.WriteLine($"kiiiiiiiiiiiiiiiiiiiiii");
+            }
+           
             return attributeLists;
         }
     }

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "peBnRnxLzRpz4Qg9HVfjmj4UDm5q0/gWW/qsDLN7DH4pfS3kP7va6U3+SLCnL3q7Z+j6VuTeFLAGTUTZPrI/7w==",
+  "dgSpecHash": "1gzBuT2mS6IDx83IrdfHxiaT7YzMVWBzP8uIR99u8k+SlI8F7qAKhEN5jlZ7Tn8y4c8dL3mCcD/n5ZwCsfc2dw==",
   "success": true,
-  "projectFilePath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
+  "projectFilePath": "D:\\wejo\\verison\\v8\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\My Computer\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\My Computer\\.nuget\\packages\\automapper.extensions.expressionmapping\\6.0.4\\automapper.extensions.expressionmapping.6.0.4.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.10\\microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.10\\microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512",

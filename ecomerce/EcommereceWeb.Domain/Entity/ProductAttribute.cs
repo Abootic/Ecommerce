@@ -12,7 +12,6 @@ namespace EcommereceWeb.Domain.Entity
         public virtual Attribute? Attribute { get; set; }
         public virtual Product? Product { get; set; }
         public virtual AttributeItem? AttributeItem { get; set; }
-        public virtual ICollection<ProductVariation> ProductVariations { get; set; }
 
 
     }

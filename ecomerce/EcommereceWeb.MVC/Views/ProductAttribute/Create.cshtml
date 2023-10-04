@@ -123,7 +123,16 @@
     }
 </style>
 
+
 <section id="auth-login" class="row flexbox-container">
+    @if (TempData["err"] != null)
+    {
+        <span class="alert alert-danger">@TempData["err"]</span>
+    }
+    @if (TempData["suc"] != null)
+    {
+        <span class="alert alert-success">@TempData["suc"]</span>
+    }
     <div class="col-xl-8 col-11">
         <div class="card bg-authentication mb-0">
             <div class="row m-0">
@@ -200,7 +209,7 @@
 </section>
 <!-- login page ends -->
 <form asp-controller="ProductAttribute" asp-action="Create" method="post" style="display:none">
-    <input type="hidden" asp-for="ProductId" value="2">
+    <input type="hidden" asp-for="ProductId" value="1">
     <input type="hidden" asp-for="AttributeId" id="AttributeId">
     <input type="hidden" asp-for="AttributeItemId" id="AttributeItemId">
     <input type="hidden" asp-for="Name" id="name">
@@ -263,7 +272,12 @@
                             let checked = document.querySelectorAll(".checked");
                             let btnText = document.querySelector(".btn-text");
                             console.log(checked.length);
+                            //if (checked && checked.length > 0) {
 
+                            //    console.log("vvvvvv " + checked.item.arguments["value"]);
+                            //} else {
+                            //    //  btnText.innerHTML = checked.length;
+                            //}
                             $(document).on("click", ".item", function (e) {
                                 e.preventDefault();
                                 e.stopImmediatePropagation();
@@ -292,10 +306,13 @@
 
                                     }
                                 } else {
+                                    console.log("sssssssssssssssss");
                                     list.push(AttributeItemId);
                                     namelist.push(namevalue);
                                 }
-                              
+                                //  console.log("ttttttttttttt  " + v);
+                                console.log("listttttttttttt  "+JSON.stringify(list));
+                                console.log("nameListttttt    "+JSON.stringify(namelist));
 
                                 $("#AttributeItemId").val(list.toString());
                                 $("#name").val(namelist.toString());

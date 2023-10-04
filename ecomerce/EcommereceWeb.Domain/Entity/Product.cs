@@ -10,10 +10,11 @@ namespace EcommereceWeb.Domain.Entity
         public string? EnName { get; set; }
         // كود  المنتج  عند  مشاركة المنتج يتم ارساله هذا الكود  ليتمكن من البحث عبره
         public string Code { get; set; }
-        public decimal? Price { get; set; }
-        public decimal? Cost { get; set; }
-        public int? Quantity { get; set; }
+        /* public decimal? Price { get; set; }
+         public decimal? Cost { get; set; }
+                public int? Quantity { get; set; }
 
+         */
         public string Logo { get; set; }// الصورة الرئيسة للمنتج
         public string? EnDetails { get; set; }
         public string? ArDetails { get; set; }
@@ -25,13 +26,13 @@ namespace EcommereceWeb.Domain.Entity
         public string? VideoProvider { get; set; }// نوع مزود الخدمة  هل يوتيوب او غيرة 
         public string? VideoUrl { get; set; }
         public int? TaxType { get; set; }// نوع الضريبة  هل قيمة او نسبة مئوية
-       
+
 
         public string? ArKeyWords { get; set; }   //AddedNew
         public string? EnKeyWords { get; set; }     //AddedNew
 
         public int? BrandId { get; set; }//العلامة  التجارية
-      // from brand model
+                                         // from brand model
         public int? MainClassificationId { get; set; }
         //from MainClassfication model
         public int? BasicClassificationId { get; set; }

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DChME7olYaMaiNMkMLIlpjSsI9eH1hPgEi6aIiDcjJfPbddxBy9jblv7VBXFFmiQmxZQ+JmzK3ign1rt8qekLw==",
+  "dgSpecHash": "rbxMtqR3TCePheUtBpAZBi7e4YUEXfygkE01UhzC8gdcSD4EwljdDFcxRxI3heh3gJ11ZtC3uhc1gWj+CcjHDA==",
   "success": true,
-  "projectFilePath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
+  "projectFilePath": "D:\\wejo\\verison\\v8\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\EcommereceWeb.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\My Computer\\.nuget\\packages\\autofac\\7.1.0\\autofac.7.1.0.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\My Computer\\.nuget\\packages\\automapper.extensions.expressionmapping\\6.0.4\\automapper.extensions.expressionmapping.6.0.4.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\My Computer\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

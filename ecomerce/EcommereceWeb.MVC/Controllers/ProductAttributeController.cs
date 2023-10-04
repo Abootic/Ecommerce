@@ -24,14 +24,14 @@ namespace EcommereceWeb.MVC.Controllers
         public async Task<IActionResult> Index()
         {
 
-         var res=   ServiceManager.ProductAttributeService.GetListVaration();
+            var res = ServiceManager.ProductAttributeService.GetListVaration();
             if (res.Status.Succeeded)
             {
-                TempData["suc"] = res.Status.Succeeded;
+                TempData["suc"] = res.Status.message;
                 return View(res.Data);
 
             }
-            TempData["err"] = res.Status.Succeeded;
+            TempData["err"] = res.Status.message;
             return View(res.Data);
 
 
@@ -39,14 +39,14 @@ namespace EcommereceWeb.MVC.Controllers
         public async Task<IActionResult> getAttrItems(int id)
         {
             var res = await ServiceManager.AttributeItemService.Find(a => a.AttributeId == id);
-            
+
             if (res.Status.Succeeded)
             {
-                ProductAdditionalVM vm =new ProductAdditionalVM();
-              vm.checkBoxListVms  = new List<CheckBoxListVm>();
+                ProductAdditionalVM vm = new ProductAdditionalVM();
+                vm.checkBoxListVms = new List<CheckBoxListVm>();
                 foreach (var item in res.Data)
                 {
-                   
+
                     vm.CheckBoxListVm = new CheckBoxListVm
                     {
                         id = item.Id,
@@ -55,21 +55,21 @@ namespace EcommereceWeb.MVC.Controllers
 
                     vm.checkBoxListVms.Add(vm.CheckBoxListVm);
                 }
-               
+
                 return PartialView("_checkBoxList", vm);
             }
             return BadRequest("noo data");
-     
+
         }
 
         // GET: ProductAttributeController/Details/5
         [HttpGet]
-       public IActionResult CreateVariation(int id,string name)
+        public IActionResult CreateVariation(int id, string name)
         {
             var productvaiation = new ProductVariationDto
             {
-                ColorId = id,
-                ColorName = name,
+                AttItemId = id.ToString(),
+                EnName = name,
 
             };
             return PartialView("_varationForm", productvaiation);
@@ -98,15 +98,15 @@ namespace EcommereceWeb.MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(ProductAdditionalVM entity)
         {
-           
+
             if (entity.AttributeItemId != null)
             {
-                var AttributeItemIdList = entity.AttributeItemId.Split(","); 
+                var AttributeItemIdList = entity.AttributeItemId.Split(",");
                 var nameattrList = entity.Name.Split(",");
-            
-                for(int i= 0,k=0; i < nameattrList.Length &&k< AttributeItemIdList.Length; i++,k++)
+
+                for (int i = 0, k = 0; i < nameattrList.Length && k < AttributeItemIdList.Length; i++, k++)
                 {
-                  
+
                     var ob = new ProductAttributeDto
                     {
                         AttributeId = entity.AttributeId,
@@ -127,19 +127,19 @@ namespace EcommereceWeb.MVC.Controllers
                     }
                 }
 
-            } 
-            
+            }
+
             return RedirectToAction("Create");
 
 
             //  Console.WriteLine($"2222222222222222222222  {d.AttributeItemId}");
 
         }
-       
-         public async  Task<ActionResult> GetAttribute()
+
+        public async Task<ActionResult> GetAttribute()
         {
             var res = await ServiceManager.AttributeService.GetAll();
-         //   var list
+            //   var list
             if (res.Status.Succeeded)
             {
 
@@ -147,7 +147,7 @@ namespace EcommereceWeb.MVC.Controllers
             return View();
         }
 
-     
+
 
         // GET: ProductAttributeController/Edit/5
         public ActionResult Edit(int id)
