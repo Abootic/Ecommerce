@@ -263,7 +263,12 @@
                             let checked = document.querySelectorAll(".checked");
                             let btnText = document.querySelector(".btn-text");
                             console.log(checked.length);
+                            //if (checked && checked.length > 0) {
 
+                            //    console.log("vvvvvv " + checked.item.arguments["value"]);
+                            //} else {
+                            //    //  btnText.innerHTML = checked.length;
+                            //}
                             $(document).on("click", ".item", function (e) {
                                 e.preventDefault();
                                 e.stopImmediatePropagation();
@@ -292,10 +297,13 @@
 
                                     }
                                 } else {
+                                    console.log("sssssssssssssssss");
                                     list.push(AttributeItemId);
                                     namelist.push(namevalue);
                                 }
-                              
+                                //  console.log("ttttttttttttt  " + v);
+                                console.log("listttttttttttt  "+JSON.stringify(list));
+                                console.log("nameListttttt    "+JSON.stringify(namelist));
 
                                 $("#AttributeItemId").val(list.toString());
                                 $("#name").val(namelist.toString());

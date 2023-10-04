@@ -1,7 +1,7 @@
 ﻿@model List<ProductVariationDto>
 @{
     ViewData["Title"] = "Home Page";
-}
+}<
 
 
 <div class="content-wrapper">
@@ -30,13 +30,13 @@
                     @if (Model != null)
                     {
                      
-                            <div class="col-sm-6">
+                            <div class="col-sm-2">
                                 <div class="form-group mb-50">
 
-                                    <select class="form-select" id="variation">
+                                    <select class="form-select">
                                     @foreach (var item in Model)
                                     {
-                                        <option value="@item.ProductId">@item.ColorName</option>
+                                        <option value="@item.ProductId">@item.EnName</option>
                                     }
                                     </select>
                                 </div>
@@ -46,111 +46,10 @@
 
                     }
                 </div>
-                <div class="dropdown-divider"></div>
-
-                <div class="col-12" id="create-variation"></div>
             </div>
-        </div>
-        </div>
         </div>
 
       
          
         
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-
-    <script src="~/js/uploadFiles.js" asp-append-version="true"></script>
-   
-    <script type="text/javascript">
-
-        function uploud(){
-
-            $("#upload").on('change', function () {
-
-                var files = $('#upload').prop("files");
-
-                let folderName = "variation";
-                uplodfile(files, folderName);
-            });
-
-            $('#fileBtn').click(function () {  $('#upload').trigger('click'); });
-        }
-                $("#variation").on("change",function(){
-                    var selectedOption = $("#variation option:selected");
-                    var pid=$(this).val();
-                    // Get the text of the selected option
-                    var selectedText = selectedOption.text();
-                    let url = "../ProductAttribute/CreateVariation";
-
-                    let item = "";
-                    jQuery.ajax({
-                        method: "get",
-                        url: url,
-                        data: { "id": pid, "name": selectedText },
-                        contentType: false,
-                        beforeSend: function () {
-
-                            $("#create-variation").html("<span class='spinner-border spinner-border-sm' role ='status' aria - hidden='true' > </span>Loading...");
-                            //$(".send-btn").prop("disabled", true);
-                        },
-                        success: function (res) {
-
-                            $("#create-variation").html(res);
-
-                            /////////////////////////////////////////////////
-                    uploud();
-                    submitData();
-                            //////////////////////////////////////////////
-
-
-                        },
-                        error: function (ex) {
-                            alert("errrrrrrrrrr  " + ex.responseText);
-                        }
-                    });
-                });
-                function submitData(){
-
-            $("#ProductVariationDto").on("submit", (e) => {
-                e.preventDefault();
-                e.stopImmediatePropagation();
-                let urlp = "../ProductAttribute/CreateVariation";
-                let datap = new FormData(document.getElementById("ProductVariationDto"));
-               
-
-                jQuery.ajax({
-                    method: "post",
-                    url: urlp,
-                    data: datap,
-                    contentType: false,
-                    processData: false,  cache: false,
-                    beforeSend: function () {
-
-                        $("#submit-btn").html("<span class='spinner-border spinner-border-sm' role ='status' aria - hidden='true' > </span>Loading...");
-                        $("#submit-btn").prop("disabled", true);
-                    },
-                    success: function (res1) {
-
-                        $("#submit-btn").prop("disabled", false);
-                        $("#submit-btn").html("اضافة");
-
-                        /////////////////////////////////////////////////
-
-
-                        //////////////////////////////////////////////
-
-
-                    },
-                    error: function (ex) {
-                        alert("errrrrrrrrrr  " + ex.responseText);
-                    }
-                });
-
-            });
-                }
-</script>
-}

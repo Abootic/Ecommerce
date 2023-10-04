@@ -137,7 +137,7 @@ namespace EcommereceWeb.Application.Services
                 var attribute = currentList[currentIndex];
 
                 variation.ProductId = attribute.ProductId;
-                variation.ColorName += (currentList[i].Name.Length> 0 ? "-" : "") + attribute.Name;
+                variation.EnName += (currentList[i].Name.Length> 0 ? "-" : "") + attribute.Name;
             }
 
             return variation;

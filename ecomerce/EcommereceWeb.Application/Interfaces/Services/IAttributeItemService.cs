@@ -11,7 +11,7 @@ namespace EcommereceWeb.Application.Interfaces.Services
         Task<IResult<AttributeItemDto>> Remove(int Id, CancellationToken cancellationToken = default);
         Task<IResult<AttributeItemDto>> Update(AttributeItemDto entity, CancellationToken cancellationToken = default);
 
-        Task<IResult<IEnumerable<AttributeItemDto>>> Find(Expression<Func<AttributeItem, bool>> expression, CancellationToken cancellationToken = default);
+        Task<IResult<IEnumerable<AttributeItemDto>>> Find(Expression<Func<AttributeItemDto, bool>> expression, CancellationToken cancellationToken = default);
         Task<IResult<IEnumerable<AttributeItemDto>>> GetAll(CancellationToken cancellationToken = default);
         Task<IResult<AttributeItemDto>> GetById(int Id, CancellationToken cancellationToken = default);
     } 

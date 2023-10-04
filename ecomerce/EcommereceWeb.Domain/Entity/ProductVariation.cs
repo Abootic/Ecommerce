@@ -6,15 +6,16 @@ namespace EcommereceWeb.Domain.Entity
     {
         public int Id { get; set; }
         public int? ProductId { get; set; }
-        public int? ProductAttributeId { get; set; }
-        public string? ColorName { get; set; }
-        public int? ColorId { get; set; }
-        public string? SizeName { get; set; }
-        public int? SizeId { get; set; }
-        public int? Quntatiy { get; set; }
+        public string? ArName { get; set; }
+        public string? EnName { get; set; }
+        public string? AttItemId { get; set; }
+        public string? Image { get; set; }
         public decimal? Price { get; set; }
+        public decimal? Cost { get; set; }
+        public int? Quantity { get; set; }
 
-        public virtual ProductAttribute? ProductAttribute { get; set; }
+
+
         public virtual Product? Product { get; set; }
 
     }

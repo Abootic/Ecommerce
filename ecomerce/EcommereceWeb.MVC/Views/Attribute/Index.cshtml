@@ -26,7 +26,7 @@
                 <div class="col-md-6 text-end">
 
                     <div class="dt-buttons text-end me-3">
-                        <a class="dt-button create-new btn btn-primary mt-3" asp-controller="Attribute" asp-action="Create"  tabindex="0">Add Atrtibute</a>
+                        <a class="dt-button create-new btn btn-primary mt-3" asp-controller="Attribute" asp-action="Create"  tabindex="0">اضافة صفة متغيرة </a>
                        
                     </div>
                 </div>
@@ -111,6 +111,7 @@
                                                 <div class="dropdown-menu">
                                                     <a class="dropdown-item" asp-controller="Attribute" asp-action="Edit" asp-route-Id="@item.Id"> تعديل  </a>
                                                     <a class="dropdown-item" asp-controller="Attribute" asp-action="Delete" asp-route-Id="@item.Id"> حذف  </a>
+                                                    <a class="dropdown-item" asp-controller="AttributeItem" asp-action="Index" asp-route-id="@item.Id"> اضافة عناصر  </a>
 
                                               </div>
                                             </div>

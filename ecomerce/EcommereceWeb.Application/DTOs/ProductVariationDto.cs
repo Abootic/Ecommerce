@@ -6,18 +6,17 @@ namespace EcommereceWeb.Application.DTOs
 {
     public class ProductVariationViewDto
     {
-     
+
         public int Id { get; set; }
         public int? ProductId { get; set; }
-        public int? ProductAttributeId { get; set; }
-        public string? ColorName { get; set; }
-        public int? ColorId { get; set; }
-        public string? SizeName { get; set; }
-        public int? SizeId { get; set; }
-        public int? Quntatiy { get; set; }
+        public string? ArName { get; set; }
+        public string? EnName { get; set; }
+        public string? AttItemId { get; set; }
+        public string? Image { get; set; }
         public decimal? Price { get; set; }
+        public decimal? Cost { get; set; }
+        public int? Quantity { get; set; }
 
-       
 
     }
     public class ProductVariationDto
@@ -27,17 +26,19 @@ namespace EcommereceWeb.Application.DTOs
         public int Id { get; set; }
         [Display(Name = "رقم المنتج")]
         public int? ProductId { get; set; }
-        public int? ProductAttributeId { get; set; }
-        [Display(Name = "لون المنتج")]
-        public string? ColorName { get; set; }
-        public int? ColorId { get; set; }
-        [Display(Name = "حجم المنتج")]
-        public string? SizeName { get; set; }
-        public int? SizeId { get; set; }
-        [Display(Name = " الكمية")]
-        public int? Quntatiy { get; set; }
-        [Display(Name = "سعر المنتج")]
-        public decimal? Price { get; set; }
+        [Display(Name = " الاسم")]
+        public string? ArName { get; set; }
+        public string? EnName { get; set; }
+        public string? AttItemId { get; set; }
+        [Display(Name = "الصور ")]
+        public string? Image { get; set; }
+        [Display(Name = "السعر")]
+        [Required(ErrorMessage = " يرجى ادخال سعر المنتج       ")]
+        public decimal Price { get; set; }
+        [Display(Name = "التكلفة")]
+        public decimal? Cost { get; set; }
+        [Display(Name = "الكمية الكلية")]
+        public int? Quantity { get; set; }
 
 
     }

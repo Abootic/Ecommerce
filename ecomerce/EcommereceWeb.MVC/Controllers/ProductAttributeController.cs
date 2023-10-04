@@ -63,29 +63,11 @@ namespace EcommereceWeb.MVC.Controllers
         }
 
         // GET: ProductAttributeController/Details/5
-        [HttpGet]
-       public IActionResult CreateVariation(int id,string name)
+        public ActionResult Details(int id)
         {
-            var productvaiation = new ProductVariationDto
-            {
-                ColorId = id,
-                ColorName = name,
-
-            };
-            return PartialView("_varationForm", productvaiation);
+            return View();
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateVariation(ProductVariationDto productVariationDto)
-        {
-            var res = await ServiceManager.ProductVariationService.Add(productVariationDto);
-            if (res.Status.Succeeded)
-            {
-                return Ok(res.Status.message);
-            }
-            return BadRequest(res.Status.message);
 
-        }
         // GET: ProductAttributeController/Create
         public ActionResult Create()
         {

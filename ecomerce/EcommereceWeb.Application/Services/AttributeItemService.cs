@@ -41,7 +41,7 @@ namespace EcommereceWeb.Application.Services
             }
         }
 
-        public async Task<IResult<IEnumerable<AttributeItemDto>>> Find(Expression<Func<AttributeItem, bool>> expression, CancellationToken cancellationToken = default)
+        public async Task<IResult<IEnumerable<AttributeItemDto>>> Find(Expression<Func<AttributeItemDto, bool>> expression, CancellationToken cancellationToken = default)
         {
             try
             {

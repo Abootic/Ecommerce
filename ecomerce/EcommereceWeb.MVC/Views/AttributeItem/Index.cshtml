@@ -1,4 +1,4 @@
-﻿@model IEnumerable<AttributeDto>
+﻿@model IEnumerable<AttributeItemDto>
 
 
 <!-- BEGIN: Content-->
@@ -15,7 +15,7 @@
 <div class="content-wrapper">
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">  إداراة الصفات المتغيرة  /</span> الصفات المتغيرة  </h4>
+        <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">   إداراة عناصر الصفات المتغيرة  /</span> الصفات المتغيرة  </h4>
 
 
         <!-- Ajax Sourced Server-side -->
@@ -23,14 +23,26 @@
 
             <div class="row ">
                 <div class="col-md-6 text-start  mt-3  ps-4">
-                    <h5 class="card-title mb-0 ms-2"> الصفات المتغيرة</h5>
+                     @if (TempData.ContainsKey("AttName"))
+            {
+                    <h5 class="card-title mb-0 ms-2"> عناصر الصفات المتغيرة ل @TempData["AttName"]</h5>
+            }
+                
+            
                 </div>
                 <div class="col-md-6 text-end">
 
-                    <div class="dt-buttons text-end me-3">
-                        <a class="dt-button create-new btn btn-primary mt-3" asp-controller="Attribute" asp-action="Create" tabindex="0">Add Atrtibute</a>
+                     @if (TempData.ContainsKey("AttId"))
+            {
+                        var Id = @TempData["AttId"];
+                         <div class="dt-buttons text-end me-3">
+                        <a class="dt-button create-new btn btn-primary mt-3" asp-controller="AttributeItem" asp-action="Create" asp-route-AttId="@Id" tabindex="0">اضافة عناصر </a>
+                                                <a class="dt-button create-new btn btn-secondary mt-3" asp-controller="Attribute" asp-action="index"  tabindex="0"> الرجوع </a>
 
                     </div>
+                       
+            }
+            
                 </div>
             </div>
             @if (TempData.ContainsKey("msg"))
@@ -50,7 +62,8 @@
                                 <th> @Html.DisplayNameFor(d=>d.ArName)</th>
                                 <th>@Html.DisplayNameFor(d=>d.EnName)</th>
                                 <th>@Html.DisplayNameFor(d=>d.Code)</th>
-                                <th>@Html.DisplayNameFor(d=>d.Type)</th>
+                                <th>@Html.DisplayNameFor(d=>d.ColorCode)</th>
+                                <th>@Html.DisplayNameFor(d=>d.Details)</th>
 
                                 <th>الحالة </th>
                                 <th>تاريخ الاضافة </th>
@@ -85,9 +98,17 @@
                                         <td>------</td>
                                     }
 
-                                    @if (item.Type != null)
+                                    @if (item.ColorCode!= null)
                                     {
-                                        <td>@item.Type</td>
+                                        <td>@item.ColorCode</td>
+                                    }
+                                    else
+                                    {
+                                        <td>------</td>
+                                    }
+                                      @if (item.Details!= null)
+                                    {
+                                        <td>@item.Details</td>
                                     }
                                     else
                                     {

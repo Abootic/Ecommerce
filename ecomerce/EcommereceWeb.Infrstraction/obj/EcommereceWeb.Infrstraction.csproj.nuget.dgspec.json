@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {}
+    "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {}
   },
   "projects": {
-    "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj": {
+    "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
+        "projectUniqueName": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
         "projectName": "EcommereceWeb.Application",
-        "projectPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
-        "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-        "outputPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\obj\\",
+        "projectPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
+        "packagesPath": "C:\\Users\\PCU\\.nuget\\packages\\",
+        "outputPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PCU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "F:\\graduation project analysis\\Nuget Package 6.0.0": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
-                "projectPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
+              "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
+                "projectPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
               }
             }
           }
@@ -47,6 +48,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.ExpressionMapping": {
+              "target": "Package",
+              "version": "[6.0.4, )"
             },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -75,8 +80,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -85,21 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
+    "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
+        "projectUniqueName": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
         "projectName": "EcommereceWeb.Domain",
-        "projectPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
-        "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-        "outputPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\obj\\",
+        "projectPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj",
+        "packagesPath": "C:\\Users\\PCU\\.nuget\\packages\\",
+        "outputPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PCU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,6 +111,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "F:\\graduation project analysis\\Nuget Package 6.0.0": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -136,8 +141,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -146,21 +150,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {
+    "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj",
+        "projectUniqueName": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj",
         "projectName": "EcommereceWeb.Infrstraction",
-        "projectPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj",
-        "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-        "outputPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\obj\\",
+        "projectPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\EcommereceWeb.Infrstraction.csproj",
+        "packagesPath": "C:\\Users\\PCU\\.nuget\\packages\\",
+        "outputPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Infrstraction\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PCU\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -168,17 +172,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "F:\\graduation project analysis\\Nuget Package 6.0.0": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj": {
-                "projectPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj"
+              "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj": {
+                "projectPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj"
               },
-              "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
-                "projectPath": "D:\\wejo\\verison\\v7\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
+              "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
+                "projectPath": "F:\\Aqlan\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
               }
             }
           }
@@ -238,8 +243,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -248,7 +252,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

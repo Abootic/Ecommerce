@@ -8,45 +8,109 @@ namespace EcommereceWeb.MVC.Controllers
     public class AttributeItemController : BaseMVCController
     {
         // GET: AttributeItemController
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int id)
         {
-          /*  if(id == 0)
+            Console.WriteLine("Aqlan IS here in items");
+            if (id != 0)
             {
-                var res = await ServiceManager.AttributeItemService.GetAll();
-                if (res.Status.Succeeded)
-                {
-                    return View(res.Data);
-                }
-                TempData["msg"] = res.Status.message;
-                return View();
+                Console.WriteLine("not 0");
 
-                return  RedirectToAction("Index","Attribute");
+                var res = await ServiceManager.AttributeItemService.Find(x => x.AttributeId == id);
+                var AttItem = await ServiceManager.AttributeService.GetById(id);
+
+                Console.WriteLine( "ssssssssssssssssss");
+                if (AttItem.Data == null)
+                {
+                    Console.WriteLine("in null");
+
+                    TempData["msg"] = "لا توجد صفة بهذا الرقم";
+                    return RedirectToAction("Index", "Attribute");
+
+                }
+                else
+                {
+                    Console.WriteLine("in else");
+
+                    if (res.Status.Succeeded)
+                    {
+                        Console.WriteLine("in suceeded");
+
+                       
+                            Console.WriteLine("in attitem");
+
+                            TempData["AttName"] = AttItem.Data.EnName;
+                            TempData["AttId"] = id;
+
+                            return View(res.Data);
+
+                        
+
+                    }
+                    TempData["msg"] = res.Status.message;
+                    return View();
+
+
+
+                }
+
+                //return RedirectToAction("Index", "Attribute");
             }
             else
-            {*/
-             var res = await ServiceManager.AttributeItemService.GetAll();
-                if (res.Status.Succeeded)
-                  {
-                      return View(res.Data);
-                  }
-                  TempData["msg"] = res.Status.message;
-                   return View();
-         
-           
+            {
+                return RedirectToAction("Index", "Attribute");
+
+            }
         }
 
 
         // GET: AttributeItemController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> IndexAll()
         {
+
+            var res = await ServiceManager.AttributeItemService.GetAll();
+            if (res.Status.Succeeded)
+            {
+                return View(res.Data);
+            }
+            TempData["msg"] = res.Status.message;
             return View();
         }
 
         // GET: AttributeItemController/Create
-        public ActionResult Create()
+        public async Task<ActionResult> Create(int AttId)
         {
-            return View();
-        }
+
+            if (AttId != 0)
+            {
+                Console.WriteLine("not 0");
+
+                var AttItem = await ServiceManager.AttributeService.GetById(AttId);
+
+                Console.WriteLine("ssssssssssssssssss");
+                if (AttItem.Data == null)
+                {
+                    Console.WriteLine("in null");
+                    TempData["AttId"] = AttId;
+                    TempData["msg"] = "لا توجد صفة بهذا الرقم";
+                    return RedirectToAction("Index", new {id= AttId });
+
+                }
+                else
+                {
+                    TempData["AttId"] = AttId;
+
+                    return View();
+
+                }
+            }
+            else
+            {
+                return RedirectToAction("Index", "Attribute");
+
+            }
+        
+
+    }
 
         // POST: AttributeItemController/Create
         [HttpPost]
@@ -55,13 +119,17 @@ namespace EcommereceWeb.MVC.Controllers
         {
             try
             {
+                Console.WriteLine("in try");
                 if (entity == null)
                 {
+                    Console.WriteLine("in entity null");
+
                     TempData["msg"] = "ادخل البيانات";
                     return View(entity);
                 }
                 if (!ModelState.IsValid)
                 {
+
 
                     TempData["msg"] = "خطاء في البيانات";
                     //TempData["msg"] = "errrror";
@@ -71,20 +139,36 @@ namespace EcommereceWeb.MVC.Controllers
                     Console.WriteLine("Ar: " + entity.ArName);
                     Console.WriteLine("En: " + entity.EnName);
                     Console.WriteLine("Code: " + entity.Code);
+                    TempData["AttId"] = entity.AttributeId;
 
                     return View(entity);
 
                 }
                 else
                 {
+                    Console.WriteLine("in add before");
+                    
                     var res = await ServiceManager.AttributeItemService.Add(entity);
+                    Console.WriteLine("in add after");
+
                     if (res.Status.Succeeded)
                     {
+                        Console.WriteLine("in secees");
+
+                        TempData["AttId"] = entity.AttributeId;
+
                         TempData["msg"] = res.Status.message;
-                        return RedirectToAction("Index");
+                        return RedirectToAction("Index","AttributeItem",new {id=entity.AttributeId});
                     }
-                    TempData["msg"] = res.Status.message;
-                    return View(entity);
+                    else
+                    {
+                        Console.WriteLine("in else success");
+
+                        TempData["AttId"] = entity.AttributeId;
+                        TempData["msg"] = res.Status.message;
+                        return View(res.Data);
+                    }
+                    
                 }
 
             }
