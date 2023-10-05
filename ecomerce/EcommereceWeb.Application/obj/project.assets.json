@@ -1710,11 +1710,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\wejo\\verison\\v8\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
+      "projectUniqueName": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
       "projectName": "EcommereceWeb.Application",
-      "projectPath": "D:\\wejo\\verison\\v8\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
+      "projectPath": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\EcommereceWeb.Application.csproj",
       "packagesPath": "C:\\Users\\My Computer\\.nuget\\packages\\",
-      "outputPath": "D:\\wejo\\verison\\v8\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\obj\\",
+      "outputPath": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\My Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1731,8 +1731,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\wejo\\verison\\v8\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
-              "projectPath": "D:\\wejo\\verison\\v8\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
+            "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj": {
+              "projectPath": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.Domain\\EcommereceWeb.Domain.csproj"
             }
           }
         }

@@ -61,7 +61,10 @@ namespace EcommereceWeb.MVC.Controllers
             return BadRequest("noo data");
 
         }
-
+        public ActionResult Details()
+        {
+            return View();
+        }
         // GET: ProductAttributeController/Details/5
         [HttpGet]
         public IActionResult CreateVariation(int id, string name)
