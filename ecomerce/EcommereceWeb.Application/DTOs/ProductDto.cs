@@ -6,22 +6,19 @@ namespace EcommereceWeb.Application.DTOs
 {
     public class ProductViewDto
     {
-        
+
         public int Id { get; set; }
-    
+
         public string Name { get; set; }
-        
+
         // كود  المنتج  عند  مشاركة المنتج يتم ارساله هذا الكود  ليتمكن من البحث عبره
         public string Code { get; set; }
-        public decimal Price { get; set; }
-        public decimal? Cost { get; set; }
-        public int? Quantity { get; set; }
-        [Required(ErrorMessage = " يرجى ادخال صورة المنتج الرئيسية        ")]
+
         public string Logo { get; set; }// الصورة الرئيسة للمنتج
         public string? Details { get; set; }
         public decimal? MinOrderQuantity { get; set; } // اقل كمية يتم  طلبة
         public decimal? MaxOrderQuantity { get; set; } // اكثر كمية يتم  طلبة
-        public decimal? Discount { get; set; } 
+        public decimal? Discount { get; set; }
 
         public string? VideoProvider { get; set; }// نوع مزود الخدمة  هل يوتيوب او غيرة 
         public string? VideoUrl { get; set; }
@@ -30,7 +27,7 @@ namespace EcommereceWeb.Application.DTOs
 
         public string? KeyWords { get; set; }
         public int? BrandId { get; set; }
-                                 
+
         public int? MainClassificationId { get; set; }
         public int? BasicClassificationId { get; set; }
         public int? SubClassificationBaseId { get; set; }
@@ -51,13 +48,7 @@ namespace EcommereceWeb.Application.DTOs
         // كود  المنتج  عند  مشاركة المنتج يتم ارساله هذا الكود  ليتمكن من البحث عبره
         [Display(Name = "كود المنتج")]
         public string Code { get; set; }
-        [Display(Name = "السعر")]
-        [Required( ErrorMessage = " يرجى ادخال سعر المنتج       ")]
-        public decimal Price { get; set; }
-        [Display(Name = "التكلفة")]
-        public decimal? Cost { get; set; }
-        [Display(Name = "الكمية الكلية")]
-        public int? Quantity { get; set; }
+
         [Required(ErrorMessage = " يرجى ادخال صورة المنتج الرئيسية        ")]
         [Display(Name = "الصورة الرئيسية")]
         public string Logo { get; set; }// الصورة الرئيسة للمنتج
@@ -70,7 +61,7 @@ namespace EcommereceWeb.Application.DTOs
         [Display(Name = "اكثر كمية يتم  طلبة")]
         public decimal? MaxOrderQuantity { get; set; } // اكثر كمية يتم  طلبة
         [Display(Name = "الخصم")]
-        public decimal? Discount { get; set; } 
+        public decimal? Discount { get; set; }
 
         public string? VideoProvider { get; set; }// نوع مزود الخدمة  هل يوتيوب او غيرة 
         public string? VideoUrl { get; set; }

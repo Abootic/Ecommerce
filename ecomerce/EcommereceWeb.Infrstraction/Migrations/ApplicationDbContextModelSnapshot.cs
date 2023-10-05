@@ -964,10 +964,6 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("Code");
 
-                    b.Property<decimal?>("Cost")
-                        .HasColumnType("decimal(10,2)")
-                        .HasColumnName("Cost");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -1033,14 +1029,6 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal?>("Price")
-                        .HasColumnType("decimal(10,2)")
-                        .HasColumnName("Price");
-
-                    b.Property<int?>("Quantity")
-                        .HasColumnType("int")
-                        .HasColumnName("Quantity");
 
                     b.Property<int?>("SubClassificationBaseId")
                         .HasColumnType("int")
@@ -1204,6 +1192,11 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("Name");
 
                     b.Property<int?>("ProductId")
                         .HasColumnType("int")
@@ -1576,14 +1569,20 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("ColorId")
-                        .HasColumnType("int")
-                        .HasColumnName("ColorId");
-
-                    b.Property<string>("ColorName")
+                    b.Property<string>("ArName")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
-                        .HasColumnName("ColorName");
+                        .HasColumnName("ArName");
+
+                    b.Property<string>("AttItemId")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("AttItemId");
+
+                    b.Property<decimal?>("Cost")
+                        .IsRequired()
+                        .HasColumnType("decimal(10,2)")
+                        .HasColumnName("Cost");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -1596,6 +1595,16 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
                     b.Property<string>("DeletedBy")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EnName")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("EnName");
+
+                    b.Property<string>("Image")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("Image");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -1619,33 +1628,18 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnType("decimal(10,2)")
                         .HasColumnName("Price");
 
-                    b.Property<int?>("ProductAttributeId")
-                        .HasColumnType("int")
-                        .HasColumnName("ProductAttributeId");
-
                     b.Property<int?>("ProductId")
                         .HasColumnType("int")
                         .HasColumnName("ProductId");
 
-                    b.Property<int?>("Quntatiy")
+                    b.Property<int?>("Quantity")
                         .HasColumnType("int")
                         .HasColumnName("Quntatiy");
-
-                    b.Property<int?>("SizeId")
-                        .HasColumnType("int")
-                        .HasColumnName("SizeId");
-
-                    b.Property<string>("SizeName")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("SizeName");
 
                     b.HasKey("Id")
                         .HasName("Pk_ProductVariation");
 
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
-
-                    b.HasIndex("ProductAttributeId");
 
                     b.HasIndex("ProductId");
 
@@ -2044,8 +2038,8 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         {
                             Id = "4a2e1650-21bd-4e67-832e-2e99c267a2e4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d030d369-f555-486e-8406-fc8b1b295c58",
-                            CreatedAt = new DateTime(2023, 9, 13, 18, 1, 36, 698, DateTimeKind.Local).AddTicks(5529),
+                            ConcurrencyStamp = "4ea8912d-eb53-4bf9-abec-5c948eda2cda",
+                            CreatedAt = new DateTime(2023, 10, 4, 21, 36, 7, 50, DateTimeKind.Local).AddTicks(7787),
                             Email = "Admin@Gmail.com",
                             EmailConfirmed = false,
                             FullName = "Admin",
@@ -2054,10 +2048,10 @@ namespace EcommereceWeb.Infrstraction.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEA1ylvEyHpFflEcDpFEyFQMmNIHQBoZ8ak2P0CN3lpdkCHq/BRtvZMSEYSwo+nhd0g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENNksFZpPM3Fj09WSrEk8ElsFW3qrnQ9RdvnmO80dSoX1T+iUrCoQJBLnnQFUACtJQ==",
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d87cacd0-b0ba-40cc-afa7-1ae22f36416a",
+                            SecurityStamp = "5505a992-02a1-47cb-be5a-d13b7939f8f9",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -2430,19 +2424,12 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductVariation", b =>
                 {
-                    b.HasOne("EcommereceWeb.Domain.Entity.ProductAttribute", "ProductAttribute")
-                        .WithMany("ProductVariations")
-                        .HasForeignKey("ProductAttributeId")
-                        .HasConstraintName("FK_ProductAttributeId_ProductVariation");
-
                     b.HasOne("EcommereceWeb.Domain.Entity.Product", "Product")
                         .WithMany("ProductVariations")
                         .HasForeignKey("ProductId")
                         .HasConstraintName("FK_ProductId_ProductVariation");
 
                     b.Navigation("Product");
-
-                    b.Navigation("ProductAttribute");
                 });
 
             modelBuilder.Entity("EcommereceWeb.Domain.Entity.SubClassificationBase", b =>
@@ -2577,11 +2564,6 @@ namespace EcommereceWeb.Infrstraction.Migrations
 
                     b.Navigation("ProductUnitSizes");
 
-                    b.Navigation("ProductVariations");
-                });
-
-            modelBuilder.Entity("EcommereceWeb.Domain.Entity.ProductAttribute", b =>
-                {
                     b.Navigation("ProductVariations");
                 });
 

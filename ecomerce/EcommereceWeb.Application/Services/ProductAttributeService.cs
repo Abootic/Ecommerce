@@ -22,9 +22,12 @@ namespace EcommereceWeb.Application.Services
         {
             try
             {
+
                 if (entity == null) return await Result<ProductAttributeDto>.FailAsync("--- entity is null ---");
 
+                Console.WriteLine($"vvvvvvvvvvvvvvvvvv  {entity.AttributeId}");
                 var entityMap = _mapper.Map<ProductAttribute>(entity);
+                Console.WriteLine($"dddddddddddddddddddddddddddd  {entityMap.AttributeId}");
                 var res = await _repositoryManager.ProductAttributeRepository.AddAndReturn(entityMap);
                 if (res != null)
                 {
@@ -81,6 +84,95 @@ namespace EcommereceWeb.Application.Services
         {
             throw new NotImplementedException();
         }
+        private List<ProductVariation> GenerateVariations(List<List<ProductAttribute>> attributeLists)
+        {
+            var variations = new List<ProductVariation>();
+
+            if (attributeLists.Count == 0)
+            {
+                return variations;
+            }
+            try
+            {
+
+                var currentIndexes = new int[attributeLists.Count];
+                var maxIndexes = new int[attributeLists.Count];
+
+                for (int i = 0; i < attributeLists.Count; i++)
+                {
+                    maxIndexes[i] = attributeLists[i].Count - 1;
+                }
+
+                while (true)
+                {
+                    var variation = GetVariation(attributeLists, currentIndexes);
+                    variations.Add(variation);
+
+                    int nextIndex = attributeLists.Count - 1;
+
+                    while (nextIndex >= 0 && currentIndexes[nextIndex] == maxIndexes[nextIndex])
+                    {
+                        currentIndexes[nextIndex] = 0;
+                        nextIndex--;
+                    }
+
+                    if (nextIndex < 0)
+                    {
+                        break;
+                    }
+
+                    currentIndexes[nextIndex]++;
+                }
+
+                return variations;
+            }catch(Exception ex)
+            {
+                Console.WriteLine($"eeeeeeeeeeeeeeeeeeeee  {ex.Message}");
+                return variations;
+            }
+        }
+
+        private ProductVariation GetVariation(List<List<ProductAttribute>> attributeLists, int[] currentIndexes)
+        {
+            var variation = new ProductVariation();
+
+            for (int i = 0; i < attributeLists.Count; i++)
+            {
+                var currentList = attributeLists[i];
+                var currentIndex = currentIndexes[i];
+                var attribute = currentList[currentIndex];
+                Console.WriteLine("545555555555555555555555");
+
+                variation.ProductId = attribute.ProductId;
+                variation.EnName += (currentList[i].Name.Length> 0 ? "-" : "") + attribute.Name;
+            }
+
+            return variation;
+        }
+        public IResult<List<ProductVariationDto>> GetListVaration()
+        {
+          
+            try
+            {
+
+                var res = _repositoryManager.ProductAttributeRepository.GetListVarationData();
+                var varition = GenerateVariations(res);
+             
+                if (res != null)
+                {
+                   
+                    var map=_mapper.Map<List<ProductVariationDto>>(varition);
+                    return Result<List<ProductVariationDto>>.Sucess(map,"eeeeeeeeeeeeeeee",200);
+                }
+                return Result<List<ProductVariationDto>>.Fail("لا يوجد بيانات", 500);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"2222222222222222222222   {ex.Message}");
+                return Result<List<ProductVariationDto>>.Fail(ex.Message, 500);
+            }
+        }
+
 
         public Task<IResult<ProductAttributeDto>> Remove(int Id, CancellationToken cancellationToken = default)
         {
@@ -91,6 +183,8 @@ namespace EcommereceWeb.Application.Services
         {
             throw new NotImplementedException();
         }
+
+       
     }
 
 }

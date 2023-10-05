@@ -10,7 +10,8 @@ namespace EcommereceWeb.Application.DTOs
         [Display(Name = "الرقم")]
         public int Id { get; set; }
         public int? ProductId { get; set; }
-        public int? AtrrributeId { get; set; }
+        public int? AttributeId { get; set; }
+        public string? Name { get; set; }
         public int? AttributeItemId { get; set; }
         
 

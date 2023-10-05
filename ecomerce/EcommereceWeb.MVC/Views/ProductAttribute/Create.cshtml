@@ -123,7 +123,16 @@
     }
 </style>
 
+
 <section id="auth-login" class="row flexbox-container">
+    @if (TempData["err"] != null)
+    {
+        <span class="alert alert-danger">@TempData["err"]</span>
+    }
+    @if (TempData["suc"] != null)
+    {
+        <span class="alert alert-success">@TempData["suc"]</span>
+    }
     <div class="col-xl-8 col-11">
         <div class="card bg-authentication mb-0">
             <div class="row m-0">
