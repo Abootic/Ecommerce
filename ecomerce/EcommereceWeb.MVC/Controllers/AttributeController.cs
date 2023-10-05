@@ -3,6 +3,7 @@ using EcommereceWeb.MVC.Controllers.Base;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using EcommereceWeb.Application.DTOs;
+using EcommereceWeb.MVC.ViewModel;
 
 namespace EcommereceWeb.MVC.Controllers
 {
@@ -24,7 +25,10 @@ namespace EcommereceWeb.MVC.Controllers
         // GET: AttributeController/Details/5
         public ActionResult Details()
         {
-            return View();
+            ProductAdditionalVM vm =new ProductAdditionalVM();
+         vm.checkBoxListVms = new List<CheckBoxListVm>();
+           vm.CheckBoxListVm= new CheckBoxListVm();
+            return View(vm);
         }
 
         // GET: AttributeController/Create

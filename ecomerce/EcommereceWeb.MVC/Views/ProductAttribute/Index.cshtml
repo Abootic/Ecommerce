@@ -1,0 +1,55 @@
+﻿@model List<ProductVariationDto>
+@{
+    ViewData["Title"] = "Home Page";
+}<
+
+
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">  إداراة الصفات المتغيرة  /</span> الصفات المتغيرة  </h4>
+
+
+        <!-- Ajax Sourced Server-side -->
+        <div class="card">
+
+            <div class="row ">
+                <div class="col-md-6 text-start  mt-3  ps-4">
+                    <h5 class="card-title mb-0 ms-2">  إضافة منتج</h5>
+                </div>
+                <div class="col-md-6 text-end">
+
+                    <div class="dt-buttons text-end me-3">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    @if (Model != null)
+                    {
+                     
+                            <div class="col-sm-2">
+                                <div class="form-group mb-50">
+
+                                    <select class="form-select">
+                                    @foreach (var item in Model)
+                                    {
+                                        <option value="@item.ProductId">@item.EnName</option>
+                                    }
+                                    </select>
+                                </div>
+                            </div>
+
+                        
+
+                    }
+                </div>
+            </div>
+        </div>
+
+      
+         
+        
+
