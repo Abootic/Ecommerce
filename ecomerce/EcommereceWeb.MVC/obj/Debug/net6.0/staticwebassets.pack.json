@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\EcommereceWeb.MVC.bundle.scp.css"
     },
     {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\BasicClassification\\1ad4307c-2f71-48fc-87b7-ede6ca7664ff.jpg",
+      "PackagePath": "staticwebassets\\Upload\\BasicClassification\\1ad4307c-2f71-48fc-87b7-ede6ca7664ff.jpg"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\BasicClassification\\2b41d034-10c2-43b6-a4d4-b18236b18d24.png",
       "PackagePath": "staticwebassets\\Upload\\BasicClassification\\2b41d034-10c2-43b6-a4d4-b18236b18d24.png"
     },
@@ -49,6 +53,10 @@
       "PackagePath": "staticwebassets\\Upload\\MainClassification\\21010fab-417e-4d02-92fb-5cd68accefcc.jpg"
     },
     {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\MainClassification\\6adfac0e-f219-4b35-a8e2-1d65f416356d.jpg",
+      "PackagePath": "staticwebassets\\Upload\\MainClassification\\6adfac0e-f219-4b35-a8e2-1d65f416356d.jpg"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\MainClassification\\7df70954-e826-4466-829c-deb97eb5de51.png",
       "PackagePath": "staticwebassets\\Upload\\MainClassification\\7df70954-e826-4466-829c-deb97eb5de51.png"
     },
@@ -61,12 +69,20 @@
       "PackagePath": "staticwebassets\\Upload\\Slider\\357d6a8a-f08e-4da7-96c3-c60db7499215.jpg"
     },
     {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\b3c5aab2-ffca-4fb4-b8e9-4d478009ff85.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SubClassificationBase\\b3c5aab2-ffca-4fb4-b8e9-4d478009ff85.jpg"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\c38ca67e-171c-4f8c-b6fe-1b99df558880.png",
       "PackagePath": "staticwebassets\\Upload\\SubClassificationBase\\c38ca67e-171c-4f8c-b6fe-1b99df558880.png"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\e69ed42a-cca3-49ef-9a27-c003994c136f.png",
       "PackagePath": "staticwebassets\\Upload\\SubClassificationBase\\e69ed42a-cca3-49ef-9a27-c003994c136f.png"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassification\\a11af36a-40c3-464f-b565-aa0b30dd7187.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SubClassification\\a11af36a-40c3-464f-b565-aa0b30dd7187.jpg"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassification\\bd5f9573-b37e-4c56-bbe1-66fd2a219705.png",

@@ -11,13 +11,14 @@ namespace EcommereceWeb.MVC.Controllers
     {
         public async Task<IActionResult> Index(int MainClassificationId)
         {
-            var res = await ServiceManager.BasicClassificationService.Find(a=>a.MainClassificationId== MainClassificationId);
+            Console.WriteLine($"ffffffffffff   {MainClassificationId}");
+            TempData.SetTemp<int>("MainClassificationId", MainClassificationId); var res = await ServiceManager.BasicClassificationService.Find(a=>a.MainClassificationId== MainClassificationId);
             if (res.Status.Succeeded)
             {
                 var mainRes = await ServiceManager.MainClassificationService.GetById(MainClassificationId);
                 if (mainRes.Status.Succeeded)
                     TempData.SetTemp<string>("name", mainRes.Data.ArMainClassificationName);
-                    TempData.SetTemp<int>("MainClassificationId", MainClassificationId);
+                
                 
 
 
@@ -107,6 +108,23 @@ namespace EcommereceWeb.MVC.Controllers
             }
             TempData["err"] = res.Status.message;
             return RedirectToAction("Index");
+        }
+        public async Task<IActionResult> GetmainBisikClassFication(int mainClassficationId)
+        {
+            var res = await ServiceManager.BasicClassificationService.Find(a => a.MainClassificationId == mainClassficationId);
+            var list = new List<dynamic>();
+            if (res.Status.Succeeded)
+            {
+                foreach (var item in res.Data)
+                {
+                    var dict = new Dictionary<string, dynamic>();
+                    dict.Add("id", item.Id);
+                    dict.Add("name", item.ArBasicClassificationName);
+                    list.Add(dict);
+                }
+                return Ok(list);
+            }
+            return BadRequest(res.Status.message);
         }
 
 

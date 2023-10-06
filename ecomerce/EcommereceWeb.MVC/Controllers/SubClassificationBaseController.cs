@@ -108,5 +108,23 @@ namespace EcommereceWeb.MVC.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public async Task<IActionResult> GetSubclassFicationBase(int bisikId)
+        {
+            var res = await ServiceManager.SubClassificationBaseService.Find(a => a.BasicClassificationId == bisikId);
+            var list = new List<dynamic>();
+            if (res.Status.Succeeded)
+            {
+                foreach (var item in res.Data)
+                {
+                    var dict = new Dictionary<string, dynamic>();
+                    dict.Add("id", item.Id);
+                    dict.Add("name", item.ArSubClassificationName);
+                    list.Add(dict);
+                }
+                return Ok(list);
+            }
+            return BadRequest(res.Status.message);
+        }
     }
 }

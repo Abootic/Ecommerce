@@ -19,7 +19,8 @@ namespace EcommereceWeb.Application.Interfaces.Common
         IProductEvaluatonRepository ProductEvaluatonRepository { get; }
         IProductImageRepository ProductImageRepository { get; }
         IProductSizeRepository ProductSizeRepository { get; }
-        //IProductUnitSizeRepository ProductUnitSizeRepository { get; }
+        //IProductUnitSizeRepository ProductUnitSizeRepository { get;  
+        IBasicClassificationRepository BasicClassificationRepository { get; }
         ISliderRepository SliderRepository { get; }
         ISubClassificationBaseRepository SubClassificationBaseRepository { get; }
         ISubSubclassificationRepository SubSubclassificationRepository { get; }

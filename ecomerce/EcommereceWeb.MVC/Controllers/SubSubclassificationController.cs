@@ -106,6 +106,23 @@ namespace EcommereceWeb.MVC.Controllers
             TempData["err"] = res.Status.message;
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> GetSubclassFication(int subId)
+        {
+            var res = await ServiceManager.SubSubclassificationService.Find(a => a.SubClassificationBaseId == subId);
+            var list = new List<dynamic>();
+            if (res.Status.Succeeded)
+            {
+                foreach (var item in res.Data)
+                {
+                    var dict = new Dictionary<string, dynamic>();
+                    dict.Add("id", item.Id);
+                    dict.Add("name", item.ArSubSubClassificationName);
+                    list.Add(dict);
+                }
+                return Ok(list);
+            }
+            return BadRequest(res.Status.message);
+        }
 
     }
 }
