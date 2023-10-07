@@ -16,9 +16,9 @@ namespace EcommereceWeb.Infrstraction.Repositories
             throw new NotImplementedException();
         }
       
-        public List<List<ProductAttribute>> GetListVarationData()
+        public List<List<ProductAttribute>> GetListVarationData(int productId)
         {  
-            var res = _dbContext.ProductAttribute.Where(a => a.ProductId == 1).AsEnumerable().GroupBy(a => a.AttributeId);
+            var res = _dbContext.ProductAttribute.Where(a => a.ProductId == productId).AsEnumerable().GroupBy(a => a.AttributeId);
             var attributeLists = new List<List<ProductAttribute>>();
             if (res.Any())
             {

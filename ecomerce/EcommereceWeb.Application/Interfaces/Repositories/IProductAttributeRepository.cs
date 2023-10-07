@@ -7,7 +7,7 @@ namespace EcommereceWeb.Application.Interfaces.Repositories
     public interface IProductAttributeRepository : IGenericRepository<ProductAttribute>
     {
         Task<IEnumerable<DataListItem>> GetDDL();
-        List<List<ProductAttribute>> GetListVarationData();
+        List<List<ProductAttribute>> GetListVarationData(int productId);
     }
 
 }

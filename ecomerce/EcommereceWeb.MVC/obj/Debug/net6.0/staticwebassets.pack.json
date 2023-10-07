@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Upload\\BasicClassification\\2b41d034-10c2-43b6-a4d4-b18236b18d24.png"
     },
     {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\BasicClassification\\34cd7c0d-f241-467e-ad93-2d8d5e1cd530.jpg",
+      "PackagePath": "staticwebassets\\Upload\\BasicClassification\\34cd7c0d-f241-467e-ad93-2d8d5e1cd530.jpg"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\BasicClassification\\4ed6a55b-34c5-4ef8-8843-48bd188e528a.png",
       "PackagePath": "staticwebassets\\Upload\\BasicClassification\\4ed6a55b-34c5-4ef8-8843-48bd188e528a.png"
     },
@@ -41,8 +45,20 @@
       "PackagePath": "staticwebassets\\Upload\\BasicClassification\\d6b22692-4ba6-46b6-a18a-9cd9dcac18e8.png"
     },
     {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Brand\\22010e00-a9d0-42c5-88b7-cc98cb3fbe09.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Brand\\22010e00-a9d0-42c5-88b7-cc98cb3fbe09.jpg"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Brand\\4aa696bf-e7a4-412a-8dd5-9a2e56a0537d.png",
       "PackagePath": "staticwebassets\\Upload\\Brand\\4aa696bf-e7a4-412a-8dd5-9a2e56a0537d.png"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Brand\\70e44799-f9f4-449a-8268-504c65b4b314.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Brand\\70e44799-f9f4-449a-8268-504c65b4b314.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Brand\\848f29cf-08e0-4aa0-abf8-6aea72dce722.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Brand\\848f29cf-08e0-4aa0-abf8-6aea72dce722.jpg"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Brand\\fea0c758-8437-409e-8637-777171713948.png",
@@ -51,6 +67,10 @@
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\MainClassification\\21010fab-417e-4d02-92fb-5cd68accefcc.jpg",
       "PackagePath": "staticwebassets\\Upload\\MainClassification\\21010fab-417e-4d02-92fb-5cd68accefcc.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\MainClassification\\6430e830-dfc3-4d34-957c-613d945776ce.jpg",
+      "PackagePath": "staticwebassets\\Upload\\MainClassification\\6430e830-dfc3-4d34-957c-613d945776ce.jpg"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\MainClassification\\6adfac0e-f219-4b35-a8e2-1d65f416356d.jpg",
@@ -65,8 +85,84 @@
       "PackagePath": "staticwebassets\\Upload\\MainClassification\\9be5463d-74ab-4d27-b155-944177e922bd.png"
     },
     {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\0f71b60a-72fc-4df3-b69f-2e67bb851976.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\0f71b60a-72fc-4df3-b69f-2e67bb851976.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\1376dd7f-3369-4988-87a7-fc5495981e67.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\1376dd7f-3369-4988-87a7-fc5495981e67.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\18e89784-6194-4fa8-a5e2-0c0999a5c31c.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\18e89784-6194-4fa8-a5e2-0c0999a5c31c.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\19cc18d4-7cbe-4dcf-abd0-f9cb525dbff5.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\19cc18d4-7cbe-4dcf-abd0-f9cb525dbff5.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\3069ae6d-07bc-49bd-8e20-8fa1cd094f98.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\3069ae6d-07bc-49bd-8e20-8fa1cd094f98.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\455efafd-cedf-4da6-8145-c998b353e850.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\455efafd-cedf-4da6-8145-c998b353e850.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\4a1f657a-b531-4511-aeb1-c9bf4fced1ce.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\4a1f657a-b531-4511-aeb1-c9bf4fced1ce.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\540f68e9-a918-4bc6-a632-7ef6dd905bd6.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\540f68e9-a918-4bc6-a632-7ef6dd905bd6.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\688204e7-ca84-4c95-8ed5-2131ab214edc.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\688204e7-ca84-4c95-8ed5-2131ab214edc.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\8f7f0a57-0207-4c6b-9b2c-a816524a9246.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\8f7f0a57-0207-4c6b-9b2c-a816524a9246.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\9b850b0c-1fe5-49ca-b262-ef6b90cea602.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\9b850b0c-1fe5-49ca-b262-ef6b90cea602.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\a9c93e99-f24e-4a2f-95df-02f1b28d2930.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\a9c93e99-f24e-4a2f-95df-02f1b28d2930.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\b46f5ec7-bf73-4d54-a5e1-a14ed60b4887.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\b46f5ec7-bf73-4d54-a5e1-a14ed60b4887.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\bc212228-b209-4a87-93ec-50d5602af65a.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\bc212228-b209-4a87-93ec-50d5602af65a.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\ca4094d7-dfcb-44a6-b476-95e65caba7d7.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\ca4094d7-dfcb-44a6-b476-95e65caba7d7.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\ca562a28-e93f-435e-887f-54f8cf36bd64.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\ca562a28-e93f-435e-887f-54f8cf36bd64.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\dc594c7b-5063-462c-8b87-dbdeca2fa31c.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\dc594c7b-5063-462c-8b87-dbdeca2fa31c.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Product\\f827ee1b-b65e-4d08-a4a8-1467bb74fe8b.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Product\\f827ee1b-b65e-4d08-a4a8-1467bb74fe8b.jpg"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\Slider\\357d6a8a-f08e-4da7-96c3-c60db7499215.jpg",
       "PackagePath": "staticwebassets\\Upload\\Slider\\357d6a8a-f08e-4da7-96c3-c60db7499215.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\8c9cceb5-bac2-4d0b-a58d-b913d61abd53.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SubClassificationBase\\8c9cceb5-bac2-4d0b-a58d-b913d61abd53.jpg"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\b3c5aab2-ffca-4fb4-b8e9-4d478009ff85.jpg",
@@ -79,6 +175,10 @@
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassificationBase\\e69ed42a-cca3-49ef-9a27-c003994c136f.png",
       "PackagePath": "staticwebassets\\Upload\\SubClassificationBase\\e69ed42a-cca3-49ef-9a27-c003994c136f.png"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassification\\5454d1bb-ae23-44e9-bb70-718b0d01e434.jpg",
+      "PackagePath": "staticwebassets\\Upload\\SubClassification\\5454d1bb-ae23-44e9-bb70-718b0d01e434.jpg"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\SubClassification\\a11af36a-40c3-464f-b565-aa0b30dd7187.jpg",
@@ -165,12 +265,20 @@
       "PackagePath": "staticwebassets\\Upload\\variation\\b5a8f4fc-053c-4ddc-822f-f6de51428561.jpg"
     },
     {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\variation\\b8c75de6-7fff-48c8-9f2b-881f9c39e572.jpg",
+      "PackagePath": "staticwebassets\\Upload\\variation\\b8c75de6-7fff-48c8-9f2b-881f9c39e572.jpg"
+    },
+    {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\variation\\b99f4989-077c-4f0e-858c-abe8a0c4e5c9.jpg",
       "PackagePath": "staticwebassets\\Upload\\variation\\b99f4989-077c-4f0e-858c-abe8a0c4e5c9.jpg"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\variation\\bc79410d-57b5-4794-90ed-efcec4650514.jpg",
       "PackagePath": "staticwebassets\\Upload\\variation\\bc79410d-57b5-4794-90ed-efcec4650514.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\variation\\bd6394b3-9bf0-46c1-b4eb-17f8a949b837.jpg",
+      "PackagePath": "staticwebassets\\Upload\\variation\\bd6394b3-9bf0-46c1-b4eb-17f8a949b837.jpg"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\variation\\beaeba17-f7c7-471d-928c-381ebcc15e9c.jpg",
@@ -195,6 +303,10 @@
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\variation\\e4a62451-7bc3-4f29-89f7-e3c177e98dfa.jpg",
       "PackagePath": "staticwebassets\\Upload\\variation\\e4a62451-7bc3-4f29-89f7-e3c177e98dfa.jpg"
+    },
+    {
+      "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\variation\\ebb14509-10e5-4dfa-9eef-daf865a2b40d.jpg",
+      "PackagePath": "staticwebassets\\Upload\\variation\\ebb14509-10e5-4dfa-9eef-daf865a2b40d.jpg"
     },
     {
       "Id": "D:\\wejo\\verison\\v9\\Ecommerce-main\\ecomerce\\EcommereceWeb.MVC\\wwwroot\\Upload\\variation\\ed339592-9fc8-4bcb-b646-e8677e4c63e2.jpg",

@@ -27,7 +27,7 @@
 
 
                 <form id="ProductVariationDto" method="post">
-                    <input type="hidden" id="ColorId" name="ColorId">
+                    <input type="hidden" id="ColorId" name="AttItemId">
 
 
                     <div class="row">
@@ -35,11 +35,18 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group mb-50">
-                                        <label class="text-bold-600" for="exampleInputEmail1">اسم </label>
+                                        <label class="text-bold-600" asp-for="ArName">اسم </label>
 
-                                        <input type="text" class="form-control" id="name" name="ColorName" value="@Model.EnName" placeholder="اسم ">
+                                        <input type="text" class="form-control" id="name" name="ArName" value="@Model.EnName" placeholder="اسم ">
                                     </div>
-                                </div>
+                                </div>  
+                              @*  <div class="col-sm-6">
+                                    <div class="form-group mb-50">
+                                        <label class="text-bold-600" asp-for="EnName">اسم </label>
+
+                                        <input type="text" class="form-control" id="name" name="ArName" value="@Model.EnName" placeholder="اسم ">
+                                    </div>
+                                </div>*@
                                 <div class="col-sm-6">
                                     <div class="form-group mb-50">
                                         <label class="text-bold-600" asp-for="Quantity"> </label>
@@ -53,6 +60,13 @@
 
                                         <input type="number" class="form-control" id="price" name="Price" min="0">
                                     </div>
+                                </div>   
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-50">
+                                        <label class="text-bold-600" asp-for="Cost"> </label>
+
+                                        <input type="number" class="form-control" id="price" name="Cost" min="0">
+                                    </div>
                                 </div>
                             </div>
 
@@ -60,7 +74,7 @@
                         <div class="col-4">
                             <input type="file" style="display:none" id="upload">
 
-                            <input type="hidden" id="logoData" name="SizeName">
+                            <input type="hidden" id="logoData" name="Image">
                             <div class="media mb-2" id="img-container">
                                 <div class="mb-1">
                                     <a class="mr-2" href="javascript:void(0);">

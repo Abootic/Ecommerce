@@ -1,0 +1,24 @@
+﻿@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="~/js/Gallery.js" asp-append-version="true"></script>
+    <script>
+        //start logo
+
+
+        $("#GalleryUpload").on('change', function () {
+            var files = $('#GalleryUpload').prop("files");
+            let folderName = "Gallery";
+            console.log("ddddddddddddddddddddddddd");
+
+
+            GalleryUplodFile(files, folderName);
+        });
+
+
+        $('#galaryBtnImage').click(function () { $('#GalleryUpload').trigger('click'); });
+
+    </script>
+
+}

@@ -1,5 +1,5 @@
 ﻿@using EcommereceWeb.Application.Services;
-@model ProductAdditionalVM
+@model  ProductDto
 @inject IServiceManager serverManager
 @{
     var brand = await serverManager.BrandService.GetAll();
@@ -23,9 +23,7 @@
         flex-direction: column;
     }
 
-    .step {
-        display: none;
-    }
+   
 
     button {
         padding: 10px 20px;
@@ -158,6 +156,14 @@
 <!-- / Navbar -->
 <!-- Content wrapper -->
 <div class="content-wrapper">
+    @if (TempData["err"] != null)
+    {
+        <span class="alert alert-danger">@TempData["err"]</span>
+    }
+    @if (TempData["suc"] != null)
+    {
+        <span class="alert alert-success">@TempData["suc"]</span>
+    }
     <!-- Content -->
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">أنشاء منتج جديد /</span> إنشاء منتج</h4>
@@ -170,378 +176,214 @@
                     <div class="row m-2">
                         <div class="col-12">
                             <div id="myForm">
-                            <div class="step" data-step="1">
-                            <form action="#">
-                                <!-- Step 1 -->
-                                <h6>
-                                    <i class="step-icon"></i>
-                                    <span class="">المنتج</span>
-                                </h6>
-                                <!-- Step 1 -->
-                                <!-- body content of step 1 -->
-                                <fieldset>
-
-                                    <div class="tab-content mt-4">
-                                        <div class="tab-pane fade show active" id="navs-tabs-line-justified-home" role="tabpanel">
-                                            <div class="repeater-default">
-                                                <div data-repeater-list="group-a">
-                                                    <div data-repeater-item>
-                                                        <div class="card mb-4  ms-0 me-0 border " style="border-radius: 5px;">
-                                                            <div class="row  bg-label-secondary border-bottom  m-0 " style="border-top-left-radius: 5px; border-top-right-radius: 5px; ">
-                                                                <div class="col">
-                                                                    <h4 class="p-1 m-2 text-primary"> المنتج</h4>
-                                                                </div>
-                                                                <button type="button" class="btn-close p-2 mt-2 me-3 " data-repeater-delete></button>
-                                                            </div>
-                                                            <div class="card-body mb-3">
-
-                                                                <!--toggle start-->
-                                                                <div class="m-0 ">
-
-
-                                                                    <div class="row justify-content-between ">
-
-
-                                                                        @*  <div class="col-md-4 ">
-                                                                        <div class=" mb-3">
-                                                                        <label for="" class="form-label">الجهة</label>
-                                                                        <select class="form-select " id="a" name="الجهة" required>
-                                                                        <option value="">الجهة</option>
-                                                                        <option>فرد</option>
-                                                                        <option>شخصية إعتبارية</option>
-                                                                        <option>حكومي</option>
-                                                                        </select>
-                                                                        </div>
-                                                                        </div>*@
-
-                                                                        <div class="col-md-4">
-                                                                            <div class="mb-3">
-                                                                                <label for="Name3" asp-for="productDto.ArName" class="form-label"> </label>
-                                                                                <input type="text" asp-for="productDto.ArName" class="form-control required " id="Name3" name="Name" placeholder="ادخل الاسم بالعربي">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-4">
-                                                                            <div class="mb-3">
-                                                                                <label for="Name3" asp-for="productDto.EnName" class="form-label"> </label>
-                                                                                <input type="text" asp-for="productDto.EnName" class="form-control required " id="Name3" name="Name" placeholder="   ادخل الاسم بالانجليزي ">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="col-md-4">
-                                                                            <div class="mb-3">
-                                                                                <label for="Name3" asp-for="productDto.BrandId" class="form-label"> الماركة</label>
-                                                                                <select class="form-select required" id="class4" name="class4">
-                                                                                    <option value="">   اختار الماركة</option>
-                                                                                    @foreach (var brandItem in brand.Data)
-                                                                                    {
-                                                                                        <option value="@brandItem.Id"> @brandItem.ArName</option>
-
-                                                                                    }
-
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-
-
-
-                                                                    </div>
-
-                                                                    <div class="row justify-content-between ">
-
-                                                                        <div class="col-sm-4">
-                                                                            <div class="mb-3 ">
-                                                                                <label class="form-label" asp-for="productDto.MinOrderQuantity" for="phone"> </label>
-                                                                                <input type="number" asp-for="productDto.MinOrderQuantity" class="form-control  required" id="phone" name="phone" placeholder="اقل كمية يمكن يطلبها ">
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="col-sm-4">
-                                                                            <div class="mb-3 ">
-                                                                                <label class="form-label" asp-for="productDto.MaxOrderQuantity" for="phone1"> </label>
-                                                                                <input type="number" asp-for="productDto.MaxOrderQuantity" class="form-control  required" id="phone1" name="phone1" placeholder="اكثر كمية يمكن يطلبها ">
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="col-md-4">
-                                                                            <div class="mb-3">
-                                                                                <label class="form-label" asp-for="productDto.Discount" for="b"></label>
-                                                                                <input type="number" asp-for="productDto.Discount" class="form-control  required" id="dis" name="dis" placeholder=" نسبة الخصم للمنتج   ">
-
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <div class="row justify-content-between ">
-                                                                            <div class="col-md-4">
-
-
-
-                                                                                <label class="form-label" for="">   نصنيفات المنتج </label>
-                                                                                <div class="container border p-3 " style="border-radius:7px">
-                                                                                    <div class="mb-3">
-                                                                                        <label class="form-label" for="city"> التصنيف الرئيسي </label>
-                                                                                        <select class="form-select " id="mainClassFicationId" >
-                                                                                            <option value="">اختار التصنيف الرئيسي</option>
-                                                                                            @foreach (var mainClassItem in mainclass.Data)
-                                                                                            {
-                                                                                                <option value="@mainClassItem.Id"> @mainClassItem.ArMainClassificationName</option>
-                                                                                            }
-
-
-                                                                                        </select>
-                                                                                    </div>
-                                                                                    <div class="mb-3">
-                                                                                        <label class="form-label" for="mod"> التصنيف الاساسي </label>
-                                                                                        <select class="form-select required" id="biskId" name="class2">
-                                                                                            <option value="">اختار التصنيف الاساسي</option>
-
-                                                                                        </select>
-                                                                                    </div>
-                                                                                    <div class="mb-3">
-                                                                                        <label class="form-label" for="date"> التصنيف الفرعي  </label>
-                                                                                        <select class="form-select required" id="subBase-Id" name="class3">
-                                                                                            <option value="">اختار التصنيف الفرعي</option>
-                                                                                          
-                                                                                        </select>
-                                                                                    </div>
-
-                                                                                    <div class="mb-3">
-                                                                                        <label class="form-label" for="date"> التصنيف فرعي الفرعي  </label>
-                                                                                        <select class="form-select required" id="sub-id" name="class4">
-                                                                                            <option value=""> التصنيف فرعي الفرعي</option>
-                                                                                            
-                                                                                        </select>
-                                                                                    </div>
-
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="col-md-4">
-
-
-                                                                                <label class="form-label" for=""> وصف المنتج </label>
-                                                                                <div class="container border  p-3 " style="border-radius:7px">
-
-                                                                                    <div class="mb-3">
-                                                                                        <label class="form-label" asp-for="productDto.ArDetails" for="mod2"> </label>
-                                                                                        <textarea rows="2" asp-for="productDto.ArDetails" class="form-control required" id="mod2" name="mod21" placeholder="ادخل الوصف بالعربي "></textarea>
-                                                                                    </div>
-                                                                                    <div class="mb-3">
-                                                                                        <label class="form-label" asp-for="productDto.EnDetails" for="ozla">  </label>
-                                                                                        <textarea rows="2" asp-for="productDto.EnDetails" class="form-control required" id="ozla" name="ozla1" placeholder="  ادخل الوصف بالانجليزي"></textarea>
-                                                                                    </div>
-                                                                                    <div class="mb-3">
-                                                                                        <label class="form-label" asp-for="productDto.ArKeyWords" for="ozla">  </label>
-                                                                                        <textarea rows="3" asp-for="productDto.ArKeyWords" class="form-control required" id="ozla" name="keywords" placeholder="  ادخل الكلمات المفتاحية  "></textarea>
-                                                                                    </div>
-
-                                                                                </div>
-
-
-                                                                            </div>
-
-                                                                            <div class="col-md-4">
-                                                                                <label class="form-label" for="">   الصورة الرئسية للمنتج</label>
-                                                                                <div class="container border  p-3 " style="border-radius:7px">
-
-                                                                                    <div class="mb-11">
-                                                                                        <a class="mr-2" href="javascript:void(0);">
-                                                                                            <img src="../../../app-assets/images/portrait/small/avatar-s-26.jpg" id="Image_Image" class="users-avatar-shadow rounded-circle" height="70" width="70">
-                                                                                        </a>
-                                                                                        <span id="errorUplod1" class="badge badge-light-danger"> </span>
-                                                                                    </div>
-                                                                                    <br />
-                                                                                    <div class="media-body">
-                                                                                        @* <h4 class="media-heading">Avatar</h4>*@
-                                                                                        <div class="col-12 px-0 d-flex">
-                                                                                            <a id="fileBtn" class="btn  btn-primary " style="color:white;">اختار صورة  </a>
-
-                                                                                        </div>
-                                                                                    </div>
-
-                                                                                </div>
-                                                                                <br />
-                                                                                <div class="modal-footer d-inline-flex">
-                                                                                    <button class="prev-step">Previous</button>
-                                                                                    <button class="next-step">Next</button>
-
-                                                                                @*    <input type="submit" class="btn btn-secondary" value=" التالي ">*@
-
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <!--  <div class="mb-3">
-                                                            <div class="col p-0 ">
-                                                              <button class="btn btn-primary" data-repeater-create type="button"><i class="bx bx-plus"></i>
-                                                                إضافة طرف آخر
-                                                              </button>
-                                                            </div>
-                                                          </div>-->
-
-                                                    </div>
-                                                </div>
-                                                <!--here delete-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <!-- body content of step 1 end -->
-                                <!-- body content of step 1 -->
-                              
-
-                                <!-- body content of step 1 end -->
-
-
-
-
-                            </form>
-                            </div>
-                         
-                            <div class="step" data-step="2">
-                                <form>
-                                    <fieldset >
+                                <div class="step" data-step="1">
+                                    <form asp-controller="Product" asp-action="Create" method="post">
+                                        <!-- Step 1 -->
+                                        <h6>
+                                            <i class="step-icon"></i>
+                                            <span class="">المنتج</span>
+                                        </h6>
 
 
                                         <div class="tab-content mt-4">
                                             <div class="tab-pane fade show active" id="navs-tabs-line-justified-home" role="tabpanel">
-                                                <div class="repeater-default">
-                                                    <div data-repeater-list="group-a">
-                                                        <div data-repeater-item>
-                                                            <div class="form-group mb-50">
-                                                                <label class="text-bold-600" for="exampleInputEmail1">صفات المنتج </label>
 
-                                                                <select class="form-select" id="Att">
-                                                                    @if (res.Status.Succeeded)
-                                                                    {
-                                                                        <option>اختار</option>
-                                                                        foreach (var item in res.Data)
-                                                                        {
-                                                                            <option value="@item.Id">@item.ArName</option>
-
-                                                                        }
-                                                                    }
-                                                                </select>
-                                                            </div>
-
-                                                            <div class="form-group mb-50">
-                                                                <div class="container-c">
-                                                                    <div class="select-btn">
-                                                                        <span class="btn-text">اختار</span>
-                                                                        <span class="arrow-down">
-                                                                            <img src="https://www.svgrepo.com/show/326564/chevron-down-circle-outline.svg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="    max-width: 800px;
-    height: 28px;
-    margin: 0px;
-    width: 28px;" alt="Chevron Down Circle Outline Vector SVG Icon - SVG Repo" jsname="kn3ccd" data-ilt="1695845198827">
-
-
-                                                                        </span>
-                                                                    </div>
-                                                                    <ul class="list-item">
-                                                                        <partial name="_checkBoxList" />
-
-
-                                                                    </ul>
-                                                                </div>
-
-                                                            </div>
-
-                                                            <div class="modal-footer d-inline-flex">
-                                                                <div class="row">
-                                                                    <div class="col-sm-6">   <a class="btn btn-secondary" onclick="Clear()" style="color:#fff">Cancel</a></div>
-                                                                    <div class="col-sm-6">
-                                                                        <input type="submit" class="btn alert-info" value="Add Attribute" id="attr-btn">
-                                                                    </div>
-                                                                </div>
-                                                                <button class="prev-step">Previous</button>
-                                                                <button class="next-step">Next</button>
-
-                                                            </div>
-
+                                                <div class="card mb-4  ms-0 me-0 border " style="border-radius: 5px;">
+                                                    <div class="row  bg-label-secondary border-bottom  m-0 " style="border-top-left-radius: 5px; border-top-right-radius: 5px; ">
+                                                        <div class="col">
+                                                            <h4 class="p-1 m-2 text-primary"> المنتج</h4>
                                                         </div>
+
                                                     </div>
-                                                    <!--here delete-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                                <div class="step" data-step="2">
-                                    <form>
-                                        <fieldset>
+                                                    <div class="card-body mb-3">
+
+                                                        <!--toggle start-->
+                                                        <div class="m-0 ">
 
 
-                                            <div class="tab-content mt-4">
-                                                <div class="tab-pane fade show active" id="navs-tabs-line-justified-home" role="tabpanel">
-                                                    <div class="repeater-default">
-                                                        <div data-repeater-list="group-a">
-                                                            <div data-repeater-item>
-                                                                <div class="form-group mb-50">
-                                                                    <label class="text-bold-600" for="exampleInputEmail1">صفات المنتج </label>
+                                                            <div class="row justify-content-between ">
 
-                                                                    <select class="form-select" id="Att">
-                                                                        @if (res.Status.Succeeded)
-                                                                        {
-                                                                            <option>اختار</option>
-                                                                            foreach (var item in res.Data)
+                                                                <div class="col-md-4">
+                                                                    <div class="mb-3">
+                                                                        <label  asp-for="ArName" class="form-label"> </label>
+                                                                        <input type="text" asp-for="ArName" class="form-control required" placeholder="ادخل الاسم بالعربي">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="mb-3">
+                                                                        <label for="Name3" asp-for="EnName" class="form-label"> </label>
+                                                                        <input type="text" asp-for="EnName" class="form-control required " id="Name3" placeholder="   ادخل الاسم بالانجليزي ">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="mb-3">
+                                                                        <label for="Name3" asp-for="BrandId" class="form-label"> الماركة</label>
+                                                                        <select class="form-select required" id="class4" name="class4">
+                                                                            <option value="">   اختار الماركة</option>
+                                                                            @foreach (var brandItem in brand.Data)
                                                                             {
-                                                                                <option value="@item.Id">@item.ArName</option>
+                                                                                <option value="@brandItem.Id"> @brandItem.ArName</option>
 
                                                                             }
-                                                                        }
-                                                                    </select>
-                                                                </div>
 
-                                                                <div class="form-group mb-50">
-                                                                    <div class="container-c">
-                                                                        <div class="select-btn">
-                                                                            <span class="btn-text">اختار</span>
-                                                                            <span class="arrow-down">
-                                                                                <img src="https://www.svgrepo.com/show/326564/chevron-down-circle-outline.svg" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="    max-width: 800px;
-    height: 28px;
-    margin: 0px;
-    width: 28px;" alt="Chevron Down Circle Outline Vector SVG Icon - SVG Repo" jsname="kn3ccd" data-ilt="1695845198827">
-
-
-                                                                            </span>
-                                                                        </div>
-                                                                        <ul class="list-item">
-                                                                            <partial name="_checkBoxList" />
-
-
-                                                                        </ul>
+                                                                        </select>
                                                                     </div>
-
                                                                 </div>
 
-                                                                <div class="modal-footer d-inline-flex">
-                                                                    <div class="row">
-                                                                        <div class="col-sm-6">   <a class="btn btn-secondary" onclick="Clear()" style="color:#fff">Cancel</a></div>
-                                                                        <div class="col-sm-6">
-                                                                            <input type="submit" class="btn alert-info" value="Add Attribute" id="attr-btn">
-                                                                        </div>
-                                                                    </div>
-                                                                    <button class="prev-step">Previous</button>
-                                                                    <button class="next-step">Next</button>
 
-                                                                </div>
 
                                                             </div>
+
+                                                            <div class="row justify-content-between ">
+
+                                                                <div class="col-sm-4">
+                                                                    <div class="mb-3 ">
+                                                                        <label class="form-label" asp-for="MinOrderQuantity" for="phone"> </label>
+                                                                        <input type="number" asp-for="MinOrderQuantity" class="form-control  required" id="phone" placeholder="اقل كمية يمكن يطلبها ">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-4">
+                                                                    <div class="mb-3 ">
+                                                                        <label class="form-label" asp-for="MaxOrderQuantity" for="phone1"> </label>
+                                                                        <input type="number" asp-for="MaxOrderQuantity" class="form-control  required" id="phone1" placeholder="اكثر كمية يمكن يطلبها ">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="mb-3">
+                                                                        <label class="form-label" asp-for="Discount" for="b"></label>
+                                                                        <input type="number" asp-for="Discount" class="form-control  required" id="dis" placeholder=" نسبة الخصم للمنتج   ">
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="row justify-content-between ">
+                                                                    <div class="col-md-4">
+
+
+
+                                                                        <label class="form-label" for="">   نصنيفات المنتج </label>
+                                                                        <div class="container border p-3 " style="border-radius:7px">
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label" for="city"> التصنيف الرئيسي </label>
+                                                                                <select class="form-select " id="mainClassFicationId" asp-for="MainClassificationId">
+                                                                                    <option value="">اختار التصنيف الرئيسي</option>
+                                                                                    @foreach (var mainClassItem in mainclass.Data)
+                                                                                    {
+                                                                                        <option value="@mainClassItem.Id"> @mainClassItem.ArMainClassificationName</option>
+                                                                                    }
+
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label" for="mod"> التصنيف الاساسي </label>
+                                                                                <select class="form-select required" id="biskId" asp-for="BasicClassificationId">
+                                                                                    <option value="">اختار التصنيف الاساسي</option>
+
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label" for="date"> التصنيف الفرعي  </label>
+                                                                                <select class="form-select required" id="subBase-Id" asp-for="SubClassificationBaseId">
+                                                                                    <option value="">اختار التصنيف الفرعي</option>
+
+                                                                                </select>
+                                                                            </div>
+
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label" for="date"> التصنيف فرعي الفرعي  </label>
+                                                                                <select class="form-select required" id="sub-id" asp-for="SubSubclassificationId">
+                                                                                    <option value=""> التصنيف فرعي الفرعي</option>
+
+                                                                                </select>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+
+
+                                                                        <label class="form-label" for=""> وصف المنتج </label>
+                                                                        <div class="container border  p-3 " style="border-radius:7px">
+
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label" asp-for=" ArDetails" for="mod2"> </label>
+                                                                                <textarea rows="2" asp-for=" ArDetails" class="form-control required" id="mod2" placeholder="ادخل الوصف بالعربي "></textarea>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label" asp-for=" EnDetails" for="ozla">  </label>
+                                                                                <textarea rows="2" asp-for=" EnDetails" class="form-control required" id="ozla" placeholder="  ادخل الوصف بالانجليزي"></textarea>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label" asp-for=" ArKeyWords" for="ozla">  </label>
+                                                                                <textarea rows="3" asp-for=" ArKeyWords" class="form-control required" id="ozla" placeholder="  ادخل الكلمات المفتاحية  "></textarea>
+                                                                            </div>
+
+                                                                        </div>
+
+
+                                                                    </div>
+
+                                                                    <div class="col-md-4">
+                                                                        <input type="file" style="display:none" id="upload">
+
+                                                                        <input type="hidden" id="logoData" asp-for=" Logo">
+                                                                        <label class="form-label" for="">   الصورة الرئسية للمنتج</label>
+                                                                        <div class="container border  p-3 " style="border-radius:7px">
+
+                                                                            <div class="mb-11">
+                                                                                <a class="mr-2" href="javascript:void(0);">
+                                                                                    <img src="../../../app-assets/images/portrait/small/avatar-s-26.jpg" id="Image_Image" class="users-avatar-shadow rounded-circle" height="70" width="70">
+                                                                                </a>
+                                                                                <span id="errorUplod1" class="badge badge-light-danger"> </span>
+                                                                            </div>
+                                                                            <br />
+                                                                            <div class="media-body">
+                                                                                @* <h4 class="media-heading">Avatar</h4>*@
+                                                                                <div class="col-12 px-0 d-flex">
+                                                                                    <a id="fileBtn" class="btn  btn-primary " style="color:white;">اختار صورة  </a>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <br />
+                                                                        <div class="modal-footer d-inline-flex">
+                                                                            <button class="prev-step">Previous</button>
+                                                                            <a class="next-step" asp-controller="ProductAttribute" asp-action="Create" asp-route-productId="@Model.Id">Next</a>
+
+                                                                            <input type="submit" class="btn btn-secondary" value=" submit ">
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <!--here delete-->
                                                     </div>
                                                 </div>
+
+
+
+
                                             </div>
-                                        </fieldset>
+                                        </div>
+
+
+                                        <!-- body content of step 1 end -->
+                                        <!-- body content of step 1 -->
+                                        <!-- body content of step 1 end -->
+
+
+
+
                                     </form>
                                 </div>
-                            <br>
+
+                              
                             </div>
                         </div>
                     </div>
@@ -551,18 +393,8 @@
         </div>
     </div>
     <!-- / Content -->
-    <form asp-controller="ProductAttribute" id="ProductAttributeDto" asp-action="Create" method="post" style="display:none">
-        <input type="hidden" name="ProductId" value="1">
-        <input type="hidden" name="AttributeId" id="AttributeId">
-        <input type="hidden" name="AttributeItemId" id="AttributeItemId">
-        <input type="hidden" name="Name" id="name">
+   
 
-        <div class="modal-footer d-inline-flex">
-            <a class="btn btn-secondary" asp-action="Index">Cancel</a>
-            <input type="submit" class="btn alert-info" value="Add Attribute" id="hidden-btn">
-        </div>
-
-    </form>
 
 
     <div class="content-backdrop fade"></div>
@@ -572,11 +404,12 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+    <script src="~/js/uploadFiles.js" asp-append-version="true"></script>
     <script type="text/javascript">
 
 
 
-        $("#mainClassFicationId").on("change",function(){
+        $("#mainClassFicationId").on("change", function () {
             let mainClassficationId = $(this).val();
             let url = "../BasicClassification/GetmainBisikClassFication";
             let item = "";
@@ -587,7 +420,7 @@
                 data: data,
                 contentType: false,
                 success: function (res) {
-                    res.map(a=>{
+                    res.map(a => {
                         item += `<option value="${a.id}">${a.name}</option>`;
                         getsubClassficationBase(a.id);
                     });
@@ -601,8 +434,8 @@
 
         });
 
-        function getsubClassficationBase(id){
-        
+        function getsubClassficationBase(id) {
+
             let url = "../SubClassificationBase/GetSubclassFicationBase";
             let item = "";
             let data = { "bisikId": id };
@@ -624,9 +457,9 @@
             });
 
 
-       
+
         }
-       function  getsubClassfication(id){
+        function getsubClassfication(id) {
             let url = "../SubSubclassification/GetSubclassFication";
             let item = "";
             let data = { "subId": id };
@@ -638,7 +471,7 @@
                 success: function (res) {
                     res.map(a => {
                         item += `<option value="${a.id}">${a.name}</option>`;
-                       
+
                     });
                     $("#sub-id").html(item);
                 },
@@ -648,173 +481,187 @@
             });
 
 
-     
-       }
-       ///////////////////////////
 
-        
-            document.addEventListener("DOMContentLoaded", function () {
-                const form = document.getElementById("myForm");
-                const steps = form.querySelectorAll(".step");
-                let currentStep = 0;
-
-                function showStep(stepIndex) {
-                    steps.forEach((step, index) => {
-                        if (index === stepIndex) {
-                            step.style.display = "block";
-                        } else {
-                            step.style.display = "none";
-                        }
-                    });
-                }
-
-                function goToStep(stepIndex) {
-                alert("dddddddddd");
-                    showStep(stepIndex);
-                    currentStep = stepIndex;
-                }
-
-                document.querySelectorAll(".next-step").forEach((nextButton, index) => {
-                    nextButton.addEventListener("click", function (e) {
-                        alert("jjjjj");
-                        e.preventDefault();
-                        if (currentStep < steps.length - 1) {
-                        alert("ggggggggg");
-                            goToStep(currentStep + 1);
-                        }
-                    });
-                });
-
-                document.querySelectorAll(".prev-step").forEach((prevButton, index) => {
-                    prevButton.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        if (currentStep > 0) {
-                            goToStep(currentStep - 1);
-                        }
-                    });
-                });
-
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    // Handle form submission here
-                });
-
-                showStep(currentStep);
-            });
-
-            /////////////////////////////////
-        $("#attr-btn").on("click", function (e) {
-            e.preventDefault();
-            $("#hidden-btn").trigger("click");
-        });
-        $("#hidden-btn")
-        ////////////////////////////////////////
-        let list = [];
-        let namelist = [];
-        function Clear() {
-
-            var selectElement = document.getElementById("Att");
-            selectElement.disabled = false;
-            list = [];
-            namelist = [];
-            window.location.reload();
         }
-        $("#Att").on("change", function () {
-            //let list = [];
-            //let namelist = [];
+        ///////////////////////////
 
-            var selectElement = document.getElementById("Att");
-            selectElement.disabled = true;
 
-            let id = $(this).val();
-            $("#AttributeId").val($(this).val());
-            let url = "../ProductAttribute/getAttrItems";
-            let item = "";
-            jQuery.ajax({
-                method: "get",
-                url: url,
-                data: { "id": id },
-                contentType: false,
-                success: function (res) {
+        //document.addEventListener("DOMContentLoaded", function () {
+        //    const form = document.getElementById("myForm");
+        //    const steps = form.querySelectorAll(".step");
+        //    let currentStep = 0;
 
-                    $(".list-item").html(res);
-                    //  document.getElementById("itemLI").style.backgroundColor = "red";
-                    const items = document.querySelectorAll(".item");
+        //    function showStep(stepIndex) {
+        //        steps.forEach((step, index) => {
+        //            if (index === stepIndex) {
+        //                step.style.display = "block";
+        //            } else {
+        //                step.style.display = "none";
+        //            }
+        //        });
+        //    }
 
-                    items.forEach(item => {
-                        item.addEventListener("click", (e) => {
+        //    function goToStep(stepIndex) {
+              
+        //        showStep(stepIndex);
+        //        currentStep = stepIndex;
+        //    }
 
-                            item.classList.toggle("checked");
+        //    document.querySelectorAll(".next-step").forEach((nextButton, index) => {
+        //        nextButton.addEventListener("click", function (e) {
+                  
+        //            e.preventDefault();
+        //            if (currentStep < steps.length - 1) {
+                     
+        //                goToStep(currentStep + 1);
+        //            }
+        //        });
+        //    });
 
-                            let checked = document.querySelectorAll(".checked");
-                            let btnText = document.querySelector(".btn-text");
-                            console.log(checked.length);
-                            //if (checked && checked.length > 0) {
+        //    document.querySelectorAll(".prev-step").forEach((prevButton, index) => {
+        //        prevButton.addEventListener("click", function (e) {
+        //            e.preventDefault();
+        //            if (currentStep > 0) {
+        //                goToStep(currentStep - 1);
+        //            }
+        //        });
+        //    });
 
-                            //    console.log("vvvvvv " + checked.item.arguments["value"]);
-                            //} else {
-                            //    //  btnText.innerHTML = checked.length;
-                            //}
-                            $(document).on("click", ".item", function (e) {
-                                e.preventDefault();
-                                e.stopImmediatePropagation();
-                                let AttributeItemId = $(this).attr("value");
-                                let namevalue = $(this).attr("name-att");
-                                console.log("name-att  " + namevalue);
+        //    form.addEventListener("submit", function (e) {
+        //        // e.preventDefault();
+        //        // Handle form submission here
+        //    });
 
-                                if (list.length > 0 && namelist.length > 0) {
-                                    let index = list.some(obj => obj === AttributeItemId);
-                                    let name = namelist.some(obj => obj === namevalue);
-                                    /////////////////////////////
-                                    if (index && name) {
-                                        list = list.filter(a => {
-                                            return a !== AttributeItemId;
-                                        });
-                                        //////////////////////////
-                                        namelist = namelist.filter(a => {
-                                            return a !== namevalue;
-                                        });
-                                        console.log("hi");
+        //    showStep(currentStep);
+        //});
 
-                                    } else {
-                                        console.log("noo");
-                                        list.push(AttributeItemId);
-                                        namelist.push(namevalue);
+        ///////////////////////////////////
+        //$("#attr-btn").on("click", function (e) {
+        //    e.preventDefault();
+        //    $("#hidden-btn").trigger("click");
+        //});
+        //$("#hidden-btn")
+        //////////////////////////////////////////
+        //let list = [];
+        //let namelist = [];
+        //function Clear() {
 
-                                    }
-                                } else {
-                                    console.log("sssssssssssssssss");
-                                    list.push(AttributeItemId);
-                                    namelist.push(namevalue);
-                                }
-                                //  console.log("ttttttttttttt  " + v);
-                                console.log("listttttttttttt  " + JSON.stringify(list));
-                                console.log("nameListttttt    " + JSON.stringify(namelist));
+        //    var selectElement = document.getElementById("Att");
+        //    selectElement.disabled = false;
+        //    list = [];
+        //    namelist = [];
+        //    window.location.reload();
+        //}
+        //$("#Att").on("change", function () {
+        //    //let list = [];
+        //    //let namelist = [];
 
-                                $("#AttributeItemId").val(list.toString());
-                                $("#name").val(namelist.toString());
-                            })
-                        });
-                    });
+        //    var selectElement = document.getElementById("Att");
+        //    selectElement.disabled = true;
 
-                },
-                error: function (ex) {
-                    alert("errrrrrrrrrr  " + ex.responseText);
-                }
-            });
+        //    let id = $(this).val();
+        //    $("#AttributeId").val($(this).val());
+        //    let url = "../ProductAttribute/getAttrItems";
+        //    let item = "";
+        //    jQuery.ajax({
+        //        method: "get",
+        //        url: url,
+        //        data: { "id": id },
+        //        contentType: false,
+        //        success: function (res) {
+
+        //            $(".list-item").html(res);
+        //            //  document.getElementById("itemLI").style.backgroundColor = "red";
+        //            const items = document.querySelectorAll(".item");
+
+        //            items.forEach(item => {
+        //                item.addEventListener("click", (e) => {
+
+        //                    item.classList.toggle("checked");
+
+        //                    let checked = document.querySelectorAll(".checked");
+        //                    let btnText = document.querySelector(".btn-text");
+        //                    console.log(checked.length);
+        //                    //if (checked && checked.length > 0) {
+
+        //                    //    console.log("vvvvvv " + checked.item.arguments["value"]);
+        //                    //} else {
+        //                    //    //  btnText.innerHTML = checked.length;
+        //                    //}
+        //                    $(document).on("click", ".item", function (e) {
+        //                        e.preventDefault();
+        //                        e.stopImmediatePropagation();
+        //                        let AttributeItemId = $(this).attr("value");
+        //                        let namevalue = $(this).attr("name-att");
+        //                        console.log("name-att  " + namevalue);
+
+        //                        if (list.length > 0 && namelist.length > 0) {
+        //                            let index = list.some(obj => obj === AttributeItemId);
+        //                            let name = namelist.some(obj => obj === namevalue);
+        //                            /////////////////////////////
+        //                            if (index && name) {
+        //                                list = list.filter(a => {
+        //                                    return a !== AttributeItemId;
+        //                                });
+        //                                //////////////////////////
+        //                                namelist = namelist.filter(a => {
+        //                                    return a !== namevalue;
+        //                                });
+        //                                console.log("hi");
+
+        //                            } else {
+        //                                console.log("noo");
+        //                                list.push(AttributeItemId);
+        //                                namelist.push(namevalue);
+
+        //                            }
+        //                        } else {
+        //                            console.log("sssssssssssssssss");
+        //                            list.push(AttributeItemId);
+        //                            namelist.push(namevalue);
+        //                        }
+        //                        //  console.log("ttttttttttttt  " + v);
+        //                        console.log("listttttttttttt  " + JSON.stringify(list));
+        //                        console.log("nameListttttt    " + JSON.stringify(namelist));
+
+        //                        $("#AttributeItemId").val(list.toString());
+        //                        $("#name").val(namelist.toString());
+        //                    })
+        //                });
+        //            });
+
+        //        },
+        //        error: function (ex) {
+        //            alert("errrrrrrrrrr  " + ex.responseText);
+        //        }
+        //    });
+        //});
+
+
+        //const selectBtn = document.querySelector(".select-btn");
+
+
+        //selectBtn.addEventListener("click", (e) => {
+        //    selectBtn.classList.toggle("open");
+
+
+        //});
+
+        ////////////////////////////////////////////////////////
+
+
+
+
+
+        $("#upload").on('change', function () {
+
+            var files = $('#upload').prop("files");
+
+            let folderName = "Product";
+            uplodfile(files, folderName);
         });
 
-
-        const selectBtn = document.querySelector(".select-btn");
-
-
-        selectBtn.addEventListener("click", (e) => {
-            selectBtn.classList.toggle("open");
-
-
-        });
-
-
+        $('#fileBtn').click(function () { $('#upload').trigger('click'); });
     </script>
 
 }

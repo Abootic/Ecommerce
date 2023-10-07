@@ -30,7 +30,7 @@ namespace EcommereceWeb.Infrstraction.EntityConfigration
             builder.Property(x => x.MaxOrderQuantity).HasColumnName(@"MaxOrderQuantity").HasColumnType("decimal(10, 2)").IsRequired(false);
             builder.Property(x => x.TaxType).HasColumnName(@"TaxType").HasColumnType("int").IsRequired();
             builder.Property(x => x.ArKeyWords).HasColumnName(@"ArKeyWords").HasColumnType("nvarchar(255)").IsRequired(false);
-            builder.Property(x => x.EnKeyWords).HasColumnName(@"ArKeyWords").HasColumnType("nvarchar(255)").IsRequired(false);
+            builder.Property(x => x.EnKeyWords).HasColumnName(@"EnKeyWords").HasColumnType("nvarchar(255)").IsRequired(false);
             builder.Property(x => x.BrandId).HasColumnName(@"BrandId").HasColumnType("int").IsRequired(false);
             builder.Property(x => x.MainClassificationId).HasColumnName(@"MainClassificationId").HasColumnType("int").IsRequired(false);
             builder.Property(x => x.BasicClassificationId).HasColumnName(@"BasicClassificationId").HasColumnType("int").IsRequired(false);

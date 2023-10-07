@@ -86,10 +86,12 @@ namespace EcommereceWeb.Application.Services
         }
         private List<ProductVariation> GenerateVariations(List<List<ProductAttribute>> attributeLists)
         {
+            Console.WriteLine("111111111111111111111111111111111111111111111111111111111");
             var variations = new List<ProductVariation>();
 
             if (attributeLists.Count == 0)
             {
+                Console.WriteLine("777777777777777777777777");
                 return variations;
             }
             try
@@ -127,50 +129,60 @@ namespace EcommereceWeb.Application.Services
                 return variations;
             }catch(Exception ex)
             {
-                Console.WriteLine($"eeeeeeeeeeeeeeeeeeeee  {ex.Message}");
+                Console.WriteLine($"2222222222222222222222222222222222222222222222  {ex.Message}");
                 return variations;
             }
         }
 
         private ProductVariation GetVariation(List<List<ProductAttribute>> attributeLists, int[] currentIndexes)
         {
+            Console.WriteLine("33333333333333333333333333333333");
             var variation = new ProductVariation();
 
-            for (int i = 0; i < attributeLists.Count; i++)
+            try
             {
-                var currentList = attributeLists[i];
-                var currentIndex = currentIndexes[i];
-                var attribute = currentList[currentIndex];
-                Console.WriteLine("545555555555555555555555");
 
-                variation.ProductId = attribute.ProductId;
-                variation.EnName += (currentList[i].Name.Length> 0 ? "-" : "") + attribute.Name;
+                for (int i = 0; i < attributeLists.Count; i++)
+                {
+                    var currentList = attributeLists[i];
+                    var currentIndex = currentIndexes[i];
+                    var attribute = currentList[currentIndex];
+                    Console.WriteLine("545555555555555555555555");
+
+                    variation.ProductId = attribute.ProductId;
+                    variation.EnName += (currentList[i].Name.Length > 0 ? "-" : "") + attribute.Name;
+                }
+            }catch(Exception ex)
+            {
+                Console.WriteLine($"nnnnnnnnnnnnnnnnnnnnnnnnnn  {ex.Message}");
+
             }
 
             return variation;
         }
-        public IResult<List<ProductVariationDto>> GetListVaration()
+        public IResult<List<ProductVariationDto>> GetListVaration(int productId)
         {
           
-            try
-            {
+            //try
+            //{
 
-                var res = _repositoryManager.ProductAttributeRepository.GetListVarationData();
-                var varition = GenerateVariations(res);
+                var res = _repositoryManager.ProductAttributeRepository.GetListVarationData(productId);
+               
              
-                if (res != null)
+                if (res.Any())
                 {
-                   
+                    var varition = GenerateVariations(res.ToList());
+
                     var map=_mapper.Map<List<ProductVariationDto>>(varition);
                     return Result<List<ProductVariationDto>>.Sucess(map,"eeeeeeeeeeeeeeee",200);
                 }
                 return Result<List<ProductVariationDto>>.Fail("لا يوجد بيانات", 500);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"2222222222222222222222   {ex.Message}");
-                return Result<List<ProductVariationDto>>.Fail(ex.Message, 500);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"2222222222222222222222   {ex.Message}");
+            //    return Result<List<ProductVariationDto>>.Fail(ex.Message, 500);
+           // }
         }
 
 

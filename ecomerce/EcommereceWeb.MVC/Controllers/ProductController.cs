@@ -8,45 +8,42 @@ namespace EcommereceWeb.MVC.Controllers
 {
     public class ProductController : BaseMVCController
     {
-        public IActionResult Index()
+        public IActionResult Index(int? pid )
         {
-              ProductAdditionalVM vm = new ProductAdditionalVM();
-            vm.checkBoxListVms = new List<CheckBoxListVm>();
-            vm.CheckBoxListVm = new CheckBoxListVm();
-            vm.productDto = new ProductDto();
-            return View(vm); vm = new ProductAdditionalVM();
-            vm.checkBoxListVms = new List<CheckBoxListVm>();
-            vm.CheckBoxListVm = new CheckBoxListVm();
-            return View(vm);
-        
-        }  public IActionResult Create()
+
+            ProductDto productDto = new ProductDto();
+            if (pid != null)
+            {
+                productDto.Id = pid.Value;
+            }
+           
+            return View(productDto); 
+           
+        }  
+        public IActionResult Create()
         {
             return View();
         }
-        public async Task<IActionResult> getAttrItems(int id)
-        {
-            var res = await ServiceManager.AttributeItemService.Find(a => a.AttributeId == id);
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(ProductDto entity) {
+            if (entity == null) RedirectToAction("Index");
+           
+            entity.Code = "2";
+            entity.TaxType = 4;
+            entity.VideoProvider = "5";
+            entity.VideoUrl = "8";
+            var res = await ServiceManager.ProductService.Add(entity);
             if (res.Status.Succeeded)
             {
-                ProductAdditionalVM vm = new ProductAdditionalVM();
-                vm.checkBoxListVms = new List<CheckBoxListVm>();
-                foreach (var item in res.Data)
-                {
+                TempData["suc"] = res.Status.message;
+                return RedirectToAction("Index", new { pid = res.Data.Id });
 
-                    vm.CheckBoxListVm = new CheckBoxListVm
-                    {
-                        id = item.Id,
-                        name = item.ArName
-                    };
-
-                    vm.checkBoxListVms.Add(vm.CheckBoxListVm);
-                }
-
-                return PartialView("_checkBoxList", vm);
             }
-            return BadRequest("noo data");
-
+            TempData["err"] = res.Status.message;
+            return RedirectToAction("Index", new { pid =0 });
         }
+
+     
     }
 }

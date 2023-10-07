@@ -940,7 +940,6 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnName("ArDetails");
 
                     b.Property<string>("ArKeyWords")
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("ArKeyWords");
 
@@ -985,9 +984,8 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         .HasColumnName("EnDetails");
 
                     b.Property<string>("EnKeyWords")
-                        .ValueGeneratedOnUpdateSometimes()
                         .HasColumnType("nvarchar(255)")
-                        .HasColumnName("ArKeyWords");
+                        .HasColumnName("EnKeyWords");
 
                     b.Property<string>("EnName")
                         .HasMaxLength(255)
@@ -2038,8 +2036,8 @@ namespace EcommereceWeb.Infrstraction.Migrations
                         {
                             Id = "4a2e1650-21bd-4e67-832e-2e99c267a2e4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4ea8912d-eb53-4bf9-abec-5c948eda2cda",
-                            CreatedAt = new DateTime(2023, 10, 4, 21, 36, 7, 50, DateTimeKind.Local).AddTicks(7787),
+                            ConcurrencyStamp = "743ed579-f426-45cb-924b-589244bd03e0",
+                            CreatedAt = new DateTime(2023, 10, 7, 8, 23, 8, 407, DateTimeKind.Local).AddTicks(4894),
                             Email = "Admin@Gmail.com",
                             EmailConfirmed = false,
                             FullName = "Admin",
@@ -2048,10 +2046,10 @@ namespace EcommereceWeb.Infrstraction.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAENNksFZpPM3Fj09WSrEk8ElsFW3qrnQ9RdvnmO80dSoX1T+iUrCoQJBLnnQFUACtJQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN/QmYEyU5fN8WLVKMwCAiAqKi6Q7YSK9pDg1Fhmm84VR95IzySbKil+hzHy1XwIvQ==",
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5505a992-02a1-47cb-be5a-d13b7939f8f9",
+                            SecurityStamp = "bf44d8c1-4b06-419e-b1d0-5069ff076123",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });

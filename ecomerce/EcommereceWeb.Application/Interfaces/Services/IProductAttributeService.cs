@@ -14,7 +14,7 @@ namespace EcommereceWeb.Application.Interfaces.Services
         Task<IResult<IEnumerable<ProductAttributeDto>>> Find(Expression<Func<ProductAttributeDto, bool>> expression, CancellationToken cancellationToken = default);
         Task<IResult<IEnumerable<ProductAttributeDto>>> GetAll(CancellationToken cancellationToken = default);
         Task<IResult<ProductAttributeDto>> GetById(int Id, CancellationToken cancellationToken = default);
-        IResult<List<ProductVariationDto>> GetListVaration();
+        IResult<List<ProductVariationDto>> GetListVaration(int productId);
     } 
 
 

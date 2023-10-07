@@ -1,5 +1,6 @@
 ﻿using EcommereceWeb.Application.DTOs;
 using EcommereceWeb.Application.Interfaces.Common;
+using EcommereceWeb.Domain.Entity;
 using EcommereceWeb.Infrastraction.Data;
 using EcommereceWeb.MVC.Controllers.Base;
 using EcommereceWeb.MVC.ViewModel;
@@ -21,10 +22,10 @@ namespace EcommereceWeb.MVC.Controllers
 
 
         // GET: ProductAttributeController
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int productId)
         {
 
-            var res = ServiceManager.ProductAttributeService.GetListVaration();
+            var res = ServiceManager.ProductAttributeService.GetListVaration(productId);
             if (res.Status.Succeeded)
             {
                 TempData["suc"] = res.Status.message;
@@ -36,6 +37,7 @@ namespace EcommereceWeb.MVC.Controllers
 
 
         }
+    
         public async Task<IActionResult> getAttrItems(int id)
         {
             var res = await ServiceManager.AttributeItemService.Find(a => a.AttributeId == id);
@@ -90,11 +92,12 @@ namespace EcommereceWeb.MVC.Controllers
 
         }
         // GET: ProductAttributeController/Create
-        public ActionResult Create()
+        public ActionResult Create(int productId)
         {
             ProductAdditionalVM vm = new ProductAdditionalVM();
             vm.checkBoxListVms = new List<CheckBoxListVm>();
             vm.CheckBoxListVm = new CheckBoxListVm();
+            vm.ProductId = productId;
             return View(vm);
         }
         [HttpPost]
@@ -121,18 +124,18 @@ namespace EcommereceWeb.MVC.Controllers
                     var res = await ServiceManager.ProductAttributeService.Add(ob);
                     if (res.Status.Succeeded)
                     {
-                        Console.WriteLine(res.Status.message);
+                        TempData["suc"] = res.Status.message;
+
                         //  return View();
                     }
                     else
                     {
-                        Console.WriteLine(res.Status.message);
+                        TempData["err"] = res.Status.message;
                     }
                 }
-
             }
 
-            return RedirectToAction("Create");
+            return RedirectToAction("Create" ,new { productId=entity.ProductId });
 
 
             //  Console.WriteLine($"2222222222222222222222  {d.AttributeItemId}");

@@ -192,10 +192,11 @@
                                         <div class="col-sm-6">
                                             <input type="submit" class="btn alert-info" value="Add Attribute" id="attr-btn"></div>
                                     </div>
-                                 
-                                   
+
                                 </div>
                             </form>
+                            <div class="col-sm-6">   <a class="btn btn-secondary" asp-controller="ProductAttribute" asp-action="Index" asp-route-productId="@Model.ProductId" style="color:#fff">next</a></div>
+
                         </div>
                     </div>
                 </div>
@@ -209,7 +210,7 @@
 </section>
 <!-- login page ends -->
 <form asp-controller="ProductAttribute" asp-action="Create" method="post" style="display:none">
-    <input type="hidden" asp-for="ProductId" value="1">
+    <input type="hidden" asp-for="ProductId" value="@Model.ProductId">
     <input type="hidden" asp-for="AttributeId" id="AttributeId">
     <input type="hidden" asp-for="AttributeItemId" id="AttributeItemId">
     <input type="hidden" asp-for="Name" id="name">
@@ -251,7 +252,7 @@
 
             let id = $(this).val();
             $("#AttributeId").val($(this).val());
-            let url = "../Product/getAttrItems";
+            let url = "../ProductAttribute/getAttrItems";
             let item = "";
             jQuery.ajax({
                 method: "get",
