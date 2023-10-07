@@ -10,7 +10,7 @@ function GalleryUplodFile(files, folderName) {
     }
     let x = "";
     let output = [];
-    var url = "../../BaseMvc/UploadFileToGallery";
+    var url = "../../BaseMVC/UploadFileToGallery";
 ;
     for (var i = 0; i < files.length; i++) {
       
@@ -35,17 +35,20 @@ function GalleryUplodFile(files, folderName) {
             $("#Image_Image").attr("src", "");
         },
         success: function (repo) {
+            let i = 0;
             repo.map(img => {
                 var imgUrl = " ../../Upload/" + folderName + "/" + img.image;
-                document.getElementById("Gallery_Image").style.backgroundImage = "url(" + imgUrl + ")";
+                document.getElementById("Image_Image").style.backgroundImage = "url(" + imgUrl + ")";
 
                 //   output.append("#galaryImage[]", repo.image);
                 output.push(img.image);
+                i++;
+                
                 $('[name="Image1[]"]').val(output);
-                console.log("wwwwwwwwwwwwwww    " + img.image);
+                console.log("wwwwwwwwwwwwwww    " + i);
             /*    x += repo.image;*/
                 $("#galaryImage").val(img.image);
-                $('#preview').append('<img src="' + imgUrl + '" width="200px;" height="200px">');
+                $('#preview').append('<div class="col-6 "><img src="' + imgUrl + '"  class="galary" ></div>');
                 document.querySelector('.errorUplod').innerHTML = "";
             });
             

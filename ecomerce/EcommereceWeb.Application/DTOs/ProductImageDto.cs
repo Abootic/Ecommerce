@@ -21,6 +21,8 @@ namespace EcommereceWeb.Application.DTOs
         public int? ProductId { get; set; } // from product model
         [Display(Name = "الصورة ")]
         public string? ImageUrl { get; set; }
+        public List<string> Image1 { get; set; } = new List<string>();
+
 
     }
 

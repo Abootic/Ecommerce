@@ -1,4 +1,4 @@
-﻿@model List<ProductVariationDto>
+﻿@model ProductAttributeVM
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -41,7 +41,7 @@
                             <div class="form-group mb-50">
 
                                 <select class="form-select" id="variation">
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.productVariationDto)
                                     {
                                         <option value="@item.ProductId">@item.EnName</option>
                                     }
@@ -54,7 +54,7 @@
                     }
                 </div>
                 <div class="dropdown-divider"></div>
-
+                <a class="btn btn-secondary"  asp-controller="ProductImage" asp-action="Create" asp-route-productId="@Model.productId">next</a>
                 <div class="col-12" id="create-variation"></div>
             </div>
         </div>

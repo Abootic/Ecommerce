@@ -24,16 +24,19 @@ namespace EcommereceWeb.MVC.Controllers
         // GET: ProductAttributeController
         public async Task<IActionResult> Index(int productId)
         {
-
+            ProductAttributeVM vm = new ProductAttributeVM();
+            vm.productVariationDto = new List<ProductVariationDto>();
             var res = ServiceManager.ProductAttributeService.GetListVaration(productId);
             if (res.Status.Succeeded)
             {
                 TempData["suc"] = res.Status.message;
-                return View(res.Data);
+                vm.productVariationDto = res.Data;
+                vm.productId = productId;
+                return View(vm);
 
             }
             TempData["err"] = res.Status.message;
-            return View(res.Data);
+            return View(vm);
 
 
         }

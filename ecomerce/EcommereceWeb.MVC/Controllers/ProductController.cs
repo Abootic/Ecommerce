@@ -30,7 +30,7 @@ namespace EcommereceWeb.MVC.Controllers
             if (entity == null) RedirectToAction("Index");
            
             entity.Code = "2";
-            entity.TaxType = 4;
+          
             entity.VideoProvider = "5";
             entity.VideoUrl = "8";
             var res = await ServiceManager.ProductService.Add(entity);

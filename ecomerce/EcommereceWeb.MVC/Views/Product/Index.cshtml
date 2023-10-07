@@ -175,8 +175,7 @@
                 <div class="card m-0">
                     <div class="row m-2">
                         <div class="col-12">
-                            <div id="myForm">
-                                <div class="step" data-step="1">
+                          
                                     <form asp-controller="Product" asp-action="Create" method="post">
                                         <!-- Step 1 -->
                                         <h6>
@@ -188,7 +187,7 @@
                                         <div class="tab-content mt-4">
                                             <div class="tab-pane fade show active" id="navs-tabs-line-justified-home" role="tabpanel">
 
-                                                <div class="card mb-4  ms-0 me-0 border " style="border-radius: 5px;">
+                                                <div class=" mb-4  ms-0 me-0 border " style="border-radius: 5px;">
                                                     <div class="row  bg-label-secondary border-bottom  m-0 " style="border-top-left-radius: 5px; border-top-right-radius: 5px; ">
                                                         <div class="col">
                                                             <h4 class="p-1 m-2 text-primary"> المنتج</h4>
@@ -321,11 +320,21 @@
                                                                                 <label class="form-label" asp-for=" ArKeyWords" for="ozla">  </label>
                                                                                 <textarea rows="3" asp-for=" ArKeyWords" class="form-control required" id="ozla" placeholder="  ادخل الكلمات المفتاحية  "></textarea>
                                                                             </div>
+                                                                            <div class="mb-3">
+                                                                                <label class="form-label" asp-for="TaxType">   الضريبة  </label>
+                                                                                <select class="form-select required" asp-for="TaxType">
+                                                                                    <option>  هل يوجد ضريبة</option>
+                                                                                    <option value="0"> يوجد ضريبة</option>
+                                                                                    <option value="1"> لا يوجد ضريبة</option>
+
+                                                                                </select>
+                                                                            </div>
 
                                                                         </div>
 
 
                                                                     </div>
+                                                                 
 
                                                                     <div class="col-md-4">
                                                                         <input type="file" style="display:none" id="upload">
@@ -351,15 +360,10 @@
 
                                                                         </div>
                                                                         <br />
-                                                                        <div class="modal-footer d-inline-flex">
-                                                                            <button class="prev-step">Previous</button>
-                                                                            <a class="next-step" asp-controller="ProductAttribute" asp-action="Create" asp-route-productId="@Model.Id">Next</a>
-
-                                                                            <input type="submit" class="btn btn-secondary" value=" submit ">
-
-                                                                        </div>
+                                                                       
                                                                     </div>
 
+                                                              
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -367,12 +371,18 @@
                                                 </div>
 
 
+                                        <div class="modal-footer d-inline-flex">
+                                            <button class="prev-step">Previous</button>
+                                            <a class="next-step" asp-controller="ProductAttribute" asp-action="Create" asp-route-productId="@Model.Id">Next</a>
 
+                                            <input type="submit" class="btn btn-primary" value="submit ">
 
+                                        </div>
+                                               
                                             </div>
                                         </div>
 
-
+                                       
                                         <!-- body content of step 1 end -->
                                         <!-- body content of step 1 -->
                                         <!-- body content of step 1 end -->
@@ -381,10 +391,7 @@
 
 
                                     </form>
-                                </div>
-
-                              
-                            </div>
+                               
                         </div>
                     </div>
                 </div>
@@ -483,172 +490,7 @@
 
 
         }
-        ///////////////////////////
-
-
-        //document.addEventListener("DOMContentLoaded", function () {
-        //    const form = document.getElementById("myForm");
-        //    const steps = form.querySelectorAll(".step");
-        //    let currentStep = 0;
-
-        //    function showStep(stepIndex) {
-        //        steps.forEach((step, index) => {
-        //            if (index === stepIndex) {
-        //                step.style.display = "block";
-        //            } else {
-        //                step.style.display = "none";
-        //            }
-        //        });
-        //    }
-
-        //    function goToStep(stepIndex) {
-              
-        //        showStep(stepIndex);
-        //        currentStep = stepIndex;
-        //    }
-
-        //    document.querySelectorAll(".next-step").forEach((nextButton, index) => {
-        //        nextButton.addEventListener("click", function (e) {
-                  
-        //            e.preventDefault();
-        //            if (currentStep < steps.length - 1) {
-                     
-        //                goToStep(currentStep + 1);
-        //            }
-        //        });
-        //    });
-
-        //    document.querySelectorAll(".prev-step").forEach((prevButton, index) => {
-        //        prevButton.addEventListener("click", function (e) {
-        //            e.preventDefault();
-        //            if (currentStep > 0) {
-        //                goToStep(currentStep - 1);
-        //            }
-        //        });
-        //    });
-
-        //    form.addEventListener("submit", function (e) {
-        //        // e.preventDefault();
-        //        // Handle form submission here
-        //    });
-
-        //    showStep(currentStep);
-        //});
-
-        ///////////////////////////////////
-        //$("#attr-btn").on("click", function (e) {
-        //    e.preventDefault();
-        //    $("#hidden-btn").trigger("click");
-        //});
-        //$("#hidden-btn")
-        //////////////////////////////////////////
-        //let list = [];
-        //let namelist = [];
-        //function Clear() {
-
-        //    var selectElement = document.getElementById("Att");
-        //    selectElement.disabled = false;
-        //    list = [];
-        //    namelist = [];
-        //    window.location.reload();
-        //}
-        //$("#Att").on("change", function () {
-        //    //let list = [];
-        //    //let namelist = [];
-
-        //    var selectElement = document.getElementById("Att");
-        //    selectElement.disabled = true;
-
-        //    let id = $(this).val();
-        //    $("#AttributeId").val($(this).val());
-        //    let url = "../ProductAttribute/getAttrItems";
-        //    let item = "";
-        //    jQuery.ajax({
-        //        method: "get",
-        //        url: url,
-        //        data: { "id": id },
-        //        contentType: false,
-        //        success: function (res) {
-
-        //            $(".list-item").html(res);
-        //            //  document.getElementById("itemLI").style.backgroundColor = "red";
-        //            const items = document.querySelectorAll(".item");
-
-        //            items.forEach(item => {
-        //                item.addEventListener("click", (e) => {
-
-        //                    item.classList.toggle("checked");
-
-        //                    let checked = document.querySelectorAll(".checked");
-        //                    let btnText = document.querySelector(".btn-text");
-        //                    console.log(checked.length);
-        //                    //if (checked && checked.length > 0) {
-
-        //                    //    console.log("vvvvvv " + checked.item.arguments["value"]);
-        //                    //} else {
-        //                    //    //  btnText.innerHTML = checked.length;
-        //                    //}
-        //                    $(document).on("click", ".item", function (e) {
-        //                        e.preventDefault();
-        //                        e.stopImmediatePropagation();
-        //                        let AttributeItemId = $(this).attr("value");
-        //                        let namevalue = $(this).attr("name-att");
-        //                        console.log("name-att  " + namevalue);
-
-        //                        if (list.length > 0 && namelist.length > 0) {
-        //                            let index = list.some(obj => obj === AttributeItemId);
-        //                            let name = namelist.some(obj => obj === namevalue);
-        //                            /////////////////////////////
-        //                            if (index && name) {
-        //                                list = list.filter(a => {
-        //                                    return a !== AttributeItemId;
-        //                                });
-        //                                //////////////////////////
-        //                                namelist = namelist.filter(a => {
-        //                                    return a !== namevalue;
-        //                                });
-        //                                console.log("hi");
-
-        //                            } else {
-        //                                console.log("noo");
-        //                                list.push(AttributeItemId);
-        //                                namelist.push(namevalue);
-
-        //                            }
-        //                        } else {
-        //                            console.log("sssssssssssssssss");
-        //                            list.push(AttributeItemId);
-        //                            namelist.push(namevalue);
-        //                        }
-        //                        //  console.log("ttttttttttttt  " + v);
-        //                        console.log("listttttttttttt  " + JSON.stringify(list));
-        //                        console.log("nameListttttt    " + JSON.stringify(namelist));
-
-        //                        $("#AttributeItemId").val(list.toString());
-        //                        $("#name").val(namelist.toString());
-        //                    })
-        //                });
-        //            });
-
-        //        },
-        //        error: function (ex) {
-        //            alert("errrrrrrrrrr  " + ex.responseText);
-        //        }
-        //    });
-        //});
-
-
-        //const selectBtn = document.querySelector(".select-btn");
-
-
-        //selectBtn.addEventListener("click", (e) => {
-        //    selectBtn.classList.toggle("open");
-
-
-        //});
-
-        ////////////////////////////////////////////////////////
-
+   
 
 
 

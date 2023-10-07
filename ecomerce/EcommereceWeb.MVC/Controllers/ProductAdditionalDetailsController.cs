@@ -1,4 +1,5 @@
 ﻿using EcommereceWeb.Application.DTOs;
+using EcommereceWeb.Domain.Entity;
 using EcommereceWeb.MVC.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,24 +17,26 @@ namespace EcommereceWeb.MVC.Controllers
             return View();
 
         }
-        public async Task<IActionResult> Create()
+        public async Task<IActionResult> Create(int productId)
         {
-            return View();
+            ProductAdditionalDetailsDto productAdditionalDetailsDto = new ProductAdditionalDetailsDto();
+            productAdditionalDetailsDto.ProductId = productId;
+            return View(productAdditionalDetailsDto);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(ProductAdditionalDetailsDto entity)
         {
 
-            if (entity == null) { TempData["err"] = "null value"; return View(entity); }
+            if (entity == null) { TempData["err"] = "null value"; return RedirectToAction("Create", new { productId = entity.ProductId }); }
             var res = await ServiceManager.ProductAdditionalDetailsService.Add(entity);
             if (res.Status.Succeeded)
             {
                 TempData["suc"] = res.Status.message;
-                return RedirectToAction("Index");
+                return RedirectToAction("Create", new { productId =entity.ProductId});
             }
             TempData["err"] = res.Status.message;
-            return View(entity);
+            return RedirectToAction("Create", new { productId = entity.ProductId });
         }
 
         public async Task<IActionResult> Edit(int Id)
